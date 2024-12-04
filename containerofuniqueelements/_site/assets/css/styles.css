@@ -1,0 +1,88 @@
+/* styles.css */
+
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Light background color */
+}
+
+/* Header styles */
+header {
+    background-color: #007bff; /* Header background color */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Horizontal list items */
+    margin-right: 15px; /* Spacing between items */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none; /* Remove underline */
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #333; /* Darker text for headings */
+}
+
+h1 {
+    font-size: 2em; /* Larger font size for main title */
+}
+
+h2 {
+    font-size: 1.5em; /* Medium font size for section titles */
+}
+
+h3 {
+    font-size: 1.2em; /* Smaller font size for subsections */
+}
+
+/* Code block styles */
+pre {
+    background-color: #eee; /* Light gray background for code blocks */
+    border-left: 4px solid #007bff; /* Blue left border */
+    padding: 10px;
+    overflow-x: auto; /* Allow horizontal scrolling for long lines */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #007bff; /* Same as header */
+    color: white;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Merge table borders */
+}
+
+table, th, td {
+    border: 1px solid #ddd; /* Light gray borders for table cells */
+}
+
+th, td {
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2; /* Light gray background for headers */
+}
