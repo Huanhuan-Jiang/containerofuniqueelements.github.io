@@ -4,7 +4,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/assets/css/styles.css"> 
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+          tex: {
+            tags: 'ams' // Use AMS numbering rules
+          }
+        };
+      </script>
+    <style>
+        .horizontal-line-title {
+            width: 100%; /* Full width */
+            height: 1px; /* Height of the line */
+            background-color: #dddada; /* Color of the line */
+            margin: 20px 0; /* Space above and below the line */
+        }
+    </style> 
+    <style>
+        .horizontal-line-sub {
+            width: 50%; /* Full width */
+            height: 1px; /* Height of the line */
+            background-color: rgb(221, 218, 218); /* Color of the line */
+            margin: 20px 0; /* Space above and below the line */
+        }
+    </style> 
 </head>
 <body>
     <header>

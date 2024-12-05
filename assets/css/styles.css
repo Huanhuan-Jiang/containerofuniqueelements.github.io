@@ -34709,3 +34709,9 @@ google-codelab-survey .option-text {
     border-radius: 50%;
     background: #3f51b5
 }
+
+.method-number {
+    width: 50%;
+    text-align: right;
+    margin-left: 10px; /* Space between method and number */
+}
