@@ -1,12 +1,14 @@
 html {
   font-variant-ligatures: no-common-ligatures;
 }
+
 title {
   display: none;
 }
 
 .maindsc {
-  margin: 0.5em 3em 0.5em 3em; /* Top, Right, Bottom, Left */
+  margin: 0.5em 3em 0.5em 3em;
+  /* Top, Right, Bottom, Left */
 }
 
 body {
@@ -25,31 +27,41 @@ body {
   font-size: 1.6em;
   padding-bottom: 0;
 }
+
 div {
   display: block;
   unicode-bidi: isolate;
 }
+
 div#cpp-content-base {
   background: white;
 }
+
 div#content {
-  line-height: 1.5em;
+  color: black;
+  direction: ltr;
+  padding: 0.5em;
 }
+
 div#bodyContent {
   line-height: 1.2em;
   position: static;
 }
+
 div#mw-head {
   width: 100%;
 }
+
 div#cpp-head-first-base {
   border-bottom: 1px solid #eee;
   background: white;
 }
+
 div#cpp-head-first {
   padding: 0.1em 0.1em 0.1em 1em;
   height: 22px;
 }
+
 table {
   font-size: 100%;
   display: table;
@@ -102,30 +114,39 @@ tr {
   unicode-bidi: isolate;
   border-color: inherit;
 }
+
 .mainpagetable {
   width: 50%;
   white-space: nowrap;
   margin: 0 3em;
+  background-color: transparent;
+  border-collapse: collapse;
 }
 
 tr.rowtop * {
-  line-height: 1em; /* Set line height for all elements in rowtop */
+  line-height: 1em;
+  /* Set line height for all elements in rowtop */
 }
 
 tr.row {
-  direction: ltr; /* Set direction for row */
+  direction: ltr;
+  /* Set direction for row */
 }
 
 .mainpagetable tr.rowtop td {
-  border-top: 1px solid silver; /* Top border for rowtop cells */
-  background: #f8f8f8; /* Background color for rowtop */
+  border-top: 1px solid silver;
+  /* Top border for rowtop cells */
+  background: #f8f8f8;
+  /* Background color for rowtop */
 }
 
 .mainpagetable tr.row td {
-  border-bottom: 1px solid silver; /* Bottom border for row cells */
-  padding: 0.5em; /* Padding inside row cells */
-  background: #fafafa; /* Background color for row cells */
+  border-bottom: 1px solid silver;
+  /* Bottom border for row cells */
+  padding: 0.5em;
+  /* Padding inside row cells */
 }
+
 a:visited {
   color: #0b0080;
 }
@@ -148,12 +169,15 @@ a {
 }
 
 .numbered-list {
-  list-style-type: none; /* Remove bullets */
-  padding-left: 0; /* Remove default padding */
+  list-style-type: none;
+  /* Remove bullets */
+  padding-left: 0;
+  /* Remove default padding */
 }
 
 .numbered-list li {
-  margin-bottom: 5px; /* Space between list items */
+  margin-bottom: 5px;
+  /* Space between list items */
 }
 
 .method-table {
@@ -263,12 +287,18 @@ a {
 
 .copy-assignable,
 .move-assignable {
-  font-family: Georgia, "DejaVu Serif", serif; /* Font family */
-  font-style: italic; /* Italic style */
-  color: #333; /* Text color (you can adjust this) */
-  background-color: #f9f9f9; /* Optional: background color */
-  padding: 4px 8px; /* Optional: padding for better appearance */
-  border-radius: 4px; /* Optional: rounded corners */
+  font-family: Georgia, "DejaVu Serif", serif;
+  /* Font family */
+  font-style: italic;
+  /* Italic style */
+  color: #333;
+  /* Text color (you can adjust this) */
+  background-color: #f9f9f9;
+  /* Optional: background color */
+  padding: 4px 8px;
+  /* Optional: padding for better appearance */
+  border-radius: 4px;
+  /* Optional: rounded corners */
 }
 
 h3 {
@@ -302,6 +332,7 @@ h4 + ol {
   margin-top: 5px;
   /* Space above lists following headings */
 }
+
 h1,
 h3,
 h4,
@@ -317,17 +348,26 @@ h6 {
   border-bottom: 1px solid #aaa;
   width: auto;
 }
+
 h2 {
-  color: #003366; /* Dark gray color for better readability */
-  background-color: #f8f8f8; /* No background color */
-  font-weight: normal; /* Normal font weight */
-  margin: 1em 2em 2em 1em; /* Adds vertical margins (top and bottom) */
-  overflow: hidden; /* Prevents overflow */
-  padding-top: 0.5em; /* Padding above the text */
-  padding-bottom: 0.17em; /* Padding below the text */
-  border-bottom: 1px solid #aaa; /* Light gray bottom border */
-  width: auto; /* Auto width */
-  transition: color 0.3s ease; /* Smooth transition for color changes */
+  color: #003366;
+  /* Dark gray color for better readability */
+  font-weight: normal;
+  /* Normal font weight */
+  margin: 1em 2em 2em 1em;
+  /* Adds vertical margins (top and bottom) */
+  overflow: hidden;
+  /* Prevents overflow */
+  padding-top: 0.5em;
+  /* Padding above the text */
+  padding-bottom: 0.17em;
+  /* Padding below the text */
+  border-bottom: 1px solid #aaa;
+  /* Light gray bottom border */
+  width: auto;
+  /* Auto width */
+  transition: color 0.3s ease;
+  /* Smooth transition for color changes */
 }
 
 h5 {
@@ -340,9 +380,11 @@ h5 {
   font-weight: bold;
   unicode-bidi: isolate;
 }
+
 h5 {
   font-size: 100%;
 }
+
 h3,
 h4,
 h5,
@@ -350,13 +392,16 @@ h6 {
   border-bottom: none;
   font-weight: bold;
 }
+
 div#cpp-head-first > h5 {
   display: inline;
 }
+
 div#mw-head h5 {
   margin: 0;
   padding: 0;
 }
+
 .parameters-section,
 .type-requirements-section,
 .return-value-section {
@@ -387,7 +432,8 @@ div#mw-head h5 {
 }
 
 .highlight-row {
-  font-weight: bold; /* Bold text for emphasis */
+  font-weight: bold;
+  /* Bold text for emphasis */
 }
 
 .return-value-section p {
@@ -439,13 +485,20 @@ tr {
 }
 
 .par-table-begin {
-  display: table; /* Use table display */
-  border-collapse: separate; /* Use separate borders */
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
-  text-indent: initial; /* Reset text indentation */
-  unicode-bidi: isolate; /* Isolate the text direction */
-  border-spacing: 2px; /* Space between borders of adjacent cells */
-  border-color: gray; /* Set border color */
+  display: table;
+  /* Use table display */
+  border-collapse: separate;
+  /* Use separate borders */
+  box-sizing: border-box;
+  /* Include padding and border in element's total width and height */
+  text-indent: initial;
+  /* Reset text indentation */
+  unicode-bidi: isolate;
+  /* Isolate the text direction */
+  border-spacing: 2px;
+  /* Space between borders of adjacent cells */
+  border-color: gray;
+  /* Set border color */
   width: 100%;
 }
 
@@ -460,19 +513,23 @@ tr {
 }
 
 .t-par td:first-child {
-  text-align: right; /* Align first cell text to the right */
+  text-align: right;
+  /* Align first cell text to the right */
 }
 
 .t-par td:nth-child(2) {
-  text-align: center; /* Center align second cell text */
+  text-align: center;
+  /* Center align second cell text */
 }
 
 .t-par td:last-child {
-  text-align: left; /* Align last cell text to the left */
+  text-align: left;
+  /* Align last cell text to the left */
 }
 
 .t-par-req {
-  padding: 0.5em 1em 0 0; /* Padding inside cells */
+  padding: 0.5em 1em 0 0;
+  /* Padding inside cells */
 }
 
 .t-par-req td {
