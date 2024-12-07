@@ -1,28 +1,60 @@
 ---
-layout: doc  # Use the layout you created for documentation
-title: "Deque of Unique"
-date: 2024-12-05
+layout: default # Use the layout you created for documentation
+title: "Container of Unique Entries"
 ---
-# Deque of Unique
 
-## Overview
-The `Deque of Unique` class provides a double-ended queue that ensures all entries are unique.
+<h1>Container of Unique Entries</h1>
 
-## Installation
-To install the library, run:
+<p>Welcome to the Container of Unique Entries documentation. This project provides various methods to manage unique entries efficiently.</p>
 
-```bash
-gem install containerofuniqueentries
+<h2>Features</h2>
+<ul>
+    <li><strong>Efficient Storage</strong>: Store unique entries without duplicates.</li>
+    <li><strong>Fast Access</strong>: Retrieve entries quickly with optimized algorithms.</li>
+    <li><strong>Flexible Interface</strong>: Easy-to-use methods for adding, removing, and checking entries.</li>
+</ul>
 
-require 'containerofuniqueentries'
+<h2>Methods Overview</h2>
+<main>
+      <section>
+<p>Here are some key methods available:</p>
+<div class="body-content">
+    <h3>
+        <span class="headline">
+        Member functions
+        </span>
+    </h3> 
+    <table class="t-dsc-begin">
+        <tbody>
+            <tr class="t-dsc-hitem">
+                <td colspan="2"><strong>Modifiers</strong></td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="./_docs/push_back">
+                        <span>push_back</span>
+                    </a>
+                </td>
+                <td>adds a value to the back of the container </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="./_docs/insert">
+                        <span>insert</span>
+                    </a>
+                </td>
+                <td>insert elements </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+      </section>
+      </main>
 
-# Create a new deque instance
-deque = DequeOfUnique.new
+<ul>
+    <li><code>void push_back(const T& value);</code></li>
+    <li><code>void push_back(T&& value);</code></li>
+    <li><code>bool contains(const T& value);</code></li>
+</ul>
 
-# Add entries
-deque.add('item1')
-deque.add('item2')
-deque.add('item1')  # This will not be added again
-
-# Display entries
-puts deque.entries  # Output: ['item1', 'item2']
+<p>For detailed documentation on each method, please refer to their respective sections.</p>
