@@ -72,6 +72,11 @@ table {
   border-spacing: 2px;
   border-color: gray;
 }
+.t-dcl-begin {
+    display: block;
+    padding: 0.5em 0;
+    border-spacing: 0;
+}
 
 .t-dsc-begin {
   max-width: 60em;

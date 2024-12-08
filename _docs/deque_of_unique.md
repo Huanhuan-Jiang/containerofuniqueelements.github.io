@@ -23,6 +23,16 @@ layout: default # Use the layout you created for documentation
         Member functions
         </span>
     </h3> 
+    <table class="t-dcl-begin">
+        <tbody>
+            <td>
+                <div>
+                    Defined in header
+                    <code><a href="./_docs/push_back">&lt;deque&gt;</a></code>
+                </div>
+            </td>
+        </tbody>
+    </table>
     <table class="t-dsc-begin">
         <tbody>
             <tr class="t-dsc-hitem">
