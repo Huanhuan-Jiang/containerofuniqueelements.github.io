@@ -7,7 +7,12 @@ title {
 }
 
 .maindsc {
-  margin: 0.5em 3em 0.5em 3em;
+  margin: 0.5em 2em 0.5em 2em;
+  /* Top, Right, Bottom, Left */
+}
+
+.libdsc {
+  margin: 0.5em 2em 0.5em 2em;
   /* Top, Right, Bottom, Left */
 }
 
@@ -36,6 +41,11 @@ div {
 div#cpp-content-base {
   background: white;
 }
+div#cpp-footer-base {
+  border-top: 1px solid silver;
+  background: none repeat scroll 0 0 #f0f0f0;
+  direction: ltr;
+}
 
 div#content {
   color: black;
@@ -63,24 +73,64 @@ div#cpp-head-first {
 }
 
 table {
+  width: 100%;
   font-size: 100%;
   display: table;
-  border-collapse: separate;
+  border-collapse: collapse;
   box-sizing: border-box;
   text-indent: initial;
   unicode-bidi: isolate;
   border-spacing: 2px;
-  border-color: gray;
+  border-color: #ebeaea;
+  border-left: none;
+  border-right: none;
 }
 .t-dcl-begin {
-    display: block;
-    padding: 0.5em 0;
-    border-spacing: 0;
+  width: 100%;
+  display: block;
+  padding: 0.5em 0;
+  border-spacing: 0;
+  border-color: inherit;
+}
+.t-dcl {
+  display: table-row;
+  vertical-align: inherit;
+  unicode-bidi: isolate;
+  border-color: inherit;
+}
+.t-dcl,
+.t-dsc-header {
+  border-bottom: 1px solid #d3d3d3; /* Add bottom border for horizontal lines */
 }
 
 .t-dsc-begin {
   max-width: 60em;
   border-spacing: 0;
+  border-color: inherit;
+}
+
+span.mw-geshi {
+  white-space: nowrap;
+}
+.cpp.source-cpp {
+  font-family: monospace;
+}
+.source-cpp {
+  line-height: normal;
+}
+p {
+  margin-top: 0;    
+  margin-bottom: 0; 
+}
+
+.kw704 {
+  line-height: 1.1em;
+  margin: 0;
+  padding: 0;
+  color: #003080;
+}
+.cpp.source-cpp .kw4 {
+  color: #0000ff;
 }
 
 tbody {
@@ -109,8 +159,11 @@ td:last-child {
   white-space: normal;
 }
 
-.t-dsc-hitem {
-  border-top: 1px solid #cccccc;
+.t-dsc-hitem tr {
+  display: table-row;
+  vertical-align: inherit;
+  unicode-bidi: isolate;
+  border-color: inherit;
 }
 
 tr {
@@ -119,6 +172,45 @@ tr {
   unicode-bidi: isolate;
   border-color: inherit;
 }
+
+.t-dsc-hitem td {
+  border-top: 1px solid #cccccc;
+  font-weight: bold;
+  line-height: 1.1em;
+  padding: 0.2em 0 0.25em 0.75em;
+  white-space: nowrap;
+}
+
+.t-dsc {
+  display: table-row;
+  vertical-align: inherit;
+  unicode-bidi: isolate;
+  border-color: inherit;
+}
+
+.t-dsc td:first-child {
+  width: 0%;
+  line-height: 1.2em;
+  padding: 0.2em 0 0.25em 0.75em;
+  white-space: nowrap;
+}
+
+.t-dsc td:last-child {
+  line-height: 1.1em;
+  padding-left: 0.75em;
+  white-space: normal;
+}
+
+.t-dsc, .t-dsc-hitem td {
+  border-top: 1px solid #CCCCCC;
+}
+.t-dsc-header {
+  padding:0;
+  font-size:0.8em;
+  ling-height=1em;
+}
+
+
 
 .mainpagetable {
   width: 50%;
@@ -162,17 +254,6 @@ a {
   background: none;
 }
 
-.horizontal-line-title {
-  width: 100%;
-  /* Full width */
-  height: 1px;
-  /* Height of the line */
-  background-color: #dddada;
-  /* Color of the line */
-  margin: 20px 0;
-  /* Space above and below the line */
-}
-
 .numbered-list {
   list-style-type: none;
   /* Remove bullets */
@@ -183,37 +264,6 @@ a {
 .numbered-list li {
   margin-bottom: 5px;
   /* Space between list items */
-}
-
-.method-table {
-  width: 50%;
-  /* Full width */
-  border-collapse: collapse;
-  /* Collapse borders */
-  margin: 20px 0;
-  /* Space above and below the table */
-}
-
-.method-table tbody tr {
-  border-bottom: 1px solid #ddd;
-  /* Bottom border for each row */
-}
-
-.method-table td {
-  padding: 10px;
-  /* Padding inside cells */
-  vertical-align: top;
-  /* Align text to the top */
-}
-
-.method-table td span.kw {
-  font-weight: bold;
-  /* Bold for keywords */
-}
-
-.method-table td span.number {
-  color: #888;
-  /* Color for numbers */
 }
 
 .body-content {
@@ -228,9 +278,18 @@ a {
   font-weight: bold;
 }
 
+.kw1 {
+  color: #000fff;
+  /* Keyword color */
+}
+
 .br0 {
   color: #008000;
   /* Bracket color */
+}
+
+.sy1 {
+  color: #000080;
 }
 
 .sy3 {
@@ -316,6 +375,23 @@ h3 {
   font-weight: bold;
   unicode-bidi: isolate;
 }
+h3 {
+  padding: 1.1em 0 0.2em 0.75em;
+}
+h3 .mw-headline{
+  font-size: 132%;
+}
+.editsection {
+  display: none;
+}
+h3 .editsection {
+  font-size: 76%;
+  font-weight: normal;
+}
+.editsection {
+  float: right;
+  margin-left: 5px;
+}
 
 h4 {
   font-size: 1.2em;
@@ -399,60 +475,67 @@ h6 {
 }
 
 div#cpp-head-first {
-    padding: 0.1em 0.1em 0.1em 1em;
-    height: 22px;
+  padding: 0.1em 0.1em 0.1em 1em;
+  height: 22px;
 }
-div#cpp-head-first, div#cpp-head-second, div#content, div#footer {
-    margin: 0 auto;
-    position: relative;
-    width: 780px;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+div#cpp-head-first,
+div#cpp-head-second,
+div#content,
+div#footer {
+  margin: 0 auto;
+  position: relative;
+  width: 780px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 div#cpp-head-second {
-    height: 40px;
+  height: 40px;
 }
 div#cpp-head-tools-left {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 div.vectorTabs {
-    float: left;
-    height: 2.5em;
+  float: left;
+  height: 2.5em;
 }
 div.vectorTabs ul {
-    height: 100%;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 li {
-    display: list-item;
-    text-align: -webkit-match-parent;
-    unicode-bidi: isolate;
+  display: list-item;
+  text-align: -webkit-match-parent;
+  unicode-bidi: isolate;
 }
 div.vectorTabs:nth-child(1) {
-    background-position: bottom left;
-    padding-left: 1px;
+  background-position: bottom left;
+  padding-left: 1px;
 }
 
 div#cpp-head-second-base {
-    background: white;
-    background-position: bottom left;
-    background-repeat: repeat-x;
-    background: linear-gradient(to bottom, white, #ebe8e8e1); /* White at the top, light grey at the bottom */
-    transition: background 0.5s ease; /* Transition for hover effect */
+  background: white;
+  background-position: bottom left;
+  background-repeat: repeat-x;
+  background: linear-gradient(
+    to bottom,
+    white,
+    #ebe8e8e1
+  ); /* White at the top, light grey at the bottom */
+  transition: background 0.5s ease; /* Transition for hover effect */
 }
 
 .fade-background {
-    background-color: #FFF6DB; /* Initial background color */
-    transition: background-color 4s ease; /* Duration and easing function */
+  background-color: #fff6db; /* Initial background color */
+  transition: background-color 4s ease; /* Duration and easing function */
 }
 
 .fade-background:hover {
-    background-color: white; /* Final background color on hover */
+  background-color: white; /* Final background color on hover */
 }
 
 div#mw-head h5 {
@@ -511,13 +594,6 @@ div#mw-head h5 {
   /* Collapse borders */
   margin: 20px 0;
   /* Space above and below the table */
-}
-
-tr {
-  display: table-row;
-  vertical-align: inherit;
-  unicode-bidi: isolate;
-  border-color: inherit;
 }
 
 .dsc-table-begin tbody tr {
@@ -595,7 +671,9 @@ tr {
   vertical-align: inherit;
   unicode-bidi: isolate;
 }
-
+table code{
+  background-color: transparent;
+}
 code {
   background-color: #f8f8f8;
   /* Light background for code */

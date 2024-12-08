@@ -16,25 +16,27 @@
             <a href="/">containerofuniqueentries.github.io</a>
           </h5>
         </div>
-      </div> 
+      </div>
       <div id="cpp-head-second-base">
         <div id="cpp-head-second">
-            <div id="cpp-head-tools-left">
-                <div class="vectorTabs">
-                    <ul class="tab-container">
-                        <li class="tab-item {% if page.url == '/' %}active{% endif %}">
-                            <span>
-                                <a href="/">Page</a>
-                            </span>
-                        </li>
-                        <li class="tab-item {% if page.url == '/_docs/deque_of_unique.html' %}active{% endif %}">
-                            <span>
-                                <a href="/_docs/deque_of_unique.html">deque_of_unique</a>
-                            </span>
-                        </li>
-                    </ul>
-                </div>
+          <div id="cpp-head-tools-left">
+            <div class="vectorTabs">
+              <ul class="tab-container">
+                <li class="tab-item {% if page.url == '/' %}active{% endif %}">
+                  <span>
+                    <a href="/">Page</a>
+                  </span>
+                </li>
+                <li
+                  class="tab-item {% if page.url == '/_docs/deque_of_unique.html' %}active{% endif %}"
+                >
+                  <span>
+                    <a href="/_docs/deque_of_unique.html">deque_of_unique</a>
+                  </span>
+                </li>
+              </ul>
             </div>
+          </div>
         </div>
       </div>
     </div>
@@ -48,42 +50,42 @@
     </div>
 
     <!-- Footer Section -->
-    <footer id="site-footer">
-      <div class="footer-content">
+    <div id="cpp-footer-base">
+      <div id="footer">
         <p>&copy; 2024 Container of Unique Entries. All rights reserved.</p>
         <p>
           <a href="/privacy-policy">Privacy Policy</a> |
           <a href="/terms-of-service">Terms of Service</a>
         </p>
       </div>
-    </footer>
+    </div>
     <style>
-        .tab-container {
-            list-style-type: none; /* Remove default bullet points */
-            padding: 0; /* Remove default padding */
-            margin: 0; /* Remove default margin */
-            display: flex; /* Use flexbox to arrange items horizontally */
-        }
+      .tab-container {
+        list-style-type: none; /* Remove default bullet points */
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+        display: flex; /* Use flexbox to arrange items horizontally */
+      }
 
-        .tab-item {
-            background-color: #e5e9f7; /* Light grey background for non-selected tabs */
-            margin-right: 10px; /* Add separation between tabs */
-            padding: 10px 15px; /* Add some padding for better appearance */
-            border-radius: 5px; /* Optional: rounded corners */
-        }
+      .tab-item {
+        background-color: #e5e9f7; /* Light grey background for non-selected tabs */
+        margin-right: 10px; /* Add separation between tabs */
+        padding: 10px 15px; /* Add some padding for better appearance */
+        border-radius: 5px; /* Optional: rounded corners */
+      }
 
-        .tab-item.active {
-            background-color: white; /* White background for the selected tab */
-        }
+      .tab-item.active {
+        background-color: white; /* White background for the selected tab */
+      }
 
-        .tab-item a {
-            text-decoration: none; /* Remove underline from links */
-            color: #000; /* Set link color */
-        }
+      .tab-item a {
+        text-decoration: none; /* Remove underline from links */
+        color: #000; /* Set link color */
+      }
 
-        .tab-item:hover {
-            background-color: #B0B0B0; /* Slightly darker grey on hover for non-selected tabs */
-        }
+      .tab-item:hover {
+        background-color: #b0b0b0; /* Slightly darker grey on hover for non-selected tabs */
+      }
     </style>
   </body>
 </html>
