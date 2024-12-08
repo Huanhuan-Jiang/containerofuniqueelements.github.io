@@ -393,8 +393,61 @@ h6 {
   font-weight: bold;
 }
 
-div#cpp-head-first > h5 {
-  display: inline;
+div#cpp-head-first {
+    padding: 0.1em 0.1em 0.1em 1em;
+    height: 22px;
+}
+div#cpp-head-first, div#cpp-head-second, div#content, div#footer {
+    margin: 0 auto;
+    position: relative;
+    width: 780px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+div#cpp-head-second {
+    height: 40px;
+}
+div#cpp-head-tools-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+div.vectorTabs {
+    float: left;
+    height: 2.5em;
+}
+div.vectorTabs ul {
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+}
+div.vectorTabs:nth-child(1) {
+    background-position: bottom left;
+    padding-left: 1px;
+}
+
+div#cpp-head-second-base {
+    background: white;
+    background-position: bottom left;
+    background-repeat: repeat-x;
+    background: linear-gradient(to bottom, white, #ebe8e8e1); /* White at the top, light grey at the bottom */
+    transition: background 0.5s ease; /* Transition for hover effect */
+}
+
+.fade-background {
+    background-color: #FFF6DB; /* Initial background color */
+    transition: background-color 4s ease; /* Duration and easing function */
+}
+
+.fade-background:hover {
+    background-color: white; /* Final background color on hover */
 }
 
 div#mw-head h5 {

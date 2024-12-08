@@ -1,9 +1,8 @@
 ---
 layout: default # Use the layout you created for documentation
-title: "Container of Unique Entries"
 ---
 
-<h1>Container of Unique Entries</h1>
+<h2>containerofuniqueentries::deque_of_unique</h2>
 
 <p>Welcome to the Container of Unique Entries documentation. This project provides various methods to manage unique entries efficiently.</p>
 
