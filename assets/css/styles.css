@@ -452,17 +452,6 @@ h2 {
 }
 
 h5 {
-  display: block;
-  font-size: 0.83em;
-  margin-block-start: 1.67em;
-  margin-block-end: 1.67em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: bold;
-  unicode-bidi: isolate;
-}
-
-h5 {
   font-size: 100%;
 }
 
@@ -683,4 +672,256 @@ code {
   /* Padding around code text */
   font-family: monospace;
   /* Monospace font for code */
+}
+.tab-container {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox to arrange items horizontally */
+}
+
+.tab-item {
+    background-color: #e5e9f7; /* Light grey background for non-selected tabs */
+    margin-right: 10px; /* Add separation between tabs */
+    padding: 10px 15px; /* Add some padding for better appearance */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+.tab-item.active {
+    background-color: white; /* White background for the selected tab */
+}
+
+.tab-item a {
+    text-decoration: none; /* Remove underline from links */
+    color: #000; /* Set link color */
+}
+
+.tab-item:hover {
+    background-color: #b0b0b0; /* Slightly darker grey on hover for non-selected tabs */
+}
+    h1,h2 {
+        margin-bottom: .6em
+    }
+
+    h3,h4,h5 {
+        margin-bottom: .3em
+    }
+    h5 {
+        font-size: 100%
+    }
+    .t-dsc-hitem > td {
+    font-weight: bold;
+    line-height: 1.1em;
+    padding: 0.2em 0 0.25em 0.75em;
+    white-space: nowrap
+}
+
+.t-dsc > td,.t-dsc-hitem > td {
+    border-top: 1px solid #CCCCCC
+}
+
+.t-dsc-header > td {
+    padding: 0;
+    font-size: 0.8em;
+    line-height: 1em
+}
+
+.t-dsc-header > td:nth-child(1) > div {
+    margin-left: 2em
+}
+.t-dsc-member-div > div {
+    padding: 0;
+    display: inline-table;
+    vertical-align: middle
+}
+
+.t-dsc-member-div > div:nth-child(1) {
+    font-weight: bold;
+    font-family: DejaVuSansMono,"DejaVu Sans Mono",courier,monospace
+}
+
+.t-dsc-member-div > div:nth-child(2) {
+    padding-left: 0.2em
+}
+
+.t-dsc-member-nobold-div > div:nth-child(1),.t-dsc-member-nobold-div > div:nth-child(1) strong.selflink {
+    font-weight: normal;
+    font-family: DejaVuSans,"DejaVu Sans",arial,sans-serif
+}
+
+.t-tr-text {
+    display: inline
+}
+.t-lines {
+    display: table
+}
+
+.t-lines > span {
+    display: table-row
+}
+
+.t-lines > span * {
+    line-height: 1em
+}
+
+.t-lines > span:empty:after {
+    content: "\a0"
+}
+.t-cmark {
+    color: #808080;
+    font-size: 0.80em
+}
+
+.t-mark,.t-mark-rev {
+    color: #008000;
+    font-size: 0.80em
+}
+
+.t-mark-rev.t-mark-ts {
+    color: #e06000
+}
+
+.wikitable th .t-mark {
+    font-weight: normal
+}
+.t-dsc-begin {
+    max-width: 60em;
+    border-spacing: 0
+}
+
+.t-dsc > td:first-child {
+    width: 0%;
+    line-height: 1.2em;
+    padding: 0.2em 0 0.25em 0.75em;
+    white-space: nowrap
+}
+
+.t-dsc > td:last-child {
+    line-height: 1.1em;
+    padding-left: 0.75em;
+    white-space: normal
+}
+
+
+body.ns-10 .t-example-live-link {
+    display: none
+}
+
+.t-example .mw-geshi {
+    margin: 0 0 1em 0
+}
+
+.t-member {
+    background-color: #f8f8f8;
+    border: 1px solid #aaa;
+    margin: 1em 0 0;
+    overflow: hidden;
+    padding: 0.2em 1em 1em
+}
+
+.t-member > h1 {
+    font-size: 1.8em
+}
+.cpp.source-cpp .de1, .cpp.source-cpp .de2 {
+                font: normal normal 1em/1.2em monospace;
+                margin: 0;
+                padding: 0;
+                background: none;
+                vertical-align: top;
+}
+.source-text li, .source-text pre {
+                line-height: normal;
+                border: 0px none white;
+            }
+.source-cpp {
+  line-height: normal;
+}
+.cpp.source-cpp {
+    font-family: monospace;
+}
+.cpp.source-cpp .ln {
+                width: 1px;
+                text-align: right;
+                margin: 0;
+                padding: 0 2px;
+                vertical-align: top;
+            }
+
+            .cpp.source-cpp .li2 {
+                font-weight: bold;
+                vertical-align: top;
+            }
+
+            .cpp.source-cpp .kw1 {
+                color: #0000dd;
+            }
+
+            .cpp.source-cpp .kw2 {
+                color: #0000ff;
+            }
+
+            .cpp.source-cpp .kw3 {
+                color: #0000dd;
+            }
+
+            .cpp.source-cpp .kw4 {
+                color: #0000ff;
+            }
+
+            .cpp.source-cpp .co1 {
+                color: #909090;
+            }
+
+            .cpp.source-cpp .co2 {
+                color: #339900;
+            }
+            p,dd {
+    line-height: 1.2em
+}
+pre,div.mw-geshi {
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 1em;
+    margin: 1em 0;
+    width: 55em;
+    background-color: #F9F9F9;
+    overflow: auto
+}
+.text.source-text .de1, .text.source-text .de2 {
+                font: normal normal 1em/1.2em monospace;
+                margin: 0;
+                padding: 0;
+                background: none;
+                vertical-align: top;
+            }
+
+            .text.source-text {
+                font-family: monospace;
+            }
+            tt,code,pre,.mw-geshi,.t-lc,#wpTextbox1 {
+    font-family: DejaVuSansMono,"DejaVu Sans Mono",courier,monospace !important
+}
+
+code,table {
+    background-color: transparent
+}
+pre,code,tt,kbd,samp {
+    font-family: monospace,"Courier New"
+}
+pre {
+        padding: 1em;
+        border: 1px dashed #2f6fab;
+        color: black;
+        background-color: #f9f9f9;
+        line-height: 1.3em
+    }
+
+pre,div.mw-geshi {
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 1em;
+    margin: 1em 0;
+    width: 55em;
+    background-color: #F9F9F9;
+    overflow: auto
 }
