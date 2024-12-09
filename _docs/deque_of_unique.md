@@ -58,6 +58,7 @@ layout: default # Use the layout you created for documentation
                                 </div>
                             </td>
                             <td></td>
+                            <td></td>
                         </tr>
                     </tbody>
             </table>
@@ -223,9 +224,9 @@ layout: default # Use the layout you created for documentation
                     <tr class="t-dsc">
                         <td>
                             <div class="t-dsc-member-div">
-                                <a href="./deque_of_unique/operator=">
+                                <div><a href="./deque_of_unique/operator=">
                                     <span>operator=</span>
-                                </a>
+                                </a></div>
                             </div>
                         </td>
                         <td>
@@ -244,9 +245,9 @@ layout: default # Use the layout you created for documentation
                     <tr class="t-dsc">
                         <td>
                             <div class="t-dsc-member-div">
-                                <a href="./deque_of_unique/at">
+                                <div><a href="./deque_of_unique/at">
                                     <span>at</span>
-                                </a>
+                                </a></div>
                             </div>
                         </td>
                         <td>
@@ -258,9 +259,9 @@ layout: default # Use the layout you created for documentation
                     <tr class="t-dsc">
                         <td>
                             <div class="t-dsc-member-div">
-                                <a href="./deque_of_unique/operator_at">
+                                <div><a href="./deque_of_unique/operator_at">
                                     <span>operator[]</span>
-                                </a>
+                                </a></div>
                             </div>
                         </td>
                         <td>
@@ -272,9 +273,9 @@ layout: default # Use the layout you created for documentation
                     <tr class="t-dsc">
                         <td>
                             <div class="t-dsc-member-div">
-                                <a href="./deque_of_unique/front">
+                                <div><a href="./deque_of_unique/front">
                                     <span>front</span>
-                                </a>
+                                </a></div>
                             </div>
                         </td>
                         <td>
@@ -286,9 +287,9 @@ layout: default # Use the layout you created for documentation
                     <tr class="t-dsc">
                         <td>
                             <div class="t-dsc-member-div">
-                                <a href="./deque_of_unique/back">
+                                <div><a href="./deque_of_unique/back">
                                     <span>back</span>
-                                </a>
+                                </a></div>
                             </div>
                         </td>
                         <td>
@@ -307,9 +308,9 @@ layout: default # Use the layout you created for documentation
                     <tr class="t-dsc">
                         <td>
                             <div class="t-dsc-member-div">
-                                <a href="./deque_of_unique/cbegin">
+                                <div><a href="./deque_of_unique/cbegin">
                                     <span>cbegin</span>
-                                </a>
+                                </a></div>
                             </div>
                         </td>
                         <td>
@@ -321,9 +322,9 @@ layout: default # Use the layout you created for documentation
                     <tr class="t-dsc">
                         <td>
                             <div class="t-dsc-member-div">
-                                <a href="./deque_of_unique/cend">
+                                <div><a href="./deque_of_unique/cend">
                                     <span>cend</span>
-                                </a>
+                                </a></div>
                             </div>
                         </td>
                         <td>
@@ -335,9 +336,9 @@ layout: default # Use the layout you created for documentation
                     <tr class="t-dsc">
                         <td>
                             <div class="t-dsc-member-div">
-                                <a href="./deque_of_unique/crbegin">
+                                <div><a href="./deque_of_unique/crbegin">
                                     <span>crbegin</span>
-                                </a>
+                                </a></div>
                             </div>
                         </td>
                         <td>
@@ -349,9 +350,9 @@ layout: default # Use the layout you created for documentation
                     <tr class="t-dsc">
                         <td>
                             <div class="t-dsc-member-div">
-                                <a href="./deque_of_unique/rcend">
+                                <div><a href="./deque_of_unique/rcend">
                                     <span>crend</span>
-                                </a>
+                                </a></div>
                             </div>
                         </td>
                         <td>
@@ -370,9 +371,9 @@ layout: default # Use the layout you created for documentation
                     <tr class="t-dsc">
                         <td>
                             <div class="t-dsc-member-div">
-                                <a href="./deque_of_unique/emtpy">
+                                <div><a href="./deque_of_unique/emtpy">
                                     <span>empty</span>
-                                </a>
+                                </a></div>
                             </div>
                         </td>
                         <td>
@@ -391,9 +392,9 @@ layout: default # Use the layout you created for documentation
                     <tr class="t-dsc">
                         <td>
                             <div class="t-dsc-member-div">
-                                <a href="./deque_of_unique/clear">
+                                <div><a href="./deque_of_unique/clear">
                                     <span>clear</span>
-                                </a>
+                                </a></div>
                             </div>
                         </td>
                         <td>
@@ -405,9 +406,9 @@ layout: default # Use the layout you created for documentation
                     <tr class="t-dsc">
                         <td>
                             <div class="t-dsc-member-div">
-                                <a href="./deque_of_unique/insert">
+                                <div><a href="./deque_of_unique/insert">
                                     <span>insert</span>
-                                </a>
+                                </a></div>
                             </div>
                         </td>
                         <td>
@@ -419,9 +420,9 @@ layout: default # Use the layout you created for documentation
                     <tr class="t-dsc">
                         <td>
                             <div class="t-dsc-member-div">
-                                <a href="./deque_of_unique/erase">
+                                <div><a href="./deque_of_unique/erase">
                                     <span>erase</span>
-                                </a>
+                                </a></div>
                             </div>
                         </td>
                         <td>
@@ -433,9 +434,9 @@ layout: default # Use the layout you created for documentation
                     <tr class="t-dsc">
                         <td>
                             <div class="t-dsc-member-div">
-                                <a href="./deque_of_unique/emplace">
+                                <div><a href="./deque_of_unique/emplace">
                                     <span>emplace</span>
-                                </a>
+                                </a></div>
                             </div>
                         </td>
                         <td>
@@ -447,9 +448,9 @@ layout: default # Use the layout you created for documentation
                     <tr class="t-dsc">
                         <td>
                             <div class="t-dsc-member-div">
-                                <a href="./deque_of_unique/push_back">
+                                <div><a href="./deque_of_unique/push_back">
                                     <span>insert</span>
-                                </a>
+                                </a></div>
                             </div>
                         </td>
                         <td>
@@ -461,9 +462,9 @@ layout: default # Use the layout you created for documentation
                     <tr class="t-dsc">
                         <td>
                             <div class="t-dsc-member-div">
-                                <a href="./deque_of_unique/emplace_back">
+                                <div><a href="./deque_of_unique/emplace_back">
                                     <span>emplace_back</span>
-                                </a>
+                                </a></div>
                             </div>
                         </td>
                         <td>
@@ -475,9 +476,9 @@ layout: default # Use the layout you created for documentation
                     <tr class="t-dsc">
                         <td>
                             <div class="t-dsc-member-div">
-                                <a href="./deque_of_unique/pop_back">
+                                <div><a href="./deque_of_unique/pop_back">
                                     <span>pop_back</span>
-                                </a>
+                                </a></div>
                             </div>
                         </td>
                         <td>
@@ -489,9 +490,9 @@ layout: default # Use the layout you created for documentation
                     <tr class="t-dsc">
                         <td>
                             <div class="t-dsc-member-div">
-                                <a href="./deque_of_unique/push_front">
+                                <div><a href="./deque_of_unique/push_front">
                                     <span>push_front</span>
-                                </a>
+                                </a></div>
                             </div>
                         </td>
                         <td>
@@ -503,9 +504,9 @@ layout: default # Use the layout you created for documentation
                     <tr class="t-dsc">
                         <td>
                             <div class="t-dsc-member-div">
-                                <a href="./deque_of_unique/emplace_front">
+                                <div><a href="./deque_of_unique/emplace_front">
                                     <span>emplace_front</span>
-                                </a>
+                                </a></div>
                             </div>
                         </td>
                         <td>
@@ -517,9 +518,9 @@ layout: default # Use the layout you created for documentation
                     <tr class="t-dsc">
                         <td>
                             <div class="t-dsc-member-div">
-                                <a href="./deque_of_unique/pop_front">
+                                <div><a href="./deque_of_unique/pop_front">
                                     <span>pop_front</span>
-                                </a>
+                                </a></div>
                             </div>
                         </td>
                         <td>
@@ -531,9 +532,9 @@ layout: default # Use the layout you created for documentation
                     <tr class="t-dsc">
                         <td>
                             <div class="t-dsc-member-div">
-                                <a href="./deque_of_unique/pop_front">
+                                <div><a href="./deque_of_unique/pop_front">
                                     <span>swap</span>
-                                </a>
+                                </a></div>
                             </div>
                         </td>
                         <td>
@@ -554,9 +555,14 @@ layout: default # Use the layout you created for documentation
                     <tr class="t-dsc">
                         <td>
                             <div class="t-dsc-member-div">
-                                <a href="./deque_of_unique/pop_front">
+                                <div><a href="./deque_of_unique/pop_front">
                                     <span>operator<=></span>
-                                </a>
+                                </a></div>
+                                <div>
+                                    <span class="t-lines">
+                                        <span class="t-mark-rev t-since-cxx20">(C++20)</span>
+                                    </span>
+                                </div>
                             </div>
                         </td>
                         <td>
@@ -578,19 +584,19 @@ layout: default # Use the layout you created for documentation
 &nbsp;
 <span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span>
 <span class="br0">{</span>
-<span class="co1">// Create a deque_of_unique containing integers</span>
-containerofunique<span class="sy4">::</span><span class="me2">deque_of_unique</span><span class="sy1">&lt;</span><span class="kw4">int</span><span class="sy1">&gt;</span> und <span class="sy1">=</span> <span class="br0">{</span><span class="nu0">3</span>, <span class="nu0">5</span>, <span class="nu0">20</span>, <span class="nu0">9</span><span class="br0">}</span><span class="sy4">;</span>
-&nbsp;
-<span class="co1">// Add an integer to the beginning and end of the deque</span>
-und.<span class="me1">push_front</span><span class="br0">(</span><span class="nu0">3</span><span class="br0">)</span><span class="sy4">;</span>
-und.<span class="me1">push_back</span><span class="br0">(</span><span class="nu0">28</span><span class="br0">)</span><span class="sy4">;</span>
-&nbsp;
-<span class="co1">// print values of deque_of_unique</span>
-<span class="kw1">for</span> <span class="br0">(</span><span class="kw4">int</span> n <span class="sy4">:</span> und.<span class="me1">deque</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span>
-<span class="kw1773">std::<span class="me2">cout</span></span>
-<span class="sy1">&lt;&lt;</span> n <span class="sy1">&lt;&lt;</span> <span class="st0">' '</span><span class="sy4">;</span>
-<span class="kw1773">std::<span class="me2">cout</span></span>
-<span class="sy1">&lt;&lt;</span> <span class="st0">'<span class="es1">\n</span>'</span><span class="sy4">;</span>
+    <span class="co1">// Create a deque_of_unique containing integers</span>
+    containerofunique<span class="sy4">::</span><span class="me2">deque_of_unique</span><span class="sy1">&lt;</span><span class="kw4">int</span><span class="sy1">&gt;</span> und <span class="sy1">=</span> <span class="br0">{</span><span class="nu0">3</span>, <span class="nu0">5</span>, <span class="nu0">20</span>, <span class="nu0">9</span><span class="br0">}</span><span class="sy4">;</span>
+    &nbsp;
+    <span class="co1">// Add an integer to the beginning and end of the deque_of_unique</span>
+    und.<span class="me1">push_front</span><span class="br0">(</span><span class="nu0">3</span><span class="br0">)</span><span class="sy4">;</span>
+    und.<span class="me1">push_back</span><span class="br0">(</span><span class="nu0">28</span><span class="br0">)</span><span class="sy4">;</span>
+    &nbsp;
+    <span class="co1">// print values of deque_of_unique</span>
+    <span class="kw1">for</span> <span class="br0">(</span><span class="kw4">int</span> n <span class="sy4">:</span> und.<span class="me1">deque</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span>
+    <span class="kw1773">std::<span class="me2">cout</span></span>
+    <span class="sy1">&lt;&lt;</span> n <span class="sy1">&lt;&lt;</span> <span class="st0">' '</span><span class="sy4">;</span>
+    <span class="kw1773">std::<span class="me2">cout</span></span>
+    <span class="sy1">&lt;&lt;</span> <span class="st0">'<span class="es1">\n</span>'</span><span class="sy4">;</span>
 <span class="br0">}</span>
                         </pre>
                     </div>
