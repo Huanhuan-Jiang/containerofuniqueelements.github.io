@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ page.title }}</title>
     <!-- Use title from front matter -->
-    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
     <!-- Link to your external CSS file -->
   </head>
   <body>
@@ -28,10 +28,10 @@
                   </span>
                 </li>
                 <li
-                  class="tab-item {% if page.url == '/_docs/deque_of_unique.html' %}active{% endif %}"
+                  class="tab-item {% if page.url == '/_docs/deque_of_unique/index.html' %}active{% endif %}"
                 >
                   <span>
-                    <a href="/_docs/deque_of_unique.html">deque_of_unique</a>
+                    <a href="/_docs/deque_of_unique/index.html">deque_of_unique</a>
                   </span>
                 </li>
               </ul>

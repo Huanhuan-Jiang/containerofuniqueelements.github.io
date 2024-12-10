@@ -18,7 +18,7 @@ layout: default # Use the layout you created for documentation
                         <td>
                             <p>
                                 <b>
-                                    <a href="./_docs/deque_of_unique">
+                                    <a href="./_docs/deque_of_unique/index.html">
                                         <span class="large-text">deque_of_unique</span> <!-- Consider using a CSS class instead -->
                                     </a>
                                 </b>

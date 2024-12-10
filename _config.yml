@@ -20,6 +20,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 url: "http://containerofuniqueentries.github.io"
+#baseurl: "/containerofuniqueentries-doc"
 twitter_username: jekyllrb
 github_username: jekyll
 
@@ -40,3 +41,14 @@ include:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+uncss:
+  stylesheets:
+    - assets/css/styles.css # Specify your stylesheets here
+  files:
+    - "**/*.html" # HTML files to consider; default is all HTML files
+  compress: true # Optional: compress resulting CSS
+  ignore: # Optional: classes to always keep
+    - ".is-loading"
+    - "#titleBar"
+
+repository: Huanhuan-Jiang/containerofuniqueentries-doc

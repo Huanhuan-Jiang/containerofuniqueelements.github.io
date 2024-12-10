@@ -1,0 +1,96 @@
+---
+layout: default
+---
+
+<div id="cpp-content-base">
+    <div id="content">
+        <div id="bodyContent">
+            <h1 id="firstHeading" class="firstHeading">
+                <span style="font-size:0.7em; line-height:130%;">containderofuniqueentries::deque_of_unique::</span>
+                <span>&nbsp;push_back&nbsp;</span>
+            </h1>
+            <div id="bodyContent">
+              <div, id="mw-content-text", lang="en", dir="ltr", class="mw-content-ltr">
+                <table class="t-dcl-begin">
+                  <tbody>
+                    <tr class="t-dcl">
+                      <td>
+                        <div>
+                          <span class="mw-geshi cpp source-cpp">
+                            <span class="kw">bool</span>&nbsp;push_back<span class="br0">(</span><span class="kw">const</span>&nbsp;T<span class="sy3">&</span>&nbsp;value<span class="br0">)</span><span class="sy4">;</span>
+                          </span>
+                        </div>
+                      </td>
+                      <td><span class="number">(1)</span></td>
+                    </tr>
+                    <tr class="t-dcl">
+                      <td>
+                        <div>
+                          <span class="mw-geshi cpp source-cpp">
+                            <span class="kw">bool</span>&nbsp;push_back<span class="br0">(</span>&nbsp;T<span class="sy3">&&</span>&nbsp;value<span class="br0">)</span><span class="sy4">;</span>
+                          </span>
+                        </div>
+                      </td>
+                      <td><span class="number">(1)</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+<tr class="t-dcl-sep">
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<p>
+  The <code>push_back</code> method adds a value to the back of the deque if it is not already present. This ensures that all entries in the deque remain unique.
+</p>
+<ul class="numbered-list">
+  <li>1) The new element is initialized as a copy of <code>value</code>.</li>
+  <li>2) <code>value</code> is moved into the new element.</li>
+</ul>
+<p>
+  All iterators (including the <code>end()</code> iterator) are invalidated. No references are invalidated.
+</p>
+    
+<h3>
+  <span class="mw-headline">
+    Parameters
+  </span>
+</h3>
+<table class="t-par-begin">
+    <tbody>
+        <tr class="t-par">
+            <td><strong>value</strong></td>
+            <td> - </td>
+            <td>The value of the element to append.</td>
+        </tr>
+        <tr class="highlight-row">
+            <td colspan="3"><strong>Type Requirements</strong></td>
+        </tr>
+        <tr class="t-par">
+            <td colspan="3"> -&nbsp;T must meet the requirements of <span style="font-family: Georgia, 'DejaVu Serif', serif; font-style: italic";>CopyAssignable</span> in order to use overload (1).</td>
+        </tr>
+        <tr class="t-par">
+                <td colspan="3"> -&nbsp;T must meet the requirements of <span style="font-family: Georgia, 'DejaVu Serif', serif; font-style: italic";>MoveAssignable</span> in order to use overload (2).</td>
+            </tr>
+    </tbody>
+</table>
+<h3>
+  <span class="mw-headline">
+    Return Value
+  </span>
+</h3>
+<table class="t-par-begin">
+    <tbody>
+        <tr class="highlight-row">
+            <td colspan="3">
+              Returns <code>'true'</code> if the appendage is successful, and <code>'false'</code> otherwise.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
