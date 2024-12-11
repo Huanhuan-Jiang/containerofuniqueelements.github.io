@@ -9,7 +9,7 @@ layout: default
                 <span style="font-size:0.7em; line-height:130%;">containderofuniqueentries::deque_of_unique::</span>
                 <span>&nbsp;constructor&nbsp;</span>
             </h1>
-            <div id="bodyContent">
+            
               <div, id="mw-content-text", lang="en", dir="ltr", class="mw-content-ltr">
                 <table class="t-dcl-begin">
                   <tbody>
@@ -17,19 +17,14 @@ layout: default
                       <td>
                         <div>
                           <span class="mw-geshi cpp source-cpp">
-                            deque_of_unique
-                            <span class="br0">(</span>
-                            <span class="br0">)</span>
+                            deque_of_unique<span class="br0">(</span><span class="br0">)</span>
                             <span class="sy4">:</span>
-                            deque_of_unique
-                            <span class="br0">(</span>
-                            <span class="br0">)</span>
-                            <span class="br0">{</span>
-                            <span class="br0">}</span>
+                            deque_of_unique<span class="br0">(</span><span class="br0">)</span>
+                            <span class="br0">{</span><span class="br0">}</span>
                           </span>
                         </div>
                       </td>
-                      <td><span class="number">(1)</span></td>
+                      <td> (1) </td>
                     </tr>
                   </tbody>
                   <tbody>
@@ -37,34 +32,65 @@ layout: default
                         <td>
                             <div>
                                 <span class="mw-geshi cpp source-cpp">
-                                    deque_of_unique
+                                    <span class="kw1">template</span><span class="sy1">&lt;</span><span class="kw1">class</span>&nbsp;input_it<span class="sy1">&gt;</span>
+                                    <br>
+                                    deque_of_unique<span class="br0">(</span>&nbsp;input_it first, input_it last
+                                    <span class="br0">)</span><span class="sy4">;</span>
                                 </span>
                             </div>
                         </td>
-                        <td><span class="number">(2)</span></td>
+                        <td> (2) </td>
                     </tr>
+                  </tbody>
+                  <tbody>
+                    <tr class="t-dcl">
+                        <td>
+                            <div>
+                                <span class="mw-geshi cpp source-cpp">
+                                    deque_of_unique<span class="br0">(</span>
+                                    <span class="kw964">std::<span class="me2">initializer_list</span></span><span class="sy1">&lt;</span>T<span class="sy1">&gt;</span><span class="sy3">&amp;</span>
+                                    init
+                                    <span class="br0">)</span><span class="sy4">;</span>
+                                </span>
+                            </div>
+                        </td>
+                        <td><span>(3)</span></td>
+                    </tr>
+                  </tbody>
+                  <tbody>
+                    <tr class="t-dcl">
+                        <td> 
+                            <div><span class="mw-geshi cpp source-cpp">deque_of_unique<span class="br0">(</span> <span class="kw4">const</span> deque_of_unique<span class="sy3">&amp;</span> other <span class="br0">)</span><span class="sy4">;</span></span></div>
+                        </td>
+                        <td> (4) </td>
+                    </tr>
+                  </tbody>
+                  <tbody>
+                    <tr class="t-dcl t-since-cxx11">
+                        <td> <div><span class="mw-geshi cpp source-cpp">deque_of_unique<span class="br0">(</span> deque_of_unique<span class="sy3">&amp;&amp;</span> other <span class="br0">)</span> <span class="kw1">noexcept</span><span class="sy4">;</span></span></div></td>
+                        <td> (5) </td>
+                        </td>
+                        </tr>
                   </tbody>
                 </table>
               </div>
-            </div>
-        </div>
-    </div>
-</div>
-<tr class="t-dcl-sep">
-  <td></td>
-  <td></td>
-  <td></td>
-</tr>
-<p>
-  The <code>push_back</code> method adds a value to the back of the deque if it is not already present. This ensures that all entries in the deque remain unique.
+            <p>
+  Constructs a new deque_of_unique from a variety of data sources.
 </p>
-<ul class="numbered-list">
-  <li>1) The new element is initialized as a copy of <code>value</code>.</li>
-  <li>2) <code>value</code> is moved into the new element.</li>
+<ul>
+    <li class="numbered-list">1) The default constructor. Constructs an empty deque_of_unique.</li>
+    <li class="numbered-list">2) Constructs a deque_of_unique with the contents of the range
+        <span style="display: inline-block;"><code>[</code><span class="t-c"><span class="mw-geshi cpp source-cpp">first</span></span><code>,&nbsp;</code><span class="t-c"><span class="mw-geshi cpp source-cpp">last</span></span><code>)</code></span>
+    </li>
+    <li class="numbered-list">3) Equivalent to <span class="t-c"><span class="mw-geshi cpp source-cpp">deque_of_unique<span class="br0">(</span>il.<span class="me1">begin</span><span class="br0">(</span><span class="br0">)</span>, il.<span class="me1">end</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span></span></span>.
+    </li>
+    <li class="numbered-list">4) The copy constructor. Constructs a <code>deque_of_unique</code> with the contents of <span class="t-c"><span class="mw-geshi cpp source-cpp">other</span></span>.
+    </li>
+    </li>
+    <li class="numbered-list">4) The move constructor. Constructs a <code>deque_of_unique</code> with the contents of <span class="t-c"><span class="mw-geshi cpp source-cpp">other</span></span>.
+    </li>
 </ul>
-<p>
-  All iterators (including the <code>end()</code> iterator) are invalidated. No references are invalidated.
-</p>
+
     
 <h3>
   <span class="mw-headline">
@@ -78,28 +104,8 @@ layout: default
             <td> - </td>
             <td>The value of the element to append.</td>
         </tr>
-        <tr class="highlight-row">
-            <td colspan="3"><strong>Type Requirements</strong></td>
-        </tr>
-        <tr class="t-par">
-            <td colspan="3"> -&nbsp;T must meet the requirements of <span style="font-family: Georgia, 'DejaVu Serif', serif; font-style: italic";>CopyAssignable</span> in order to use overload (1).</td>
-        </tr>
-        <tr class="t-par">
-                <td colspan="3"> -&nbsp;T must meet the requirements of <span style="font-family: Georgia, 'DejaVu Serif', serif; font-style: italic";>MoveAssignable</span> in order to use overload (2).</td>
-            </tr>
     </tbody>
 </table>
-<h3>
-  <span class="mw-headline">
-    Return Value
-  </span>
-</h3>
-<table class="t-par-begin">
-    <tbody>
-        <tr class="highlight-row">
-            <td colspan="3">
-              Returns <code>'true'</code> if the appendage is successful, and <code>'false'</code> otherwise.
-            </td>
-        </tr>
-    </tbody>
-</table>
+        </div>
+    </div>
+</div>

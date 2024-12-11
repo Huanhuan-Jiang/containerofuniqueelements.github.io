@@ -218,6 +218,31 @@ html {
      background-color: transparent;
      border-collapse: collapse;
 }
+ .kw964{
+    font-variant-ligatures: no-common-ligatures;
+    direction: ltr;
+    border-spacing: 0;
+    font-size: 1.0em;
+    font-family: DejaVuSansMono,"DejaVu Sans Mono",courier,monospace !important;
+    white-space: nowrap;
+    color: #003080;
+    line-height: 1.1em;
+    margin: 0;
+    padding: 0;
+ }
+  .me2{
+    font-variant-ligatures: no-common-ligatures;
+    direction: ltr;
+    border-spacing: 0;
+    font-size: 1.0em;
+    font-family: DejaVuSansMono,"DejaVu Sans Mono",courier,monospace !important;
+    white-space: nowrap;
+    color: #003080;
+    line-height: 1.1em;
+    margin: 0;
+    padding: 0;
+ }
+    
  tr.rowtop * {
      line-height: 1em;
     /* Set line height for all elements in rowtop */
@@ -530,23 +555,29 @@ html {
     /* Set border color */
      width: 100%;
 }
- .t-par-begin {
-    border-spacing: 0;
+.t-par-begin {
+    border-spacing: 0
 }
- .t-par td {
-     padding: 8px;
+
+.t-par > td {
+    padding: 0.5em 1em 0 0;
+    vertical-align: top
 }
- .t-par td:first-child {
-     text-align: right;
-    /* Align first cell text to the right */
+
+.t-par > td:nth-child(1) {
+    white-space: nowrap;
+    text-align: right;
+    font-weight: bold;
+    font-family: DejaVuSansMono,"DejaVu Sans Mono",courier,monospace
 }
- .t-par td:nth-child(2) {
-     text-align: center;
-    /* Center align second cell text */
+
+.t-par > td:nth-child(3) {
+    width: 100%
 }
- .t-par td:last-child {
-     text-align: left;
-    /* Align last cell text to the left */
+
+.t-par-hitem > td {
+    font-weight: bold;
+    padding: 0.8em 0 0.3em 1em
 }
  .t-par-req {
      padding: 0.5em 1em 0 0;
@@ -650,9 +681,26 @@ html {
      display: inline 
 }
 
-.t-li1 >div {
-    padding-left: 3em
+.t-li1{
+    font-variant-ligatures: no-common-ligatures;
+    font-family: DejaVuSans, "DejaVu Sans", arial, sans-serif;
+    font-size: 16px;
+    color: black;
+    direction: ltr;
+    display: inline-block;
+    text-align: right;
+    text-indent: 1em;
 }
+
+ .t-c {
+    background-color: transparent;
+    background-color: rgba(0,0,0,0.031);
+    border: 1px solid #D6D6D6;
+    border-radius: 3px;
+    margin: 0 2px;
+    padding: 0 2px;
+    display: inline-block;
+} 
 
 .t-li {
      display: inline-block;
