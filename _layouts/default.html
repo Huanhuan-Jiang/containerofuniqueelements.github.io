@@ -24,12 +24,10 @@
               <ul class="tab-container">
                 <li class="tab-item {% if page.url == '/' %}active{% endif %}">
                   <span>
-                    <a href="/">Page</a>
+                    <a href="{{ '/' | relative_url }}">Page</a>
                   </span>
                 </li>
-                <li
-                  class="tab-item {% if page.url == '/_docs/deque_of_unique/index.html' %}active{% endif %}"
-                >
+                <li class="tab-item {% if page.url == '/_docs/deque_of_unique/index.html' %}active{% endif %}">
                   <span>
                     <a href="{{ '/_docs/deque_of_unique/index.html' | relative_url }}">deque_of_unique</a>
                   </span>
