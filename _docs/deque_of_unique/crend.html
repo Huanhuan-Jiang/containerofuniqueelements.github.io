@@ -6,25 +6,25 @@ layout: default
     <div id="content">
         <div id="bodyContent">
             <h1 id="firstHeading" class="firstHeading">
-                <span style="font-size:0.7em; line-height:130%;">containderofuniqueentries::deque_of_unique::</span><span>&nbsp;cbegin&nbsp;</span>
+                <span style="font-size:0.7em; line-height:130%;">containderofuniqueentries::deque_of_unique::</span><span>&nbsp;crend&nbsp;</span>
             </h1>
             <div, id="mw-content-text", lang="en", dir="ltr", class="mw-content-ltr">
                 <table class="t-dcl-begin">
                     <tbody>
                         <tr class="t-dcl">
-                            <td> <div><span class="mw-geshi cpp source-cpp">const_iterator cbegin<span class="br0">(</span><span class="br0">)</span> <span class="kw4">const</span><span class="kw1"> noexcept</span><span class="sy4">;</span></span></div></td>
+                            <td> <div><span class="mw-geshi cpp source-cpp">const_reverse_iterator crend<span class="br0">(</span><span class="br0">)</span> <span class="kw4">const</span><span class="kw1"> noexcept</span><span class="sy4">;</span></span></div></td>
                         </tr>
                         <tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
                     </tbody>
                 </table>
               </div>
             <div, id="mw-content-text", lang="en", dir="ltr", class="mw-content-ltr">
-                <p>Returns an iterator to the first element of the deque_of_unique.
+                <p>Returns a reverse iterator to the first element of the reversed deque_of_unique. It corresponds to the last element of the non-reversed deque_of_unique.
                 </p>
-                <p>If the deque_of_unique is empty, the returned iterator will be equal to end().
+                <p>If the deque_of_unique is empty, the returned iterator is equal to rend().
                 </p>
                 <div class="t-image">
-                    <p><img alt="range-begin-end.svg" src="https://upload.cppreference.com/mwiki/images/1/1b/range-begin-end.svg" width="546" height="157">
+                    <p><img alt="range-rbegin-rend.svg" src="https://upload.cppreference.com/mwiki/images/3/39/range-rbegin-rend.svg" width="589" height="250">
                     </p>
                 </div>
             </div>

@@ -1,0 +1,96 @@
+---
+layout: default
+---
+
+<div id="cpp-content-base">
+    <div id="content">
+        <div id="bodyContent">
+            <h1 id="firstHeading" class="firstHeading">
+                <span style="font-size:0.7em; line-height:130%;">containderofuniqueentries::deque_of_unique::</span><span>&nbsp;insert&nbsp;</span>
+            </h1>
+            <div, id="mw-content-text", lang="en", dir="ltr", class="mw-content-ltr">
+                <table class="t-dcl-begin"><tbody>
+                    <tr class="t-dcl">
+                    <td><div><span class="mw-geshi cpp source-cpp">iterator insert<span class="br0">(</span> const_iterator pos, <span class="kw4">const</span> T<span class="sy3">&amp;</span> value <span class="br0">)</span><span class="sy4">;</span></span></div></td>
+                    <td> (1)</td>
+                    <td class="t-dcl-nopad"></td>
+                    </tr>
+                    <tr class="t-dcl">
+                    <td><div><span class="mw-geshi cpp source-cpp">iterator insert<span class="br0">(</span> const_iterator pos, T<span class="sy3">&amp;&amp;</span> value <span class="br0">)</span><span class="sy4">;</span></span></div></td>
+                    <td> (2)</td>
+                    </tr>
+                    <tr class="t-dcl">
+                    <td><div><span id="Version_4"></span><span class="mw-geshi cpp source-cpp"><span class="kw1">template</span><span class="sy1">&lt;</span> <span class="kw1">class</span> input_it <span class="sy1">&gt;</span><br>
+                    iterator insert<span class="br0">(</span> const_iterator pos, input_it first, input_it last <span class="br0">)</span><span class="sy4">;</span></span></div></td>
+                    <td> (3)</td>
+                    <td class="t-dcl-nopad"></td>
+                    </tr>
+                    <tr class="t-dcl">
+                    <td><div><span class="mw-geshi cpp source-cpp">iterator insert<span class="br0">(</span> const_iterator pos, <a href="http://en.cppreference.com/w/cpp/utility/initializer_list"><span class="kw964">std::<span class="me2">initializer_list</span></span></a><span class="sy1">&lt;</span>T<span class="sy1">&gt;</span> ilist <span class="br0">)</span><span class="sy4">;</span></span></div></td>
+                    <td> (4)</td>
+                    </tr>
+                    <tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
+                    </tbody></table>
+              </div>
+            <div, id="mw-content-text", lang="en", dir="ltr", class="mw-content-ltr">
+                <p>Inserts elements at the specified location in the container.
+                </p>
+                <div class="t-li1"><span class="t-li">1)</span> Inserts a copy of <span class="t-c"><span class="mw-geshi cpp source-cpp">value</span></span> before <span class="t-c"><span class="mw-geshi cpp source-cpp">pos</span></span>.</div>
+                <div class="t-li1"><span class="t-li">2)</span> Inserts <span class="t-c"><span class="mw-geshi cpp source-cpp">value</span></span> before <span class="t-c"><span class="mw-geshi cpp source-cpp">pos</span></span>, possibly using move semantics. </div>
+                <div class="t-li1"><span class="t-li">3)</span><span class="t-li" style="display: none;">4)</span><span class="t-li" style="display: none;">3)</span> Inserts elements from range <span style="display: inline-block;"><code>[</code><span class="t-c"><span class="mw-geshi cpp source-cpp">first</span></span><code>,&nbsp;</code><span class="t-c"><span class="mw-geshi cpp source-cpp">last</span></span><code>)</code></span> before <span class="t-c"><span class="mw-geshi cpp source-cpp">pos</span></span>. </div>
+                <div class="t-li1"><span class="t-li"></span> If <span class="t-c"><span class="mw-geshi cpp source-cpp">first</span></span> and <span class="t-c"><span class="mw-geshi cpp source-cpp">last</span></span> are iterators into <span class="t-c"><span class="mw-geshi cpp source-cpp"><span class="sy2">*</span>this</span></span>, the behavior is undefined. </div>
+                <div class="t-li1"><span class="t-li">4)</span> Inserts elements from initializer list <span class="t-c"><span class="mw-geshi cpp source-cpp">ilist</span></span> before <span class="t-c"><span class="mw-geshi cpp source-cpp">pos</span></span>.</div>
+            </div>
+            <h3><span class="editsection">[]</span> <span class="mw-headline" id="Parameters">Parameters</span></h3>
+            <table class="t-par-begin">
+
+
+                <tbody><tr class="t-par">
+                <td> pos
+                </td>
+                <td> -
+                </td>
+                <td> iterator before which the content will be inserted (<span class="t-c"><span class="mw-geshi cpp source-cpp">pos</span></span> may be the <a href="/w/cpp/container/deque/end" title="cpp/container/deque/end"><code>end()</code></a> iterator)
+                </td></tr>
+                <tr class="t-par">
+                <td> value
+                </td>
+                <td> -
+                </td>
+                <td> element value to insert
+                </td></tr>
+                <tr class="t-par">
+                <td> first, last
+                </td>
+                <td> -
+                </td>
+                <td> the range of elements to insert, cannot be iterators into container for which insert is called
+                </td></tr>
+                <tr class="t-par">
+                <td> ilist
+                </td>
+                <td> -
+                </td>
+                <td> <span class="t-lc">std::initializer_list</a></span> to insert the values from
+                </td></tr>
+                <tr class="t-par-hitem">
+                <td colspan="3"> Type requirements
+                </td></tr>
+                <tr class="t-par-req">
+                <td colspan="3"> -<div class="spacer"></div><code>T</code> must meet the requirements of <a href="/w/cpp/named_req/CopyAssignable" title="cpp/named req/CopyAssignable"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">CopyAssignable</span></a> and <a href="/w/cpp/named_req/CopyInsertable" title="cpp/named req/CopyInsertable"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">CopyInsertable</span></a> in order to use overload (1).
+                </td></tr>
+                <tr class="t-par-req">
+                <td colspan="3"> -<div class="spacer"></div><code>T</code> must meet the requirements of <a href="/w/cpp/named_req/MoveAssignable" title="cpp/named req/MoveAssignable"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">MoveAssignable</span></a> and <a href="/w/cpp/named_req/MoveInsertable" title="cpp/named req/MoveInsertable"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">MoveInsertable</span></a> in order to use overload (2).
+                </td></tr>
+                <tr class="t-par-req">
+                <td colspan="3"> -<div class="spacer"></div><code>T</code> must meet the requirements of <a href="/w/cpp/named_req/EmplaceConstructible" title="cpp/named req/EmplaceConstructible"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">EmplaceConstructible</span></a> in order to use overloads (3,4).
+                </td></tr>
+                <tr class="t-par-req">
+                <td colspan="3"> -<div class="spacer"></div><code>T</code> must meet the requirements of <a href="/w/cpp/named_req/Swappable" title="cpp/named req/Swappable"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">Swappable</span></a>, <a href="/w/cpp/named_req/MoveAssignable" title="cpp/named req/MoveAssignable"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">MoveAssignable</span></a>, <a href="/w/cpp/named_req/MoveConstructible" title="cpp/named req/MoveConstructible"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">MoveConstructible</span></a> and <a href="/w/cpp/named_req/MoveInsertable" title="cpp/named req/MoveInsertable"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">MoveInsertable</span></a> in order to use overloads (3,4). 
+                </td></tr></tbody>
+            </table>
+            <h3><span class="mw-headline" id="Return_value">Return value</span></h3>
+            <p>(none)</p>
+        </div>
+    </div>
+</div>

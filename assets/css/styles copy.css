@@ -1,0 +1,902 @@
+html {
+  font-variant-ligatures: no-common-ligatures;
+}
+title {
+  display: none;
+}
+.maindsc {
+  margin: 0.5em 2em 0.5em 2em;
+  /* Top, Right, Bottom, Left */
+}
+.libdsc {
+  margin: 0.5em 2em 0.5em 2em;
+  /* Top, Right, Bottom, Left */
+}
+body {
+  height: 100%;
+  margin: 8px;
+  padding: 0;
+  font-family: DejaVuSans, "DejaVu Sans", arial, sans-serif;
+  font-size: 16px;
+}
+#firstHeading {
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 0.1em;
+  line-height: 1.2em;
+  font-size: 1.6em;
+  padding-bottom: 0;
+}
+div {
+  display: block;
+  unicode-bidi: isolate;
+}
+div#cpp-content-base {
+  background: white;
+}
+div#cpp-footer-base {
+  border-top: 1px solid silver;
+  background: none repeat scroll 0 0 #f0f0f0;
+  direction: ltr;
+}
+div#content {
+  color: black;
+  direction: ltr;
+  padding: 0.5em;
+}
+div#bodyContent {
+  line-height: 1.2em;
+  position: static;
+}
+div#mw-head {
+  width: 100%;
+}
+div#cpp-head-first-base {
+  border-bottom: 1px solid #eee;
+  background: white;
+}
+div#cpp-head-first {
+  padding: 0.1em 0.1em 0.1em 1em;
+  height: 22px;
+}
+table {
+  width: 100%;
+  font-size: 100%;
+  display: table;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  text-indent: initial;
+  unicode-bidi: isolate;
+  border-spacing: 2px;
+  border-color: #ebeaea;
+  border-left: none;
+  border-right: none;
+}
+.t-dcl-begin {
+  width: 100%;
+  display: block;
+  padding: 0.5em 0;
+  border-spacing: 0;
+  border-color: inherit;
+}
+.t-dcl {
+  display: table-row;
+  vertical-align: inherit;
+  unicode-bidi: isolate;
+  border-color: inherit;
+}
+.t-dcl-header > td:nth-child(1) > div {
+  margin-left: 2em;
+  font-size: 0.8em;
+}
+.t-dcl-h > td:nth-child(1) > div {
+  margin-left: 2em;
+  padding-top: 0.7em;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+.t-dcl > td:nth-child(1) {
+  padding: 0.3em 2em 0.2em 1em;
+  font-size: 1em;
+}
+.t-dcl > td:nth-child(1) > div p,
+.t-dcl > td:nth-child(1) > div span {
+  line-height: 1.1em;
+  margin: 0;
+  padding: 0;
+}
+.t-dcl > td:nth-child(2),
+.t-dcl-rev-aux > td:nth-child(2) {
+  font-size: 0.8em;
+  padding-right: 1.5em;
+}
+.t-dcl > td:nth-child(3),
+.t-dcl-rev-aux > td:nth-child(3) {
+  padding: 0;
+}
+.t-dcl,
+.t-dsc-header {
+  border-bottom: 1px solid #d3d3d3;
+  /* Add bottom border for horizontal lines */
+}
+.t-dcl-sep > td {
+  padding: 0;
+}
+.t-dsc-begin {
+  max-width: 60em;
+  border-spacing: 0;
+  border-color: inherit;
+}
+span.mw-geshi {
+  white-space: nowrap;
+}
+.cpp.source-cpp {
+  font-family: monospace;
+}
+.source-cpp {
+  line-height: normal;
+}
+p {
+  margin-top: 0.4em 0 0.5em 0;
+  margin-bottom: 0;
+}
+.kw704 {
+  line-height: 1.1em;
+  margin: 0;
+  padding: 0;
+  color: #003080;
+}
+.cpp.source-cpp .kw4 {
+  color: #0000ff;
+}
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+  border-color: inherit;
+}
+td {
+  display: table-cell;
+  vertical-align: inherit;
+  unicode-bidi: isolate;
+}
+td:first-child {
+  width: 0%;
+  line-height: 1.2em;
+  padding: 0.2em 0 0.25em 0.75em;
+  white-space: nowrap;
+}
+td:last-child {
+  line-height: 1.1em;
+  padding-left: 0.75em;
+  white-space: normal;
+}
+.t-dsc-hitem tr {
+  display: table-row;
+  vertical-align: inherit;
+  unicode-bidi: isolate;
+  border-color: inherit;
+}
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  unicode-bidi: isolate;
+  border-color: inherit;
+}
+.t-dsc-hitem td {
+  border-top: 1px solid #cccccc;
+  font-weight: bold;
+  line-height: 1.1em;
+  padding: 0.2em 0 0.25em 0.75em;
+  white-space: nowrap;
+}
+.t-dsc {
+  display: table-row;
+  vertical-align: inherit;
+  unicode-bidi: isolate;
+  border-color: inherit;
+}
+.t-dsc td:first-child {
+  width: 0%;
+  line-height: 1.2em;
+  padding: 0.2em 0 0.25em 0.75em;
+  white-space: nowrap;
+}
+.t-dsc td:last-child {
+  line-height: 1.1em;
+  padding-left: 0.75em;
+  white-space: normal;
+}
+.t-dsc,
+.t-dsc-hitem td {
+  border-top: 1px solid #cccccc;
+}
+.t-dsc-header {
+  padding: 0;
+  font-size: 0.8em;
+  line-height: 1em;
+}
+.mainpagetable {
+  width: 50%;
+  white-space: nowrap;
+  margin: 0 3em;
+  background-color: transparent;
+  border-collapse: collapse;
+}
+.kw964 {
+  font-variant-ligatures: no-common-ligatures;
+  direction: ltr;
+  border-spacing: 0;
+  font-size: 1em;
+  font-family: DejaVuSansMono, "DejaVu Sans Mono", courier, monospace !important;
+  white-space: nowrap;
+  color: #003080;
+  line-height: 1.1em;
+  margin: 0;
+  padding: 0;
+}
+.me2 {
+  font-variant-ligatures: no-common-ligatures;
+  direction: ltr;
+  border-spacing: 0;
+  font-size: 1em;
+  font-family: DejaVuSansMono, "DejaVu Sans Mono", courier, monospace !important;
+  white-space: nowrap;
+  color: #003080;
+  line-height: 1.1em;
+  margin: 0;
+  padding: 0;
+}
+
+tr.rowtop * {
+  line-height: 1em;
+  /* Set line height for all elements in rowtop */
+}
+tr.row {
+  direction: ltr;
+  /* Set direction for row */
+}
+.mainpagetable tr.rowtop td {
+  border-top: 1px solid silver;
+  /* Top border for rowtop cells */
+  background: #f8f8f8;
+  /* Background color for rowtop */
+}
+.mainpagetable tr.row td {
+  border-bottom: 1px solid silver;
+  /* Bottom border for row cells */
+  padding: 0.5em;
+  /* Padding inside row cells */
+}
+a:visited {
+  color: #0b0080;
+}
+a {
+  text-decoration: none;
+  color: #0645ad;
+  background: none;
+}
+a {
+  text-decoration: none;
+  color: #0645ad;
+  background: none;
+}
+a:visited {
+  color: #0b0080;
+}
+a:active {
+  color: #faa700;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+.numbered-list {
+  list-style-type: none;
+  /* Remove bullets */
+  padding-left: 0;
+  /* Remove default padding */
+}
+.numbered-list li {
+  margin-bottom: 5px;
+  /* Space between list items */
+}
+.body-content {
+  margin: 20px;
+  line-height: 1.2em;
+  position: static;
+}
+.kw {
+  color: #000fff;
+  /* Keyword color */
+  font-weight: bold;
+}
+.kw1 {
+  color: #000fff;
+  /* Keyword color */
+}
+.br0 {
+  color: #008000;
+  /* Bracket color */
+}
+.sy1 {
+  color: #000080;
+}
+.sy3 {
+  color: #000040;
+  /* Symbol color */
+}
+.sy4 {
+  color: #008080;
+  /* Another symbol color */
+}
+.copy-assignable,
+.move-assignable {
+  font-family: Georgia, "DejaVu Serif", serif;
+  /* Font family */
+  font-style: italic;
+  /* Italic style */
+  color: #333;
+  /* Text color (you can adjust this) */
+  background-color: #f9f9f9;
+  /* Optional: background color */
+  padding: 4px 8px;
+  /* Optional: padding for better appearance */
+  border-radius: 4px;
+  /* Optional: rounded corners */
+}
+h3 {
+  padding: 1.1em 0 0.2em 0.75em;
+}
+h3 .mw-headline {
+  font-size: 132%;
+}
+.editsection {
+  display: none;
+}
+h3 .editsection {
+  font-size: 76%;
+  font-weight: normal;
+}
+.editsection {
+  float: right;
+  margin-left: 5px;
+}
+h4 {
+  font-size: 1.2em;
+  /* Slightly larger font for headings */
+  margin-top: 20px;
+  /* Space above headings */
+}
+h3 .headline {
+  font-size: 132%;
+}
+h4 + p {
+  margin-top: 5px;
+  /* Space above paragraphs following headings */
+}
+h4 + ol {
+  margin-top: 5px;
+  /* Space above lists following headings */
+}
+h1,
+h3,
+h4,
+h5,
+h6 {
+  color: black;
+  background: none;
+  font-weight: normal;
+  margin: 0;
+  overflow: hidden;
+  padding-top: 0.5em;
+  padding-bottom: 0.17em;
+  border-bottom: 1px solid #aaa;
+  width: auto;
+}
+h2 {
+  color: #003366;
+  /* Dark gray color for better readability */
+  font-weight: normal;
+  /* Normal font weight */
+  margin: 1em 2em 2em 1em;
+  /* Adds vertical margins (top and bottom) */
+  overflow: hidden;
+  /* Prevents overflow */
+  padding-top: 0.5em;
+  /* Padding above the text */
+  padding-bottom: 0.17em;
+  /* Padding below the text */
+  border-bottom: 1px solid #aaa;
+  /* Light gray bottom border */
+  width: auto;
+  /* Auto width */
+  transition: color 0.3s ease;
+  /* Smooth transition for color changes */
+}
+h5 {
+  font-size: 100%;
+}
+h3,
+h4,
+h5,
+h6 {
+  border-bottom: none;
+  font-weight: bold;
+}
+div#cpp-head-first {
+  padding: 0.1em 0.1em 0.1em 1em;
+  height: 22px;
+}
+div#cpp-head-first,
+div#cpp-head-second,
+div#content,
+div#footer {
+  margin: 0 auto;
+  position: relative;
+  width: 780px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+div#cpp-head-second {
+  height: 40px;
+}
+div#cpp-head-tools-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+div.vectorTabs {
+  float: left;
+  height: 2.5em;
+}
+div.vectorTabs ul {
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+  unicode-bidi: isolate;
+}
+div.vectorTabs:nth-child(1) {
+  background-position: bottom left;
+  padding-left: 1px;
+}
+div#cpp-head-second-base {
+  background: white;
+  background-position: bottom left;
+  background-repeat: repeat-x;
+  background: linear-gradient(to bottom, white, #ebe8e8e1);
+  /* White at the top, light grey at the bottom */
+  transition: background 0.5s ease;
+  /* Transition for hover effect */
+}
+.fade-background {
+  background-color: #fff6db;
+  /* Initial background color */
+  transition: background-color 4s ease;
+  /* Duration and easing function */
+}
+.fade-background:hover {
+  background-color: white;
+  /* Final background color on hover */
+}
+div#mw-head h5 {
+  margin: 0;
+  padding: 0;
+}
+.parameters-section,
+.type-requirements-section,
+.return-value-section {
+  margin-top: 20px;
+  /* Space above each section */
+}
+.parameters-section h4,
+.type-requirements-section h4,
+.return-value-section h4 {
+  font-size: 1.2em;
+  /* Slightly larger font for headings */
+  margin-bottom: 10px;
+  /* Space below headings */
+  font-weight: bold;
+}
+.parameters-section ul,
+.type-requirements-section ul {
+  margin-left: 20px;
+  /* Indent unordered lists */
+}
+.parameters-section li,
+.type-requirements-section li {
+  margin-bottom: 5px;
+  /* Space between list items */
+}
+.t-par-hitem > td {
+  font-weight: bold;
+  padding: 0.8em 0 0.3em 1em;
+}
+.return-value-section p {
+  margin-top: 5px;
+  /* Space above paragraph in return value section */
+}
+.dsc-table-begin {
+  max-width: 60em;
+  border-spacing: 0;
+}
+.dsc-table {
+  width: 50%;
+  /* Full width */
+  border-collapse: collapse;
+  /* Collapse borders */
+  margin: 20px 0;
+  /* Space above and below the table */
+}
+.dsc-table-begin tbody tr {
+  border-bottom: 1px solid #ddd;
+  /* Bottom border for each row */
+}
+.dsc-table td {
+  vertical-align: top;
+  /* Align text to the top */
+}
+.dsc-table-begin .t-par td {
+  padding: 8px;
+}
+.dsc-table-begin .t-par td:first-child {
+  text-align: left;
+}
+.dsc-table-begin .t-par td:last-child {
+  text-align: left;
+}
+.par-table-begin {
+  display: table;
+  /* Use table display */
+  border-collapse: separate;
+  /* Use separate borders */
+  box-sizing: border-box;
+  /* Include padding and border in element's total width and height */
+  text-indent: initial;
+  /* Reset text indentation */
+  unicode-bidi: isolate;
+  /* Isolate the text direction */
+  border-spacing: 2px;
+  /* Space between borders of adjacent cells */
+  border-color: gray;
+  /* Set border color */
+  width: 100%;
+}
+.t-par-begin {
+  border-spacing: 0;
+}
+
+.t-par > td {
+  padding: 0.5em 1em 0 0;
+  vertical-align: top;
+}
+
+.t-par > td:nth-child(1) {
+  white-space: nowrap;
+  text-align: right;
+  font-weight: bold;
+  font-family: DejaVuSansMono, "DejaVu Sans Mono", courier, monospace;
+}
+
+.t-par > td:nth-child(3) {
+  width: 100%;
+}
+
+.t-par-hitem > td {
+  font-weight: bold;
+  padding: 0.8em 0 0.3em 1em;
+}
+.t-par-req {
+  padding: 0.5em 1em 0 0;
+  /* Padding inside cells */
+}
+.t-par-req td {
+  display: table-cell;
+  vertical-align: inherit;
+  unicode-bidi: isolate;
+}
+table code {
+  background-color: transparent;
+}
+code {
+  background-color: #f8f8f8;
+  /* Light background for code */
+  border-radius: 3px;
+  /* Rounded corners */
+  padding: 2px 4px;
+  /* Padding around code text */
+  font-family: monospace;
+  /* Monospace font for code */
+}
+.tab-container {
+  list-style-type: none;
+  /* Remove default bullet points */
+  padding: 0;
+  /* Remove default padding */
+  margin: 0;
+  /* Remove default margin */
+  display: flex;
+  /* Use flexbox to arrange items horizontally */
+}
+.tab-item {
+  background-color: #e5e9f7;
+  /* Light grey background for non-selected tabs */
+  margin-right: 10px;
+  /* Add separation between tabs */
+  padding: 10px 15px;
+  /* Add some padding for better appearance */
+  border-radius: 5px;
+  /* Optional: rounded corners */
+}
+.tab-item.active {
+  background-color: white;
+  /* White background for the selected tab */
+}
+.tab-item a {
+  text-decoration: none;
+  /* Remove underline from links */
+  color: #000;
+  /* Set link color */
+}
+.tab-item:hover {
+  background-color: #b0b0b0;
+  /* Slightly darker grey on hover for non-selected tabs */
+}
+h1,
+h2 {
+  margin-bottom: 0.6em;
+}
+h3,
+h4,
+h5 {
+  margin-bottom: 0.3em;
+}
+h5 {
+  font-size: 100%;
+}
+.t-dsc-hitem > td {
+  font-weight: bold;
+  line-height: 1.1em;
+  padding: 0.2em 0 0.25em 0.75em;
+  white-space: nowrap;
+}
+.t-dsc > td,
+.t-dsc-hitem > td {
+  border-top: 1px solid #cccccc;
+}
+.t-dsc-header > td {
+  padding: 0;
+  font-size: 0.8em;
+  line-height: 1em;
+}
+.t-dsc-header > td:nth-child(1) > div {
+  margin-left: 2em;
+}
+.t-dsc-member-div > div {
+  padding: 0;
+  display: inline-table;
+  vertical-align: middle;
+}
+.t-dsc-member-div > div:nth-child(1) {
+  font-weight: bold;
+  font-family: DejaVuSansMono, "DejaVu Sans Mono", courier, monospace;
+}
+.t-dsc-member-div > div:nth-child(2) {
+  padding-left: 0.2em;
+}
+.t-dsc-member-nobold-div > div:nth-child(1),
+.t-dsc-member-nobold-div > div:nth-child(1) strong.selflink {
+  font-weight: normal;
+  font-family: DejaVuSans, "DejaVu Sans", arial, sans-serif;
+}
+.t-tr-text {
+  display: inline;
+}
+
+.t-li1 {
+  font-variant-ligatures: no-common-ligatures;
+  font-family: DejaVuSans, "DejaVu Sans", arial, sans-serif;
+  font-size: 16px;
+  color: black;
+  direction: ltr;
+  display: inline-block;
+  text-align: right;
+  text-indent: 1em;
+}
+
+.t-c {
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.031);
+  border: 1px solid #d6d6d6;
+  border-radius: 3px;
+  margin: 0 2px;
+  padding: 0 2px;
+  display: inline-block;
+}
+
+.t-li {
+  display: inline-block;
+  width: 5em;
+  text-align: right;
+}
+.t-lines {
+  display: table;
+}
+.t-lines > span {
+  display: table-row;
+}
+.t-lines > span * {
+  line-height: 1em;
+}
+.t-lines > span:empty:after {
+  content: "\a0";
+}
+.t-cmark {
+  color: #808080;
+  font-size: 0.8em;
+}
+.t-mark,
+.t-mark-rev {
+  color: #008000;
+  font-size: 0.8em;
+}
+.t-mark-rev.t-mark-ts {
+  color: #e06000;
+}
+.wikitable th .t-mark {
+  font-weight: normal;
+}
+.t-dsc-begin {
+  max-width: 60em;
+  border-spacing: 0;
+}
+.t-dsc > td:first-child {
+  width: 0%;
+  line-height: 1.2em;
+  padding: 0.2em 0 0.25em 0.75em;
+  white-space: nowrap;
+}
+.t-dsc > td:last-child {
+  line-height: 1.1em;
+  padding-left: 0.75em;
+  white-space: normal;
+}
+body.ns-10 .t-example-live-link {
+  display: none;
+}
+.t-example .mw-geshi {
+  margin: 0 0 1em 0;
+}
+.t-member {
+  background-color: #f8f8f8;
+  border: 1px solid #aaa;
+  margin: 1em 0 0;
+  overflow: hidden;
+  padding: 0.2em 1em 1em;
+}
+.t-member > h1 {
+  font-size: 1.8em;
+}
+.cpp.source-cpp .de1,
+.cpp.source-cpp .de2 {
+  font: normal normal 1em/1.2em monospace;
+  margin: 0;
+  padding: 0;
+  background: none;
+  vertical-align: top;
+}
+.source-text li,
+.source-text pre {
+  line-height: normal;
+  border: 0px none white;
+}
+.source-cpp {
+  line-height: normal;
+}
+.cpp.source-cpp {
+  font-family: monospace;
+}
+.cpp.source-cpp .ln {
+  width: 1px;
+  text-align: right;
+  margin: 0;
+  padding: 0 2px;
+  vertical-align: top;
+}
+.cpp.source-cpp .li2 {
+  font-weight: bold;
+  vertical-align: top;
+}
+.cpp.source-cpp .kw1 {
+  color: #0000dd;
+}
+.cpp.source-cpp .kw2 {
+  color: #0000ff;
+}
+.cpp.source-cpp .kw3 {
+  color: #0000dd;
+}
+.cpp.source-cpp .kw4 {
+  color: #0000ff;
+}
+.cpp.source-cpp .co1 {
+  color: #909090;
+}
+.cpp.source-cpp .co2 {
+  color: #339900;
+}
+p,
+dd {
+  line-height: 1.2em;
+}
+pre,
+div.mw-geshi {
+  border: 1px solid silver;
+  border-radius: 5px;
+  padding: 1em;
+  margin: 1em 0;
+  width: 55em;
+  background-color: #f9f9f9;
+  overflow: auto;
+}
+.text.source-text .de1,
+.text.source-text .de2 {
+  font: normal normal 1em/1.2em monospace;
+  margin: 0;
+  padding: 0;
+  background: none;
+  vertical-align: top;
+}
+.text.source-text {
+  font-family: monospace;
+}
+tt,
+code,
+pre,
+.mw-geshi,
+.t-lc,
+#wpTextbox1 {
+  font-family: DejaVuSansMono, "DejaVu Sans Mono", courier, monospace !important;
+}
+code,
+table {
+  background-color: transparent;
+}
+pre,
+code,
+tt,
+kbd,
+samp {
+  font-family: monospace, "Courier New";
+}
+pre {
+  padding: 1em;
+  border: 1px dashed #2f6fab;
+  color: black;
+  background-color: #f9f9f9;
+  line-height: 1.3em;
+}
+pre,
+div.mw-geshi {
+  border: 1px solid silver;
+  border-radius: 5px;
+  padding: 1em;
+  margin: 1em 0;
+  width: 55em;
+  background-color: #f9f9f9;
+  overflow: auto;
+}
+.t-mark,
+.t-mark-rev {
+  color: #008000;
+  font-size: 0.8em;
+}
+.method {
+  display: block;
+}
