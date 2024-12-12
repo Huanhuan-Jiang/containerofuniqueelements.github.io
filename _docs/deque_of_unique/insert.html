@@ -11,22 +11,22 @@ layout: default
             <div, id="mw-content-text", lang="en", dir="ltr", class="mw-content-ltr">
                 <table class="t-dcl-begin"><tbody>
                     <tr class="t-dcl">
-                    <td><div><span class="mw-geshi cpp source-cpp">iterator insert<span class="br0">(</span> const_iterator pos, <span class="kw4">const</span> T<span class="sy3">&amp;</span> value <span class="br0">)</span><span class="sy4">;</span></span></div></td>
+                    <td><div><span class="mw-geshi cpp source-cpp"><span class="t-lc">std::pair</span><span class="sy1">&lt;</span>const_iterator, bool<span class="sy1">&gt;</span> insert<span class="br0">(</span> const_iterator pos, <span class="kw4">const</span> T<span class="sy3">&amp;</span> value <span class="br0">)</span><span class="sy4">;</span></span></div></td>
                     <td> (1)</td>
                     <td class="t-dcl-nopad"></td>
                     </tr>
                     <tr class="t-dcl">
-                    <td><div><span class="mw-geshi cpp source-cpp">iterator insert<span class="br0">(</span> const_iterator pos, T<span class="sy3">&amp;&amp;</span> value <span class="br0">)</span><span class="sy4">;</span></span></div></td>
+                    <td><div><span class="mw-geshi cpp source-cpp"><span class="t-lc">std::pair</span><span class="sy1">&lt;</span>const_iterator, bool<span class="sy1">&gt;</span> insert<span class="br0">(</span> const_iterator pos, T<span class="sy3">&amp;&amp;</span> value <span class="br0">)</span><span class="sy4">;</span></span></div></td>
                     <td> (2)</td>
                     </tr>
                     <tr class="t-dcl">
                     <td><div><span id="Version_4"></span><span class="mw-geshi cpp source-cpp"><span class="kw1">template</span><span class="sy1">&lt;</span> <span class="kw1">class</span> input_it <span class="sy1">&gt;</span><br>
-                    iterator insert<span class="br0">(</span> const_iterator pos, input_it first, input_it last <span class="br0">)</span><span class="sy4">;</span></span></div></td>
+                    <span class="mw-geshi cpp source-cpp"><span class="t-lc">std::pair</span><span class="sy1">&lt;</span>const_iterator, bool<span class="sy1">&gt;</span> insert<span class="br0">(</span> const_iterator pos, input_it first, input_it last <span class="br0">)</span><span class="sy4">;</span></span></div></td>
                     <td> (3)</td>
                     <td class="t-dcl-nopad"></td>
                     </tr>
                     <tr class="t-dcl">
-                    <td><div><span class="mw-geshi cpp source-cpp">iterator insert<span class="br0">(</span> const_iterator pos, <a href="http://en.cppreference.com/w/cpp/utility/initializer_list"><span class="kw964">std::<span class="me2">initializer_list</span></span></a><span class="sy1">&lt;</span>T<span class="sy1">&gt;</span> ilist <span class="br0">)</span><span class="sy4">;</span></span></div></td>
+                    <td><div><span class="mw-geshi cpp source-cpp"><span class="mw-geshi cpp source-cpp"><span class="t-lc">std::pair</span><span class="sy1">&lt;</span>const_iterator, bool<span class="sy1">&gt;</span> insert<span class="br0">(</span> const_iterator pos, <a href="http://en.cppreference.com/w/cpp/utility/initializer_list"><span class="kw964">std::<span class="me2">initializer_list</span></span></a><span class="sy1">&lt;</span>T<span class="sy1">&gt;</span> ilist <span class="br0">)</span><span class="sy4">;</span></span></div></td>
                     <td> (4)</td>
                     </tr>
                     <tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
@@ -86,13 +86,27 @@ layout: default
                     </td></tr></tbody>
                 </table>
                 <h3><span class="mw-headline" id="Return_value">Return value</span></h3>
-                <div class="t-li1">
-                    <span class="t-li">1,2)</span><span class="t-li" style="display: none;">1-2)</span><span class="t-li" style="display: none;">1)</span> The function returns a std::pair<span class="sy1">&lt;</span>const_iterator, bool<span class="sy1">&gt;:</span>
-                    <br> -&nbsp;&nbsp;first (const_iterator): pointing to the newly inserted element if successful, or <span class="t-c"><span class="mw-geshi cpp source-cpp">pos</span></span> if insertion fails (value already exists).
-                    <br> -&nbsp;&nbsp;second (bool): true if insertion was successful, or false if insertion failed (value already present).
-                </div>
-                <div class="t-li1"><span class="t-li">3)</span><span class="t-li" style="display: none;">4)</span><span class="t-li" style="display: none;">3)</span> Iterator pointing to the first element inserted, or <span class="t-c"><span class="mw-geshi cpp source-cpp">pos</span></span> if <span class="t-c"><span class="mw-geshi cpp source-cpp">first <span class="sy1">==</span> last</span></span>.</div>
-                <div class="t-li1"><span class="t-li">4)</span> Iterator pointing to the first element inserted, or <span class="t-c"><span class="mw-geshi cpp source-cpp">pos</span></span> if <span class="t-c"><span class="mw-geshi cpp source-cpp">ilist</span></span> is empty.</div>
+                <p>The function returns a std::pair<span class="sy1">&lt;</span>const_iterator, bool.</p>
+                <table class="t-dsc-begin">
+                    <tbody>
+                    <tr class="t-dsc-hitem">
+                        <th></th>
+                        <td> second is true if insertion succeeds </td>
+                        <td> second is false if insertion fails </td>
+                    </tr>
+                    <tr class="t-dsc">
+                        <th>1,2) </th>
+                        <td>&nbsp;pointing to the newly inserted element if successful</td>
+                        <td><span class="t-c"><span class="mw-geshi cpp source-cpp">pos</span></td>
+                    </tr>
+                    <tr class="t-dsc">
+                        <th>3,4) </th>
+                        <td>&nbsp;pointing to the first element inserted</td>
+                        <td><span class="t-c"><span class="mw-geshi cpp source-cpp">pos</span></span>                        </td>
+                    </tr>
+                    <tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
