@@ -39,7 +39,20 @@
     format("truetype");
   font-weight: normal;
 }
+@media screen {
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 1em;
+  }
 
+  body {
+    min-width: 780px;
+    background: none repeat scroll 0 0 #f0f0f0;
+  }
 .toc,
 #toc,
 #p-logo,
@@ -3541,20 +3554,6 @@ sup.reference {
   }
 }
 
-@media screen {
-  html,
-  body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    font-size: 1em;
-  }
-
-  body {
-    min-width: 780px;
-    background: none repeat scroll 0 0 #f0f0f0;
-  }
 
   div#cpp-head-first,
   div#cpp-head-second,

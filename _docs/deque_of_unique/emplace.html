@@ -25,83 +25,85 @@ layout: default
                 <p>The arguments <span class="t-c"><span class="mw-geshi cpp source-cpp">args...</span></span> are forwarded to the constructor as <span class="t-c"><span class="mw-geshi cpp source-cpp"><a href="http://en.cppreference.com/w/cpp/utility/forward"><span class="kw1125">std::<span class="me2">forward</span></span></a><span class="sy1">&lt;</span>Args<span class="sy1">&gt;</span><span class="br0">(</span>args<span class="br0">)</span>...</span></span>. <span class="t-c"><span class="mw-geshi cpp source-cpp">args...</span></span> may directly or indirectly refer to a value in the container.
                 </p>
                 <h3><span class="editsection">[]</span> <span class="mw-headline" id="Parameters">Parameters</span></h3>
-            <table class="t-par-begin">
-
-
-                <tbody><tr class="t-par">
-                <td> pos
-                </td>
-                <td> -
-                </td>
-                <td> iterator before which the new element will be constructed
-                </td></tr>
-                <tr class="t-par">
-                <td> args
-                </td>
-                <td> -
-                </td>
-                <td> arguments to forward to the constructor of the element
-                </td></tr>
-                <tr class="t-par-hitem">
-                <td colspan="3"> Type requirements
-                </td></tr>
-                <tr class="t-par-req">
-                <td colspan="3"> -<div class="spacer"></div><code>T (the container's element type)</code> must meet the requirements of <a href="/w/cpp/named_req/MoveAssignable" title="cpp/named req/MoveAssignable"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">MoveAssignable</span></a>, <a href="/w/cpp/named_req/MoveInsertable" title="cpp/named req/MoveInsertable"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">MoveInsertable</span></a> and <a href="/w/cpp/named_req/EmplaceConstructible" title="cpp/named req/EmplaceConstructible"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">EmplaceConstructible</span></a>.
-                </td></tr></tbody>
-            </table>
-            <table class="t-par-begin">
-                <tbody><tr class="t-par">
-                <td> pos
-                </td>
-                <td> -
-                </td>
-                <td> iterator before which the content will be inserted (<span class="t-c"><span class="mw-geshi cpp source-cpp">pos</span></span> may be the <a href="/w/cpp/container/deque/end" title="cpp/container/deque/end"><code>end()</code></a> iterator)
-                </td></tr>
-                <tr class="t-par">
-                <td> value
-                </td>
-                <td> -
-                </td>
-                <td> element value to insert
-                </td></tr>
-                <tr class="t-par">
-                <td> first, last
-                </td>
-                <td> -
-                </td>
-                <td> the range of elements to insert, cannot be iterators into container for which insert is called
-                </td></tr>
-                <tr class="t-par">
-                <td> ilist
-                </td>
-                <td> -
-                </td>
-                <td> <span class="t-lc">std::initializer_list</span> to insert the values from
-                </td></tr>
-                <tr class="t-par-hitem">
-                <td colspan="3"> Type requirements
-                </td></tr>
-                <tr class="t-par-req">
-                <td colspan="3"> -<div class="spacer"></div><code>T</code> must meet the requirements of <a href="/w/cpp/named_req/CopyAssignable" title="cpp/named req/CopyAssignable"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">CopyAssignable</span></a> and <a href="/w/cpp/named_req/CopyInsertable" title="cpp/named req/CopyInsertable"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">CopyInsertable</span></a> in order to use overload (1).
-                </td></tr>
-                <tr class="t-par-req">
-                <td colspan="3"> -<div class="spacer"></div><code>T</code> must meet the requirements of <a href="/w/cpp/named_req/MoveAssignable" title="cpp/named req/MoveAssignable"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">MoveAssignable</span></a> and <a href="/w/cpp/named_req/MoveInsertable" title="cpp/named req/MoveInsertable"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">MoveInsertable</span></a> in order to use overload (2).
-                </td></tr>
-                <tr class="t-par-req">
-                <td colspan="3"> -<div class="spacer"></div><code>T</code> must meet the requirements of <a href="/w/cpp/named_req/EmplaceConstructible" title="cpp/named req/EmplaceConstructible"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">EmplaceConstructible</span></a> in order to use overloads (3,4).
-                </td></tr>
-                <tr class="t-par-req">
-                <td colspan="3"> -<div class="spacer"></div><code>T</code> must meet the requirements of <a href="/w/cpp/named_req/Swappable" title="cpp/named req/Swappable"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">Swappable</span></a>, <a href="/w/cpp/named_req/MoveAssignable" title="cpp/named req/MoveAssignable"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">MoveAssignable</span></a>, <a href="/w/cpp/named_req/MoveConstructible" title="cpp/named req/MoveConstructible"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">MoveConstructible</span></a> and <a href="/w/cpp/named_req/MoveInsertable" title="cpp/named req/MoveInsertable"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">MoveInsertable</span></a> in order to use overloads (3,4). 
-                </td></tr></tbody>
-            </table>
-            <h3><span class="mw-headline" id="Return_value">Return value</span></h3>
-            <div class="t-li1">
-                <span class="t-li">1,2)</span><span class="t-li" style="display: none;">1-2)</span><span class="t-li" style="display: none;">1)</span> The function returns a std::pair<span class="sy1">&lt;</span>const_iterator, bool<span class="sy1">&gt;:</span>
-                <br> -&nbsp;&nbsp;first (const_iterator): pointing to the newly inserted element if successful, or <span class="t-c"><span class="mw-geshi cpp source-cpp">pos</span></span> if insertion fails (value already exists).
-                <br> -&nbsp;&nbsp;second (bool): true if insertion was successful, or false if insertion failed (value already present).
-            </div>
-            <div class="t-li1"><span class="t-li">3)</span><span class="t-li" style="display: none;">4)</span><span class="t-li" style="display: none;">3)</span> Iterator pointing to the first element inserted, or <span class="t-c"><span class="mw-geshi cpp source-cpp">pos</span></span> if <span class="t-c"><span class="mw-geshi cpp source-cpp">first <span class="sy1">==</span> last</span></span>.</div>
-            <div class="t-li1"><span class="t-li">4)</span> Iterator pointing to the first element inserted, or <span class="t-c"><span class="mw-geshi cpp source-cpp">pos</span></span> if <span class="t-c"><span class="mw-geshi cpp source-cpp">ilist</span></span> is empty.</div>
+                <table class="t-par-begin">
+                    <tbody><tr class="t-par">
+                    <td> pos
+                    </td>
+                    <td> -
+                    </td>
+                    <td> iterator before which the new element will be constructed
+                    </td></tr>
+                    <tr class="t-par">
+                    <td> args
+                    </td>
+                    <td> -
+                    </td>
+                    <td> arguments to forward to the constructor of the element
+                    </td></tr>
+                    <tr class="t-par-hitem">
+                    <td colspan="3"> Type requirements
+                    </td></tr>
+                    <tr class="t-par-req">
+                    <td colspan="3"> -<div class="spacer"></div><code>T (the container's element type)</code> must meet the requirements of <a href="/w/cpp/named_req/MoveAssignable" title="cpp/named req/MoveAssignable"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">MoveAssignable</span></a>, <a href="/w/cpp/named_req/MoveInsertable" title="cpp/named req/MoveInsertable"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">MoveInsertable</span></a> and <a href="/w/cpp/named_req/EmplaceConstructible" title="cpp/named req/EmplaceConstructible"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">EmplaceConstructible</span></a>.
+                    </td></tr></tbody>
+                </table>
+                <table class="t-par-begin">
+                    <tbody><tr class="t-par">
+                    <td> pos
+                    </td>
+                    <td> -
+                    </td>
+                    <td> iterator before which the content will be inserted (<span class="t-c"><span class="mw-geshi cpp source-cpp">pos</span></span> may be the <a href="/w/cpp/container/deque/end" title="cpp/container/deque/end"><code>end()</code></a> iterator)
+                    </td></tr>
+                    <tr class="t-par">
+                    <td> value
+                    </td>
+                    <td> -
+                    </td>
+                    <td> element value to insert
+                    </td></tr>
+                    <tr class="t-par">
+                    <td> first, last
+                    </td>
+                    <td> -
+                    </td>
+                    <td> the range of elements to insert, cannot be iterators into container for which insert is called
+                    </td></tr>
+                    <tr class="t-par">
+                    <td> ilist
+                    </td>
+                    <td> -
+                    </td>
+                    <td> <span class="t-lc">std::initializer_list</span> to insert the values from
+                    </td></tr>
+                    <tr class="t-par-hitem">
+                    <td colspan="3"> Type requirements
+                    </td></tr>
+                    <tr class="t-par-req">
+                    <td colspan="3"> -<div class="spacer"></div><code>T</code> must meet the requirements of <a href="/w/cpp/named_req/CopyAssignable" title="cpp/named req/CopyAssignable"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">CopyAssignable</span></a> and <a href="/w/cpp/named_req/CopyInsertable" title="cpp/named req/CopyInsertable"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">CopyInsertable</span></a> in order to use overload (1).
+                    </td></tr>
+                    <tr class="t-par-req">
+                    <td colspan="3"> -<div class="spacer"></div><code>T</code> must meet the requirements of <a href="/w/cpp/named_req/MoveAssignable" title="cpp/named req/MoveAssignable"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">MoveAssignable</span></a> and <a href="/w/cpp/named_req/MoveInsertable" title="cpp/named req/MoveInsertable"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">MoveInsertable</span></a> in order to use overload (2).
+                    </td></tr>
+                    <tr class="t-par-req">
+                    <td colspan="3"> -<div class="spacer"></div><code>T</code> must meet the requirements of <a href="/w/cpp/named_req/EmplaceConstructible" title="cpp/named req/EmplaceConstructible"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">EmplaceConstructible</span></a> in order to use overloads (3,4).
+                    </td></tr>
+                    <tr class="t-par-req">
+                    <td colspan="3"> -<div class="spacer"></div><code>T</code> must meet the requirements of <a href="/w/cpp/named_req/Swappable" title="cpp/named req/Swappable"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">Swappable</span></a>, <a href="/w/cpp/named_req/MoveAssignable" title="cpp/named req/MoveAssignable"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">MoveAssignable</span></a>, <a href="/w/cpp/named_req/MoveConstructible" title="cpp/named req/MoveConstructible"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">MoveConstructible</span></a> and <a href="/w/cpp/named_req/MoveInsertable" title="cpp/named req/MoveInsertable"><span style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">MoveInsertable</span></a> in order to use overloads (3,4). 
+                    </td></tr></tbody>
+                </table>
+                <h3><span class="mw-headline" id="Return_value">Return value</span></h3>
+                <div class="t-li1">
+                    <span class="t-li">1,2)</span><span class="t-li" style="display: none;">1-2)</span><span class="t-li" style="display: none;">1)</span> The function returns a std::pair<span class="sy1">&lt;</span>const_iterator, bool<span class="sy1">&gt;:</span>
+                    <br> -&nbsp;&nbsp;first (const_iterator): pointing to the newly inserted element if successful, or <span class="t-c"><span class="mw-geshi cpp source-cpp">pos</span></span> if insertion fails (value already exists).
+                    <br> -&nbsp;&nbsp;second (bool): true if insertion was successful, or false if insertion failed (value already present).
+                </div>
+                <div class="t-li1">
+                    <span class="t-li">3)</span><span class="t-li" style="display: none;">4)</span><span class="t-li" style="display: none;">3)</span> Iterator pointing to the first element inserted, or <span class="t-c"><span class="mw-geshi cpp source-cpp">pos</span></span> if <span class="t-c"><span class="mw-geshi cpp source-cpp">first <span class="sy1">==</span> last</span></span>.
+                </div>
+                <div class="t-li1">
+                    <span class="t-li">4)</span> Iterator pointing to the first element inserted, or <span class="t-c"><span class="mw-geshi cpp source-cpp">pos</span></span> if <span class="t-c"><span class="mw-geshi cpp source-cpp">ilist</span></span> is empty.
+                </div>
             </div>    
         </div>
     </div>
