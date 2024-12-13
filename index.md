@@ -4,7 +4,7 @@ layout: default # Use the layout you created for documentation
 
 <div id="cpp-content-base">
     <div id="content">
-        <div id="bodyContent">
+        <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
             <h2>Container of Unique Entries</h2>
             <p class="maindsc">
                 The "Container of Unique Entries" library provides efficient data structures that ensure all entries are unique. 
@@ -12,20 +12,21 @@ layout: default # Use the layout you created for documentation
                 across the collection. This library is ideal for applications where duplicate data entries are not allowed, 
                 ensuring data integrity and performance.
             </p>
-            <table class="mainpagetable" cellspacing="0">
+            <table class="t-rev-begin">
                 <tbody>
-                    <tr class="row">
+                    <tr class="t-rev t-until-cxx17">
                         <td>
-                            <p>
-                                <b>
-                                    <a href="./_docs/deque_of_unique/index.html">
-                                        <span class="large-text">deque_of_unique</span> <!-- Consider using a CSS class instead -->
-                                    </a>
-                                </b>
-                            </p>
-                        </td>
+                                <p>
+                                    <b>
+                                        <a href="./_docs/deque_of_unique/index.html">
+                                            <span class="large-text">deque_of_unique</span> <!-- Consider using a CSS class instead -->
+                                        </a>
+                                    </b>
+                                </p>
+                            </td>
+                        <td></td>
                     </tr>
-                    <tr class="row">
+                    <tr class="t-rev t-since-cxx17">
                         <td>
                             <p>
                                 <b>
@@ -35,6 +36,7 @@ layout: default # Use the layout you created for documentation
                                 </b>
                             </p>
                         </td>
+                        <td></td>
                     </tr>
                 </tbody>
             </table>
