@@ -3,101 +3,126 @@ layout: deque_of_unique_method
 title: constructor
 ---
 
-              <div, id="mw-content-text", lang="en", dir="ltr", class="mw-content-ltr">
-                <table class="t-dcl-begin">
-                  <tbody>
-                    <tr class="t-dcl">
-                      <td>
-                        <div>
-                          <span class="mw-geshi cpp source-cpp">
-                            deque_of_unique<span class="br0">(</span><span class="br0">)</span>
-                            <span class="sy4">:</span>
-                            deque_of_unique<span class="br0">(</span><span class="br0">)</span>
-                            <span class="br0">{</span><span class="br0">}</span>
-                          </span>
-                        </div>
-                      </td>
-                      <td> (1) </td>
-                    </tr>
-                  </tbody>
-                  <tbody>
-                    <tr class="t-dcl">
-                        <td>
-                            <div>
-                                <span class="mw-geshi cpp source-cpp">
-                                    <span class="kw1">template</span><span class="sy1">&lt;</span><span class="kw1">class</span>&nbsp;input_it<span class="sy1">&gt;</span>
-                                    <br>
-                                    deque_of_unique<span class="br0">(</span>&nbsp;input_it first, input_it last
-                                    <span class="br0">)</span><span class="sy4">;</span>
-                                </span>
-                            </div>
-                        </td>
-                        <td> (2) </td>
-                    </tr>
-                  </tbody>
-                  <tbody>
-                    <tr class="t-dcl">
-                        <td>
-                            <div>
-                                <span class="mw-geshi cpp source-cpp">
-                                    deque_of_unique<span class="br0">(</span>
-                                    <span class="kw964">std::<span class="me2">initializer_list</span></span><span class="sy1">&lt;</span>T<span class="sy1">&gt;</span><span class="sy3">&amp;</span>
-                                    init
-                                    <span class="br0">)</span><span class="sy4">;</span>
-                                </span>
-                            </div>
-                        </td>
-                        <td><span>(3)</span></td>
-                    </tr>
-                  </tbody>
-                  <tbody>
-                    <tr class="t-dcl">
-                        <td> 
-                            <div><span class="mw-geshi cpp source-cpp">deque_of_unique<span class="br0">(</span> <span class="kw4">const</span> deque_of_unique<span class="sy3">&amp;</span> other <span class="br0">)</span><span class="sy4">;</span></span></div>
-                        </td>
-                        <td> (4) </td>
-                    </tr>
-                  </tbody>
-                  <tbody>
-                    <tr class="t-dcl t-since-cxx11">
-                        <td> <div><span class="mw-geshi cpp source-cpp">deque_of_unique<span class="br0">(</span> deque_of_unique<span class="sy3">&amp;&amp;</span> other <span class="br0">)</span> <span class="kw1">noexcept</span><span class="sy4">;</span></span></div></td>
-                        <td> (5) </td>
-                        </td>
-                    </tr>
-                    <tr class="t-dcl-sep"><td></td><td></td><td></td></tr>
-                  </tbody>
-                </table>
-                <p>
-                  Constructs a new deque_of_unique from a variety of data sources.
-                </p>
-                <div class="t-li1">
-                    <span class="t-li">1)</span> The default constructor. Constructs an empty deque_of_unique.
-                </div>
-                <div class="t-li1">
-                  <span class="t-li">2)</span> Constructs a deque_of_unique with the contents of the range
-                        <span style="display: inline-block;"><code>[</code><span class="t-c"><span class="mw-geshi cpp source-cpp">first</span></span><code>,&nbsp;</code><span class="t-c"><span class="mw-geshi cpp source-cpp">last</span></span><code>)</code></span>
-                </div>
-                <div class="t-li1">
-                  <span class="t-li">3)</span> Equivalent to <span class="t-c"><span class="mw-geshi cpp source-cpp">deque_of_unique<span class="br0">(</span>il.<span class="me1">begin</span><span class="br0">(</span><span class="br0">)</span>, il.<span class="me1">end</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span></span></span>.
-                </div>
-                <div class="t-li1">
-                  <span class="t-li">4)</span> The copy constructor. Constructs a <code>deque_of_unique</code> with the contents of <span class="t-c"><span class="mw-geshi cpp source-cpp">other</span></span>.
-                </div>
-                <div class="t-li1">
-                  <span class="t-li">5)</span> The move constructor. Constructs a <code>deque_of_unique</code> with the contents of <span class="t-c"><span class="mw-geshi cpp source-cpp">other</span></span>.
-                </div>
-                <h3>
-                  <span class="mw-headline">
-                    Parameters
-                  </span>
-                </h3>
-                <table class="t-par-begin">
-                    <tbody>
-                        <tr class="t-par">
-                            <td><strong>value</strong></td>
-                            <td> - </td>
-                            <td>The value of the element to append.</td>
-                        </tr>
-                    </tbody>
-                </table>
-              </div>
+<table class="t-dcl-begin">
+  <tbody>
+    <tr class="t-dcl">
+      <td>
+        <div>
+          <span class="mw-geshi cpp source-cpp">
+            deque_of_unique<span class="br0">(</span><span class="br0">)</span>
+            <span class="sy4">:</span>
+            deque_of_unique<span class="br0">(</span><span class="br0">)</span>
+            <span class="br0">{</span><span class="br0">}</span>
+          </span>
+        </div>
+      </td>
+      <td>(1)</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr class="t-dcl">
+      <td>
+        <div>
+          <span class="mw-geshi cpp source-cpp">
+            <span class="kw1">template</span><span class="sy1">&lt;</span
+            ><span class="kw1">class</span>&nbsp;input_it<span class="sy1"
+              >&gt;</span
+            >
+            <br />
+            deque_of_unique<span class="br0">(</span>&nbsp;input_it first,
+            input_it last <span class="br0">)</span><span class="sy4">;</span>
+          </span>
+        </div>
+      </td>
+      <td>(2)</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr class="t-dcl">
+      <td>
+        <div>
+          <span class="mw-geshi cpp source-cpp"
+            >deque_of_unique<span class="br0">(</span>
+            <span class="kw4">const</span> deque_of_unique<span class="sy3"
+              >&amp;</span
+            >
+            other <span class="br0">)</span><span class="sy4">;</span></span
+          >
+        </div>
+      </td>
+      <td>(4)</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr class="t-dcl t-since-cxx11">
+      <td>
+        <div>
+          <span class="mw-geshi cpp source-cpp"
+            >deque_of_unique<span class="br0">(</span> deque_of_unique<span
+              class="sy3"
+              >&amp;&amp;</span
+            >
+            other <span class="br0">)</span> <span class="kw1">noexcept</span
+            ><span class="sy4">;</span></span
+          >
+        </div>
+      </td>
+      <td>(5)</td>
+    </tr>
+    <tr class="t-dcl-sep">
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Constructs a new deque_of_unique from a variety of data sources.</p>
+
+<div class="t-li1">
+  <span class="t-li">1)</span> The default constructor. Constructs an empty
+  deque_of_unique.
+</div>
+
+<div class="t-li1">
+  <span class="t-li">2)</span> Constructs a deque_of_unique with the contents of
+  the range
+  <span style="display: inline-block"
+    ><code>[</code
+    ><span class="t-c"><span class="mw-geshi cpp source-cpp">first</span></span
+    ><code>,&nbsp;</code
+    ><span class="t-c"><span class="mw-geshi cpp source-cpp">last</span></span
+    ><code>)</code></span
+  >.
+</div>
+
+<div class="t-li1">
+  <span class="t-li">3)</span> Equivalent to
+  <code
+    >deque_of_unique<span class="br0">(</span>il.<span class="me1">begin</span
+    ><small>(</small><small>)</small>, il.<small>end</small>(<small>)</small
+    ><small>)</small>.</code
+  >.
+</div>
+
+<div class="t-li1">
+  <span class="t-li">4)</span> The copy constructor. Constructs a
+  <code>deque_of_unique</code> with the contents of <code>other</code>.
+</div>
+
+<div class="t-li1">
+  <span class="t-li">5)</span> The move constructor. Constructs a
+  <code>deque_of_unique</code> with the contents of <code>other</code>.
+</div>
+
+<h3><strong>Parameters</strong></h3>
+
+<table class="t-par-begin">
+  <tbody>
+    <tr class="t-par">
+      <td><strong>value</strong></td>
+      <td>-</td>
+      <td>The value of the element to append.</td>
+    </tr>
+  </tbody>
+</table>
