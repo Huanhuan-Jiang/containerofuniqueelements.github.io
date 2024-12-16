@@ -52,3 +52,6 @@ uncss:
     - "#titleBar"
 
 repository: Huanhuan-Jiang/containerofuniqueentries-doc
+
+plugins:
+  - jekyll-last-modified-at

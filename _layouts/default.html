@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" class="client-js">
   <head>
-    <title style="display: none;">{{page.title}}</title>
+    <title style="display: none">{{page.title}}</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Use title from front matter -->
@@ -1063,36 +1063,37 @@
           left: -170px;
           max-width: 150px;
           border-radius: 4px;
-          border: solid 1px hsla(0, 0%, 0%, .1);
+          border: solid 1px hsla(0, 0%, 0%, 0.1);
           background-color: hsl(0, 0%, 98%);
           font-size: 12px;
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
-          Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial,
+            sans-serif;
           line-height: 1.5;
         }
-        
+
         #carbonads a {
           color: inherit;
           text-decoration: none;
         }
-        
+
         #carbonads a:hover {
           color: inherit;
         }
-        
+
         #carbonads span {
           position: relative;
           display: block;
           overflow: hidden;
         }
-        
+
         .carbon-img {
           display: block;
           margin-bottom: 8px;
           max-width: 150px;
           line-height: 1;
         }
-        
+
         .carbon-img img {
           display: block;
           margin: 0 auto;
@@ -1100,24 +1101,33 @@
           width: 150px;
           height: auto;
         }
-        
+
         .carbon-text {
           display: block;
           padding: 0 1em 8px;
         }
-        
+
         .carbon-poweredby {
           display: block;
           padding: 8px 12px;
-          background: repeating-linear-gradient(-45deg, transparent, transparent 5px, hsla(0, 0%, 0%, .025) 5px, hsla(0, 0%, 0%, .025) 10px) hsla(203, 11%, 95%, .4);
+          background: repeating-linear-gradient(
+              -45deg,
+              transparent,
+              transparent 5px,
+              hsla(0, 0%, 0%, 0.025) 5px,
+              hsla(0, 0%, 0%, 0.025) 10px
+            )
+            hsla(203, 11%, 95%, 0.4);
           text-transform: uppercase;
-          letter-spacing: .5px;
+          letter-spacing: 0.5px;
           font-weight: 600;
           font-size: 9px;
           line-height: 1;
         }
-        html { font-variant-ligatures: no-common-ligatures; }
-        </style>
+        html {
+          font-variant-ligatures: no-common-ligatures;
+        }
+      </style>
       <div id="cpp-head-first-base">
         <div id="cpp-head-first">
           <h5><a href="/"> containderofuniqueentries-doc </a></h5>
@@ -1136,14 +1146,10 @@
           <div id="cpp-head-personal">
             <!-- 0 -->
             <div id="p-personal" class="">
-              <span id="pt-createaccount"
-                ></span
-              >
+              <span id="pt-createaccount"></span>
               <div class="menu">
                 <ul>
-                  <li id="pt-login">
-                    
-                  </li>
+                  <li id="pt-login"></li>
                 </ul>
               </div>
             </div>
@@ -1162,7 +1168,7 @@
                 <li id="ca-nstab-main" class="selected">
                   <span
                     ><a
-                      href="{{ '/_docs/deque_of_unique/index' | relative_url }}" 
+                      href="{{ '/_docs/deque_of_unique/index' | relative_url }}"
                       title="deque_of_unique"
                       accesskey="c"
                       >deque_of_unique</a
@@ -1172,7 +1178,7 @@
                 <li id="ca-talk">
                   <span
                     ><a
-                      href="{{ '/_docs/vector_of_unique/index' | relative_url }}" 
+                      href="{{ '/_docs/vector_of_unique/index' | relative_url }}"
                       title="vector_of_unique"
                       accesskey="t"
                       >vector_of_unique</a
@@ -1197,8 +1203,7 @@
           <div id="cpp-head-tools-right">
             <div class="stdrev-select">
               <div>
-                <span class="stdrev-text"> </span
-                >
+                <span class="stdrev-text"> </span>
               </div>
             </div>
             <div id="p-cactions" class="vectorMenu emptyPortlet">
@@ -1290,14 +1295,18 @@
     <div id="cpp-content-base">
       <div id="content">
         <a id="top"></a>
-        <div id="mw-js-message" style="display:none;"></div>
+        <div id="mw-js-message" style="display: none"></div>
         <div id="bodyContent">
-          <div id="siteSub">From https://huanhuan-jiang.github.io/containerofuniqueentries-doc/</div>
+          <div id="siteSub">
+            From https://huanhuan-jiang.github.io/containerofuniqueentries-doc/
+          </div>
           <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-            <div class="t-navbar" style="">
+            <div class="t-navbar">
               <div class="t-navbar-sep">&nbsp;</div>
               <div class="t-navbar-head">
-                <a href="/" title="containerofunique">containderofuniqueentries</a>
+                <a href="/" title="containerofunique"
+                  >containderofuniqueentries</a
+                >
                 <div class="t-navbar-menu">
                   <div>
                     <div>
@@ -1344,7 +1353,8 @@
                 </div>
               </div>
             </div>
-            <h1 id="firstHeading" class="firstHeading" style="margin-top: 20px;"><span style="font-size:1em; line-height:130%">
+            <h1 id="firstHeading" class="firstHeading" style="margin-top: 20px">
+              <span style="font-size: 1em; line-height: 130%"></span>
               {{ page.title }}
             </h1>
             {{ content }}
@@ -1357,17 +1367,21 @@
     <!-- Footer Section -->
     <div id="cpp-footer-base">
       <div id="footer">
+        <ul id="footer-info">
+          <li id="footer-info-lastmod">
+            This page was last modified on {{ page.last_modified_at | date: "%d
+            %B %Y, at %H:%M" }}.
+          </li>
+        </ul>
         <p>&copy; 2024 Container of Unique Entries. All rights reserved.</p>
         <p>
           <a href="{{ '/privacy-policy.html' | relative_url }}"
             >Privacy Policy</a
           >
           |
-          <a href="{{ '/FAQ.html' | relative_url }}"
-            >Frequently Asked Questions</a
-          >
+          <a href="{{ '/FAQ.html' | relative_url }}">About containerofunique</a>
           |
-          <a href="/disclaimers">Disclaimers</a>
+          <a href="{{ '/disclaimers.html' | relative_url }}">Disclaimers</a>
         </p>
       </div>
     </div>
