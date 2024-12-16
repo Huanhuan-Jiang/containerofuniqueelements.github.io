@@ -21,8 +21,7 @@
     </div>
     <ul id="footer-info">
       <li id="footer-info-lastmod">
-        This page was last modified on {{ page.last_modified_at | date: "%d %B
-        %Y, at %H:%M" }}.
+        This page was last modified on <time datetime="{{ page.last_modified_at | date: "%Y-%m-%dT%H:%M:%S" }}">{{ page.last_modified_at | date: "%d %B %Y, at %H:%M" }}</time>.
       </li>
     </ul>
     <p>&copy; 2024 Container of Unique Entries. All rights reserved.</p>
