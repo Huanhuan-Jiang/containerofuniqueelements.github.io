@@ -55,3 +55,4 @@ repository: Huanhuan-Jiang/containerofuniqueentries-doc
 
 plugins:
   - jekyll-last-modified-at
+  - jekyll-git_metadata
