@@ -1,0 +1,33 @@
+name: Update Last Modified Date
+
+on:
+  push:
+    branches:
+      - main # or the branch you're using for GitHub Pages
+
+jobs:
+  update_last_modified:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+
+      - name: Install dependencies
+        run: |
+          gem install jekyll
+          bundle install
+
+      - name: Run update_last_modified.sh script
+        run: |
+          ./scripts/update_last_modified.sh  # Update with the correct path to your script
+
+      - name: Commit updated files
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "Update last_modified_at timestamp"
+          git push
