@@ -1,9 +1,8 @@
 name: Update Last Modified Date
 
 on:
-  push:
-    branches:
-      - main # or the branch you're using for GitHub Pages
+  push: # Trigger the workflow on any push
+  pull_request: # Optional: Trigger on pull requests as well
 
 jobs:
   update_last_modified:
