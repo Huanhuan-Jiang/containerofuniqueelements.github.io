@@ -21,8 +21,9 @@
     </div>
     <ul id="footer-info">
       <li id="footer-info-lastmod">
-        This page was last modified on {{ site.github.last_commit.date | date:
-        "%d %B %Y, at %H:%M" }}.
+        {% if page.git.last_modified_at %} {{ page.git.last_modified_at | date:
+        "%d %B %Y, at %H:%M" }} {% else %} {{ site.time | date: "%d %B %Y, at
+        %H:%M" }} {% endif %}.
       </li>
     </ul>
     <p>&copy; 2024 Container of Unique Entries. All rights reserved.</p>

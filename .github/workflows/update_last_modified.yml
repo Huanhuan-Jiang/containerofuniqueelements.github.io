@@ -24,7 +24,7 @@ jobs:
 
       - name: Run update_last_modified.sh script
         run: |
-          ./scripts/update_last_modified.sh  # Update with the correct path to your script
+          ./scripts/update_last_modified.sh
 
       - name: Commit updated files
         run: |
