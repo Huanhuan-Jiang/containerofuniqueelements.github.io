@@ -89,7 +89,7 @@ title: insert
             </td>
             <td> iterator before which the content will be inserted (<span class="t-c"><span
                         class="mw-geshi cpp source-cpp">pos</span></span> may be the <a
-                    href="/w/cpp/container/deque/end" title="cpp/container/deque/end"><code>end()</code></a> iterator)
+                    href="{{ '/_docs/deque_of_unique/cend' | relative_url }}" title="containerofunique/deque_of_unique/cend"><code>cend()</code></a> iterator)
             </td>
         </tr>
         <tr class="t-par">
@@ -122,38 +122,38 @@ title: insert
         </tr>
         <tr class="t-par-req">
             <td colspan="3"> -<div class="spacer"></div><code>T</code> must meet the requirements of <a
-                    href="/w/cpp/named_req/CopyAssignable" title="cpp/named req/CopyAssignable"><span
+                    href="http://en.cppreference.com/w/cpp/named_req/CopyAssignable" title="cpp/named req/CopyAssignable"><span
                         style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">CopyAssignable</span></a>
-                and <a href="/w/cpp/named_req/CopyInsertable" title="cpp/named req/CopyInsertable"><span
+                and <a href="http://en.cppreference.com/w/cpp/named_req/CopyInsertable" title="cpp/named req/CopyInsertable"><span
                         style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">CopyInsertable</span></a>
                 in order to use overload (1).
             </td>
         </tr>
         <tr class="t-par-req">
             <td colspan="3"> -<div class="spacer"></div><code>T</code> must meet the requirements of <a
-                    href="/w/cpp/named_req/MoveAssignable" title="cpp/named req/MoveAssignable"><span
+                    href="http://en.cppreference.com/w/cpp/named_req/MoveAssignable" title="cpp/named req/MoveAssignable"><span
                         style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">MoveAssignable</span></a>
-                and <a href="/w/cpp/named_req/MoveInsertable" title="cpp/named req/MoveInsertable"><span
+                and <a href="http://en.cppreference.com/w/cpp/named_req/MoveInsertable" title="cpp/named req/MoveInsertable"><span
                         style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">MoveInsertable</span></a>
                 in order to use overload (2).
             </td>
         </tr>
         <tr class="t-par-req">
             <td colspan="3"> -<div class="spacer"></div><code>T</code> must meet the requirements of <a
-                    href="/w/cpp/named_req/EmplaceConstructible" title="cpp/named req/EmplaceConstructible"><span
+                    href="http://en.cppreference.com/w/cpp/named_req/EmplaceConstructible" title="cpp/named req/EmplaceConstructible"><span
                         style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">EmplaceConstructible</span></a>
                 in order to use overloads (3,4).
             </td>
         </tr>
         <tr class="t-par-req">
             <td colspan="3"> -<div class="spacer"></div><code>T</code> must meet the requirements of <a
-                    href="/w/cpp/named_req/Swappable" title="cpp/named req/Swappable"><span
+                    href="http://en.cppreference.com/w/cpp/named_req/Swappable" title="cpp/named req/Swappable"><span
                         style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">Swappable</span></a>, <a
-                    href="/w/cpp/named_req/MoveAssignable" title="cpp/named req/MoveAssignable"><span
+                    href="http://en.cppreference.com/w/cpp/named_req/MoveAssignable" title="cpp/named req/MoveAssignable"><span
                         style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">MoveAssignable</span></a>,
-                <a href="/w/cpp/named_req/MoveConstructible" title="cpp/named req/MoveConstructible"><span
+                <a href="http://en.cppreference.com/w/cpp/named_req/MoveConstructible" title="cpp/named req/MoveConstructible"><span
                         style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">MoveConstructible</span></a>
-                and <a href="/w/cpp/named_req/MoveInsertable" title="cpp/named req/MoveInsertable"><span
+                and <a href="http://en.cppreference.com/w/cpp/named_req/MoveInsertable" title="cpp/named req/MoveInsertable"><span
                         style="font-family: Georgia, 'DejaVu Serif', serif; font-style:italic">MoveInsertable</span></a>
                 in order to use overloads (3,4).
             </td>
@@ -161,13 +161,21 @@ title: insert
     </tbody>
 </table>
 <h3><span class="mw-headline" id="Return_value">Return value</span></h3>
-<p>The function returns a std::pair<span class="sy1">&lt;</span>const_iterator, bool.</p>
+<p>The function returns a <span class="mw-geshi cpp source-cpp"><span class="t-lc">std::pair</span><span class="sy1">&lt;</span>const_iterator, bool<span class="sy1">&gt;</span></span>.</p>
 <table class="t-dsc-begin">
     <tbody>
         <tr class="t-dsc-hitem">
             <th></th>
-            <td> second is true if insertion succeeds </td>
-            <td> second is false if insertion fails </td>
+            <td> second is <span class="t-c"
+                ><span class="mw-geshi cpp source-cpp"
+                  ><span class="kw2">true</span></span
+                ></span
+              > if insertion succeeds </td>
+            <td> second is <span class="t-c"
+                ><span class="mw-geshi cpp source-cpp"
+                  ><span class="kw2">false</span></span
+                ></span
+              > if insertion fails </td>
         </tr>
         <tr class="t-dsc">
             <th>1,2) </th>

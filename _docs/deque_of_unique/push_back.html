@@ -9,7 +9,8 @@ title: push_back
       <td>
         <div>
           <span class="mw-geshi cpp source-cpp">
-            <span class="kw">bool</span>&nbsp;push_back<span class="br0">(</span
+            <span class="kw4">bool</span>&nbsp;push_back<span class="br0"
+              >(</span
             ><span class="kw">const</span>&nbsp;T<span class="sy3">&</span
             >&nbsp;value<span class="br0">)</span><span class="sy4">;</span>
           </span>
@@ -21,7 +22,8 @@ title: push_back
       <td>
         <div>
           <span class="mw-geshi cpp source-cpp">
-            <span class="kw">bool</span>&nbsp;push_back<span class="br0">(</span
+            <span class="kw4">bool</span>&nbsp;push_back<span class="br0"
+              >(</span
             >&nbsp;T<span class="sy3">&&</span>&nbsp;value<span class="br0"
               >)</span
             ><span class="sy4">;</span>
@@ -70,13 +72,16 @@ title: push_back
     <tr class="t-par-req">
       <td colspan="3">
         -&nbsp;T must meet the requirements of
-        <span
-          style="
-            font-family: Georgia, 'DejaVu Serif', serif;
-            font-style: italic;
-          "
-          ;
-          >CopyAssignable</span
+        <a
+          href="http://en.cppreference.com/w/cpp/named_req/CopyAssignable"
+          title="cpp/named req/CopyAssignable"
+          ><span
+            style="
+              font-family: Georgia, 'DejaVu Serif', serif;
+              font-style: italic;
+            "
+            >CopyAssignable</span
+          ></a
         >
         in order to use overload (1).
       </td>
@@ -84,13 +89,16 @@ title: push_back
     <tr class="t-par-req">
       <td colspan="3">
         -&nbsp;T must meet the requirements of
-        <span
-          style="
-            font-family: Georgia, 'DejaVu Serif', serif;
-            font-style: italic;
-          "
-          ;
-          >MoveAssignable</span
+        <a
+          href="http://en.cppreference.com/w/cpp/named_req/MoveAssignable"
+          title="cpp/named req/MoveAssignable"
+          ><span
+            style="
+              font-family: Georgia, 'DejaVu Serif', serif;
+              font-style: italic;
+            "
+            >MoveAssignable</span
+          ></a
         >
         in order to use overload (2).
       </td>
@@ -104,9 +112,24 @@ title: push_back
   <tbody>
     <tr class="highlight-row">
       <td colspan="3">
-        Returns <code>'true'</code> if the appendage is successful, and
-        <code>'false'</code> otherwise.
+        Returns
+        <span class="t-c"
+          ><span class="mw-geshi cpp source-cpp"
+            ><span class="kw2">true</span></span
+          ></span
+        >
+        if the appendage is successful, and
+        <span class="t-c"
+          ><span class="mw-geshi cpp source-cpp"
+            ><span class="kw2">false</span></span
+          ></span
+        >
+        otherwise.
       </td>
     </tr>
   </tbody>
 </table>
+<h3>
+  <span class="mw-headline" id="Complexity">Complexity</span>
+</h3>
+<p>Constant.</p>

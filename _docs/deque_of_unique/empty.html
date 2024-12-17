@@ -9,7 +9,7 @@ title: empty
       <td>
         <div>
           <span class="mw-geshi cpp source-cpp"
-            >const_reference front<span class="br0">(</span
+            ><span class="kw4">bool</span> empty<span class="br0">(</span
             ><span class="br0">)</span> <span class="kw4">const</span
             ><span class="sy4">;</span></span
           >
@@ -23,11 +23,36 @@ title: empty
     </tr>
   </tbody>
 </table>
-<p>Returns a reference to the first element in the container.</p>
-<p>Calling front on an emtpy container causes undefined behavior.</p>
+<p>
+  Checks if the container has no elements, i.e. whether
+  <span class="t-c"
+    ><span class="mw-geshi cpp source-cpp"
+      >begin<span class="br0">(</span><span class="br0">)</span>
+      <span class="sy1">==</span> end<span class="br0">(</span
+      ><span class="br0">)</span></span
+    ></span
+  >.
+</p>
 <h3>
   <span class="mw-headline" id="Parameters">Parameters</span>
 </h3>
 <p>(none)</p>
 <h3><span class="mw-headline" id="Return_value">Return value</span></h3>
-<p>Return to the first element.</p>
+<p>
+  <span class="t-c"
+    ><span class="mw-geshi cpp source-cpp"
+      ><span class="kw2">true</span></span
+    ></span
+  >
+  if the container is empty,
+  <span class="t-c"
+    ><span class="mw-geshi cpp source-cpp"
+      ><span class="kw2">false</span></span
+    ></span
+  >
+  otherwise.
+</p>
+<h3>
+  <span class="mw-headline" id="Complexity">Complexity</span>
+</h3>
+<p>Constant.</p>

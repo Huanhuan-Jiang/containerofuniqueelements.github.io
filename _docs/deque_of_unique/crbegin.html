@@ -24,13 +24,19 @@ title: crbegin
   </tbody>
 </table>
 <p>
-  Returns an iterator to the element following the last element of the
-  deque_of_unique.
+  Returns a reverse iterator to the first element of the reversed
+  <code>deque_of_unique</code>. It corresponds to the last element of the
+  non-reversed <code>deque_of_unique</code>. If the
+  <code>deque_of_unique</code> is empty, the returned iterator is equal to
+  <span class="t-lc"
+    ><a
+      href="{{ '/_docs/deque_of_unique/crend' | relative_url }}"
+      title="containerofunique/deque_of_unique/crend"
+      >crend()</a
+    ></span
+  >.
 </p>
-<p>
-  This element acts as a placeholder; attempting to access it results in
-  undefined behavior.
-</p>
+
 <div class="t-image">
   <p>
     <img
@@ -47,3 +53,7 @@ title: crbegin
 <p>(none)</p>
 <h3><span class="mw-headline" id="Return_value">Return value</span></h3>
 <p>Iterator to the element following the last element.</p>
+<h3>
+  <span class="mw-headline" id="Complexity">Complexity</span>
+</h3>
+<p>Constant.</p>

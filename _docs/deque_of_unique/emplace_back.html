@@ -62,8 +62,10 @@ title: emplace_back
 </p>
 <p>
   All iterators (including the
-  <a href="/w/cpp/container/deque/end" title="cpp/container/deque/end"
-    ><code>end()</code></a
+  <a
+    href="{{ '/_docs/deque_of_unique/cend' | relative_url }}"
+    title="containerofunique/deque_of_unique/cend"
+    ><code>cend()</code></a
   >
   iterator) are invalidated. No references are invalidated.
 </p>
@@ -87,7 +89,7 @@ title: emplace_back
         <code>T (the container's element type)</code> must meet the requirements
         of
         <a
-          href="/w/cpp/named_req/EmplaceConstructible"
+          href="https://en.cppreference.com/w/cpp/named_req/EmplaceConstructible"
           title="cpp/named req/EmplaceConstructible"
           ><span
             style="
@@ -106,3 +108,7 @@ title: emplace_back
   An optional reference wrapper to the inserted element if the insertion is
   successful; otherwise, std::nullopt if the element already exists in the set.
 </p>
+<h3>
+  <span class="mw-headline" id="Complexity">Complexity</span>
+</h3>
+<p>Constant.</p>
