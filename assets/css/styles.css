@@ -673,7 +673,12 @@ body.skin-vector .t-navbar-head:nth-child(2) {
   padding: 0.2em 0 0.25em 0.75em;
   white-space: nowrap;
 }
-
+.t-dsc > td:nth-child(2) {
+  width: 0%;
+  line-height: 1.2em;
+  padding: 0.2em 0 0.25em 0.75em;
+  white-space: nowrap;
+}
 .t-dsc > td:last-child {
   line-height: 1.1em;
   padding-left: 0.75em;
