@@ -1,5 +1,5 @@
 ---
-last_modified_at: "2024-12-17 15:10:47 +0800"
+last_modified_at: "2024-12-18 15:00:54 +0800"
 layout: deque_of_unique_method
 title: constructor
 ---
@@ -39,6 +39,31 @@ title: constructor
     </tr>
   </tbody>
   <tbody>
+    <tr class="t-dcl t-since-cxx11">
+      <td>
+        <div>
+          <span class="mw-geshi cpp source-cpp"
+            >deque_of_unique<span class="br0">(</span>
+            <a href="http://en.cppreference.com/w/cpp/utility/initializer_list"
+              ><span class="kw964"
+                >std::<span class="me2">initializer_list</span></span
+              ></a
+            ><span class="sy1">&lt;</span>T<span class="sy1">&gt;</span> init
+            <span class="br0">)</span> <span class="br0">)</span
+            ><span class="sy4">;</span></span
+          >
+        </div>
+      </td>
+      <td>(3)</td>
+      <td></td>
+    </tr>
+    <tr class="t-dcl-sep">
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+  <tbody>
     <tr class="t-dcl">
       <td>
         <div>
@@ -51,7 +76,7 @@ title: constructor
           >
         </div>
       </td>
-      <td>(3)</td>
+      <td>(4)</td>
     </tr>
   </tbody>
   <tbody>
@@ -68,7 +93,7 @@ title: constructor
           >
         </div>
       </td>
-      <td>(4)</td>
+      <td>(5)</td>
     </tr>
     <tr class="t-dcl-sep">
       <td></td>
@@ -99,10 +124,15 @@ title: constructor
 
 <div class="t-li1">
   <span class="t-li">3)</span> Equivalent to
-  <code
-    >deque_of_unique<span class="br0">(</span>il.<span class="me1">begin</span
-    ><small>(</small><small>)</small>, il.<small>end</small>(<small>)</small
-    ><small>)</small>.</code
+  <span class="t-c"
+    ><span class="mw-geshi cpp source-cpp"
+      >deque_of_unique<span class="br0">(</span>il.<span class="me1">begin</span
+      ><span class="br0">(</span><span class="br0">)</span>, il.<span
+        class="me1"
+        >end</span
+      ><span class="br0">(</span><span class="br0">)</span
+      ><span class="br0">)</span></span
+    ></span
   >.
 </div>
 
@@ -127,3 +157,36 @@ title: constructor
     </tr>
   </tbody>
 </table>
+<h3>
+  <span class="mw-headline" id="Complexity">Complexity</span>
+</h3>
+<div class="t-li1"><span class="t-li">1)</span> Constant.</div>
+<div class="t-li1">
+  <span class="t-li">2)</span> Linear in
+  <span class="t-c"
+    ><span class="mw-geshi cpp source-cpp"
+      ><a href="http://en.cppreference.com/w/cpp/iterator/distance"
+        ><span class="kw678">std::<span class="me2">distance</span></span></a
+      ><span class="br0">(</span>first, last<span class="br0">)</span></span
+    ></span
+  >.
+</div>
+<div class="t-li1">
+  <span class="t-li">3)</span> Linear in
+  <span class="t-c"
+    ><span class="mw-geshi cpp source-cpp"
+      >init.<span class="me1">size</span><span class="br0">(</span
+      ><span class="br0">)</span></span
+    ></span
+  >.
+</div>
+<div class="t-li1">
+  <span class="t-li">4)</span> Linear in
+  <span class="t-c"
+    ><span class="mw-geshi cpp source-cpp"
+      >other.<span class="me1">size</span><span class="br0">(</span
+      ><span class="br0">)</span></span
+    ></span
+  >.
+</div>
+<div class="t-li1"><span class="t-li">5)</span> Constant.</div>
