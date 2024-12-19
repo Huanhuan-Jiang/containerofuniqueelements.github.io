@@ -103,3 +103,41 @@ title: operator=
     ></span
   >
 </p>
+<h3>Complexity</h3>
+<div class="t-li1">
+  <span class="t-li">1)</span> Linear in the size of
+  <span class="t-c"
+    ><span class="mw-geshi cpp source-cpp"
+      ><span class="sy2">*</span>this</span
+    ></span
+  >
+  and <span class="t-c"><span class="mw-geshi cpp source-cpp">other</span></span
+  >.
+</div>
+<div class="t-li1">
+  <span class="t-li">2)</span> Linear in the size of
+  <span class="t-c"
+    ><span class="mw-geshi cpp source-cpp"
+      ><span class="sy2">*</span>this</span
+    ></span
+  >
+  unless the allocators do not compare equal and do not propagate, in which case
+  linear in the size of
+  <span class="t-c"
+    ><span class="mw-geshi cpp source-cpp"
+      ><span class="sy2">*</span>this</span
+    ></span
+  >
+  and <span class="t-c"><span class="mw-geshi cpp source-cpp">other</span></span
+  >.
+</div>
+<div class="t-li1">
+  <span class="t-li">3)</span> Linear in the size of
+  <span class="t-c"
+    ><span class="mw-geshi cpp source-cpp"
+      ><span class="sy2">*</span>this</span
+    ></span
+  >
+  and <span class="t-c"><span class="mw-geshi cpp source-cpp">ilist</span></span
+  >.
+</div>
