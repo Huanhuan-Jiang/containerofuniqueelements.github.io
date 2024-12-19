@@ -12,12 +12,6 @@ for file in $pages; do
     continue  # Skip updating if there are uncommitted changes
   fi
 
-  # Check if the file has been modified since the last commit
-  if git diff --quiet HEAD^ HEAD -- "$file"; then
-    echo "No changes detected for $file since last commit; skipping update."
-    continue  # Skip updating if there are no changes since the last commit
-  fi
-
   # Get the last Git commit timestamp for the current file
   last_modified=$(git log -1 --format="%ad" --date=iso "$file")
 
