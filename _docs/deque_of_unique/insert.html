@@ -493,3 +493,35 @@ title: insert
     </tr>
   </tbody>
 </table>
+<h3>Exceptions</h3>
+<p>
+  For (1) and (2), if an exception is thrown by insertion into unordered_set,
+  the insertion has no effect. For (3) and (4), exceptions description is still
+  incomplete.
+</p>
+<table class="t-rev-begin">
+  <tbody>
+    <tr class="t-rev t-since-cxx11">
+      <td>
+        <p>
+          For insertion into the deque, if an exception is thrown when inserting
+          a single element at either end, this function has no effect (strong
+          exception guarantee). Otherwise, if an exception is thrown by the move
+          constructor of a non-<a
+            href="/w/cpp/named_req/CopyInsertable"
+            title="cpp/named req/CopyInsertable"
+            ><span
+              style="
+                font-family: Georgia, 'DejaVu Serif', serif;
+                font-style: italic;
+              "
+              >CopyInsertable</span
+            ></a
+          >
+          <code>T</code>, the effects are unspecified.
+        </p>
+      </td>
+      <td><span class="t-mark-rev t-since-cxx11">(since C++11)</span></td>
+    </tr>
+  </tbody>
+</table>
