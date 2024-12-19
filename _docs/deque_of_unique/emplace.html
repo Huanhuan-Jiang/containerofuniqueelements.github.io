@@ -19,6 +19,8 @@ title: emplace
 </p>
 <p>The arguments <span class="t-c"><span class="mw-geshi cpp source-cpp">args...</span></span> are forwarded to the constructor as <span class="t-c"><span class="mw-geshi cpp source-cpp"><a href="http://en.cppreference.com/w/cpp/utility/forward"><span class="kw1125">std::<span class="me2">forward</span></span></a><span class="sy1">&lt;</span>Args<span class="sy1">&gt;</span><span class="br0">(</span>args<span class="br0">)</span>...</span></span>. <span class="t-c"><span class="mw-geshi cpp source-cpp">args...</span></span> may directly or indirectly refer to a value in the container.
 </p>
+<p>All iterators (including the <a href="https://en.cppreference.com/w/cpp/container/deque/end" title="cpp/container/deque/end"><code>cend()</code></a> iterator) are invalidated. References are invalidated too, unless <span class="t-c"><span class="mw-geshi cpp source-cpp">pos <span class="sy1">==</span></span><code>&nbsp;</code><a href="https://en.cppreference.com/w/cpp/container/deque/begin" title="cpp/container/deque/begin"><code>cbegin()</code></a></span> or <span class="t-c"><span class="mw-geshi cpp source-cpp">pos <span class="sy1">==</span></span><code>&nbsp;</code><a href="https://en.cppreference.com/w/cpp/container/deque/end" title="cpp/container/deque/end"><code>cend()</code></a></span>, in which case they are not invalidated.
+</p>
 <h3><span class="mw-headline" id="Parameters">Parameters</span></h3>
 <table class="t-par-begin">
   <tbody><tr class="t-par">
