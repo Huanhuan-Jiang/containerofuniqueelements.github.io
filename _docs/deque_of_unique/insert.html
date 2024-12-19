@@ -145,6 +145,50 @@ title: insert
   <span class="t-c"><span class="mw-geshi cpp source-cpp">pos</span></span
   >.
 </div>
+<p>
+  All iterators (including the
+  <a
+    href="https://en.cppreference.com/w/cpp/container/deque/end"
+    title="cpp/container/deque/end"
+    ><code>cend()</code></a
+  >
+  iterator) are invalidated. References are invalidated too, unless
+  <span class="t-c"
+    ><span class="mw-geshi cpp source-cpp">pos <span class="sy1">==</span></span
+    ><code>&nbsp;</code
+    ><a
+      href="https://en.cppreference.com/w/cpp/container/deque/begin"
+      title="cpp/container/deque/begin"
+      ><code>cbegin()</code></a
+    ></span
+  >
+  or
+  <span class="t-c"
+    ><span class="mw-geshi cpp source-cpp">pos <span class="sy1">==</span></span
+    ><code>&nbsp;</code
+    ><a
+      href="https://en.cppreference.com/w/cpp/container/deque/end"
+      title="cpp/container/deque/end"
+      ><code>cend()</code></a
+    ></span
+  >, in which case they are not invalidated.
+</p>
+<p>
+  If after the operation the new number of elements is greater than old
+  <span class="t-c"
+    ><a
+      href="https://en.cppreference.com/w/cpp/container/unordered_set/max_load_factor"
+      title="cpp/container/unordered set/max load factor"
+      ><code>max_load_factor()</code></a
+    ><code> *</code><code>&nbsp;</code
+    ><a
+      href="https://en.cppreference.com/w/cpp/container/unordered_set/bucket_count"
+      title="cpp/container/unordered set/bucket count"
+      ><code>bucket_count()</code></a
+    ></span
+  >
+  a rehashing takes place.
+</p>
 <h3><span class="mw-headline" id="Parameters">Parameters</span></h3>
 <table class="t-par-begin">
   <tbody>
