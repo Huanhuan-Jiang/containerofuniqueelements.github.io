@@ -8,8 +8,14 @@ pages=$(git ls-files "*.html" | grep -Ev '(^_includes/|^_plugins/|^_layouts/)')
 for file in $pages; do
   # Check if there are any uncommitted changes for this file
   if ! git diff --quiet HEAD -- "$file"; then
-    echo "No committed changes detected for $file; skipping update."
+    echo "Uncommitted changes detected for $file; skipping update."
     continue  # Skip updating if there are uncommitted changes
+  fi
+
+  # Check if the file has been modified since the last commit
+  if git diff --quiet HEAD^ HEAD -- "$file"; then
+    echo "No changes detected for $file since last commit; skipping update."
+    continue  # Skip updating if there are no changes since the last commit
   fi
 
   # Get the last Git commit timestamp for the current file
