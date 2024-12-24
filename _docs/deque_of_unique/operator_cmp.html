@@ -1,0 +1,172 @@
+---
+last_modified_at:
+layout: deque_of_unique_method
+title: operator&lt;=&gt;
+---
+
+<table class="t-dcl-begin">
+  <tbody>
+    <tr class="t-dsc-header">
+      <td>
+        <div>
+          Defined in header
+          <code
+            ><a
+              href="{{ '/_docs/deque_of_unique/index.html' | relative_url }}"
+              title="containerofunique/deque_of_unique"
+              >&lt;deque_of_unique&gt;</a
+            ></code
+          >
+        </div>
+      </td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr class="t-dcl t-since-cxx20">
+      <td>
+        <div>
+          <span class="mw-geshi cpp source-cpp"
+            ><span class="kw1">template</span><span class="sy1">&lt;</span>
+            <span class="kw1">class</span> T <span class="sy1">&gt;</span><br />
+            <p>
+              synth<span class="sy2">-</span>three<span class="sy2">-</span
+              >way<span class="sy2">-</span>result<span class="sy1">&lt;</span
+              >T<span class="sy1">&gt;</span><br />
+              &nbsp; &nbsp; operator<span class="sy1">&lt;=&gt;</span
+              ><span class="br0">(</span> <span class="kw4">const</span>
+              <a href="{{ '/_docs/deque_of_unique/index.html' | relative_url }}"
+                ><span class="kw1279"
+                  >containerofunique::<span class="me2"
+                    >deque_of_unique</span
+                  ></span
+                ></a
+              ><span class="sy1">&lt;</span>T<span class="sy1">&gt;</span
+              ><span class="sy3">&amp;</span> lhs,<br />
+            </p>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span
+              class="kw4"
+              >const</span
+            >
+            <a href="{{ '/_docs/deque_of_unique/index.html' | relative_url }}"
+              ><span class="kw1279"
+                >containerofunique::<span class="me2"
+                  >deque_of_unique</span
+                ></span
+              ></a
+            ><span class="sy1">&lt;</span>T<span class="sy1">&gt;</span
+            ><span class="sy3">&amp;</span> rhs <span class="br0">)</span
+            ><span class="sy4">;</span></span
+          >
+        </div>
+      </td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr class="t-dcl-sep">
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<p>
+  Compares the contents of
+  <span class="t-c"><span class="mw-geshi cpp source-cpp">lhs</span></span> and
+  <span class="t-c"><span class="mw-geshi cpp source-cpp">rhs</span></span>
+  lexicographically. The comparison is performed as if by calling
+  <span class="t-c"
+    ><span class="mw-geshi cpp source-cpp"
+      ><a
+        href="http://en.cppreference.com/w/cpp/algorithm/lexicographical_compare_three_way"
+        ><span class="kw3261"
+          >std::<span class="me2">lexicographical_compare_three_way</span></span
+        ></a
+      ><span class="br0">(</span>lhs.<span class="me1">begin</span
+      ><span class="br0">(</span><span class="br0">)</span>, lhs.<span
+        class="me1"
+        >end</span
+      ><span class="br0">(</span><span class="br0">)</span>,</span
+    ><br /><code
+      >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code
+    ><span class="mw-geshi cpp source-cpp"
+      >rhs.<span class="me1">begin</span><span class="br0">(</span
+      ><span class="br0">)</span>, rhs.<span class="me1">end</span
+      ><span class="br0">(</span><span class="br0">)</span>,</span
+    ><code>&nbsp;</code
+    ><a
+      href="https://en.cppreference.com/w/cpp/standard_library/synth-three-way"
+      title="cpp/standard library/synth-three-way"
+      ><tt><i>synth-three-way</i></tt></a
+    ><span class="mw-geshi cpp source-cpp"
+      ><span class="br0">)</span></span
+    ></span
+  >.
+</p>
+
+<p>
+  The return type is the return type of
+  <a
+    href="https://en.cppreference.com/w/cpp/standard_library/synth-three-way"
+    title="cpp/standard library/synth-three-way"
+    ><tt><i>synth-three-way</i></tt></a
+  >
+  (i.e.,
+  <a
+    href="https://en.cppreference.com/w/cpp/standard_library/synth-three-way"
+    title="cpp/standard library/synth-three-way"
+    ><tt><i>synth-three-way-result</i></tt></a
+  > ﻿<span class="mw-geshi cpp source-cpp"
+    ><span class="sy1">&lt;</span>T<span class="sy1">&gt;</span></span
+  >).
+</p>
+<p>
+  If none of the following conditions is satisfied,
+  the behavior is undefined:
+  <ul>
+    <li>
+      <code>T</code> models
+      <a
+        href="https://en.cppreference.com/w/cpp/utility/compare/three_way_comparable"
+        title="cpp/utility/compare/three way comparable"
+        ><code>three_way_comparable</code></a
+      >.
+    </li>
+    <li>
+      <code>&lt;</code> is defined for values of type (possibly const-qualified)
+      <code>T</code>, and <code>&lt;</code> is a total ordering relationship.
+    </li>
+  </ul>
+</p>
+<p></p>
+<h3><span class="mw-headline" id="Parameters">Parameters</span></h3>
+<table class="t-par-begin">
+  <tbody>
+    <tr class="t-par">
+      <td>lhs, rhs</td>
+      <td>-</td>
+      <td><code>deque</code>s whose contents to compare</td>
+    </tr>
+  </tbody>
+</table>
+<p></p>
+<h3><span class="mw-headline" id="Return_value">Return value</span></h3>
+<p> The relative order of the first pair of
+  non-equivalent elements in
+  <span class="t-c"><span class="mw-geshi cpp source-cpp">lhs</span></span> and
+  <span class="t-c"><span class="mw-geshi cpp source-cpp">rhs</span></span> if
+  there are such elements,
+  <span class="t-c"
+    ><span class="mw-geshi cpp source-cpp"
+      >lhs.<span class="me1">size</span><span class="br0">(</span
+      ><span class="br0">)</span> <span class="sy1">&lt;=&gt;</span> rhs.<span
+        class="me1"
+        >size</span
+      ><span class="br0">(</span><span class="br0">)</span></span
+    ></span
+  >
+  otherwise.
+</p>
+<h3><span class="mw-headline" id="Complexity">Complexity</span></h3>
+<p>Linear in the size of the <code>deque_of_unique</code>.</p>
+<h3>Exceptions</h3>
+<p>（none）</p>
