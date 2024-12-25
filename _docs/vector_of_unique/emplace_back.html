@@ -62,13 +62,32 @@ title: emplace_back
   >.
 </p>
 <p>
-  All iterators (including the
+  If after the operation the new
   <a
-    href="{{ '/_docs/vector_of_unique/cend' | relative_url }}"
-    title="containerofunique/vector_of_unique/cend"
+    href="{{ '/_docs/vector_of_unique/size.html' | relative_url }}"
+    title="vector_of_unique/size"
+    ><code>size()</code></a
+  >
+  is greater than old
+  <a
+    href="{{ '/_docs/vector_of_unique/capacity.html' | relative_url }}"
+    title="vector_of_unique/capacity"
+    ><code>capacity()</code></a
+  >
+  a reallocation takes place, in which case all iterators (including the
+  <a
+    href="{{ '/_docs/vector_of_unique/cend.html' | relative_url }}"
+    title="vector_of_unique/cend"
     ><code>cend()</code></a
   >
-  iterator) are invalidated. No references are invalidated.
+  iterator) and all references to the elements are invalidated. Otherwise only
+  the
+  <a
+    href="{{ '/_docs/vector_of_unique/cend.html' | relative_url }}"
+    title="vector_of_unique/cend"
+    ><code>cend()</code></a
+  >
+  iterator is invalidated.
 </p>
 <h3>
   <span class="mw-headline" id="Parameters">Parameters</span>
@@ -145,5 +164,22 @@ title: emplace_back
     href="https://en.cppreference.com/w/cpp/language/exceptions#Exception_safety"
     title="cpp/language/exceptions"
     >strong exception safety guarantee</a
-  >).
+  >). If the move constructor of <code>T</code> is not
+  <span class="mw-geshi cpp source-cpp"><span class="kw1">noexcept</span></span>
+  and is not
+  <a
+    href="https://en.cppreference.com/w/cpp/named_req/CopyInsertable"
+    title="cpp/named req/CopyInsertable"
+    ><span
+      style="font-family: Georgia, 'DejaVu Serif', serif; font-style: italic"
+      >CopyInsertable</span
+    ></a
+  >
+  into
+  <span class="t-c"
+    ><span class="mw-geshi cpp source-cpp"
+      ><span class="sy2">*</span>this</span
+    ></span
+  >, <code>vector_of_unique</code> will use the throwing move constructor. If it
+  throws, the guarantee is waived and the effects are unspecified.
 </p>
