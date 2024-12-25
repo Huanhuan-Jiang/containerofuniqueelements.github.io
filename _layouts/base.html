@@ -102,3 +102,23 @@
     {% include footer.html %}
   </body>
 </html>
+
+<script>
+  const currentURL = window.location.href;
+
+  document.querySelectorAll("ul li a").forEach((link) => {
+    if (
+      currentURL.includes("deque_of_unique") &&
+      link.getAttribute("href").includes("deque_of_unique")
+    ) {
+      link.parentElement.parentElement.classList.add("selected");
+    } else if (
+      currentURL.includes("vector_of_unique") &&
+      link.getAttribute("href").includes("vector_of_unique")
+    ) {
+      link.parentElement.parentElement.classList.add("selected");
+    } else {
+      link.parentElement.parentElement.classList.remove("selected");
+    }
+  });
+</script>
