@@ -1,0 +1,91 @@
+---
+last_modified_at: "2024-12-19 16:02:01 +0800"
+layout: vector_of_unique_method
+title: swap
+---
+
+<table class="t-dcl-begin">
+  <tbody></tbody>
+  <tbody class="t-dcl-rev">
+    <tr class="t-dcl t-since-cxx98 t-until-cxx17">
+      <td>
+        <div>
+          <span class="mw-geshi cpp source-cpp"
+            ><span class="kw4">constexpr void</span> swap<span class="br0"
+              >(</span
+            >
+            vector<span class="sy3">&amp;</span> other <span class="br0">)</span
+            ><span class="sy4">;</span></span
+          >
+        </div>
+      </td>
+      <td class="t-dcl-nopad"></td>
+      <td></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr class="t-dcl-sep">
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<p>
+  Exchanges the contents of the container with those of
+  <span class="t-c"><span class="mw-geshi cpp source-cpp">other</span></span
+  >. Does not invoke any move, copy, or swap operations on individual elements.
+</p>
+<p>
+  All iterators and references remain valid. The
+  <a
+    href="{{ '/_docs/vector_of_unique/cend' | relative_url }}"
+    title="containerofunique/vector_of_unique/cend"
+    ><code>cend()</code></a
+  >
+  iterator is invalidated.
+</p>
+<h3>
+  <span class="mw-headline" id="Parameters">Parameters</span>
+</h3>
+<table class="t-par-begin">
+  <tbody>
+    <tr class="t-par">
+      <td>other</td>
+      <td>-</td>
+      <td>container to exchange the contents with</td>
+    </tr>
+  </tbody>
+</table>
+<h3><span class="mw-headline" id="Return_value">Return value</span></h3>
+<p>(none)</p>
+<h3><span class="mw-headline" id="Complexity">Complexity</span></h3>
+<p>Constant</p>
+<h3>Exceptions</h3>
+<div class="t-li1">
+  <span class="t-li">1)</span>
+  The <span class="t-c mw-geshi cpp source-cpp">swap</span> method does not
+  throw exceptions (`noexcept`) if:
+  <li>
+    The allocator is
+    <span class="t-c mw-geshi cpp source-cpp">noexcept</span> (which is the case
+    for the default allocator).
+  </li>
+  <li>
+    The move constructor of
+    <span class="t-c mw-geshi cpp source-cpp">T</span> is
+    <span class="t-c mw-geshi cpp source-cpp">noexcept</span> (required by the
+    underlying containers).
+  </li>
+</div>
+<div class="t-li1">
+  <span class="t-li">2)</span>
+  If the allocator or key type does not support
+  <span class="t-c mw-geshi cpp source-cpp">noexcept</span>, the exceptions
+  thrown by
+  <span class="t-c mw-geshi cpp source-cpp">std::vector::swap</span> or
+  <span class="t-c mw-geshi cpp source-cpp">std::unordered_set::swap</span> may
+  propagate. However, these cases are rare when using the default allocator and
+  the move constructor of <span class="t-c mw-geshi cpp source-cpp">T</span> is
+  <span class="t-c mw-geshi cpp source-cpp">noexcept</span>.
+</div>
