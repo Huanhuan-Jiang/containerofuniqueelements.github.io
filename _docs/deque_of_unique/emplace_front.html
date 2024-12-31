@@ -112,33 +112,11 @@ title: emplace_front
 <h3>
   <span class="mw-headline" id="Complexity">Complexity</span>
 </h3>
-<table class="t-dsc-begin" style="width: 50em">
-  <tbody>
-    <tr class="t-dsc-hitem">
-      <th></th>
-      <th>Emplace element in unordered_set</th>
-      <th>Emplace element in deque</th>
-    </tr>
+<p>
+  Average case: constant, worst case: <code>O(M)</code>, where M is the size of
+  the deque_of_unique.
+</p>
 
-    <tr class="t-dsc">
-      <td></td>
-      <td>
-        <div>
-          Amortized constant on average, worst case linear in the size of the
-          container.
-        </div>
-      </td>
-      <td>
-        <div>Constant.</div>
-      </td>
-    </tr>
-    <tr class="t-dcl-sep">
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
 <h3>Exceptions</h3>
 <p>
   If an exception is thrown for any reason, this function has no effect (<a
