@@ -62,30 +62,9 @@ title: emplace
 <h3>
   <span class="mw-headline" id="Complexity">Complexity</span>
 </h3>
-<table class="t-dsc-begin" style="width: 40em;">
-  <tbody>
-    <tr class="t-dsc-hitem">
-      <th></th>
-      <th>Emplace element in unordered_set</th>
-      <th>Emplace element in deque</th>
-    </tr>
-    
-    <tr class="t-dsc">
-      <td></td>
-      <td><div>Amortized constant on average, worst case linear in the size of the container.</div></td>
-      <td>
-        <div>
-          Linear in the lesser of the distances between <code>pos</code> and either of the ends of the container.
-        </div>
-      </td>
-    </tr>
-    <tr class="t-dcl-sep">
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+<p>Average case: <code>O(M)</code>, worst case: <code>O(2 * M)</code>
+, where M is the size of the unordered_set.</p>
+
 <h3>Exceptions</h3>
 <p>
   If an exception is thrown for any reason, this function has no effect (<a

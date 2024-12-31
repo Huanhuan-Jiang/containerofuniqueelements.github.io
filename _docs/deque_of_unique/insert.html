@@ -388,33 +388,20 @@ title: insert
   >.
 </div>
 <h3>Complexity</h3>
+<p>
+  N is the number of elements to insert. L is the average distance for insertion
+  into the deque. M is the size of the unordered_set.
+</p>
 <table class="t-dsc-begin">
   <tbody>
-    <tr class="t-dsc-hitem">
-      <th></th>
-      <th>Insertion into unordered_set</th>
-      <th>Insertion into deque</th>
-    </tr>
     <tr class="t-dsc">
       <td style="text-align: right">1,2)</td>
       <td>
         <div>
           <span class="t-li4"
-            >Average case: <code>O(1)</code>.<br />
-            Worst case: <code>O(size())</code>.
+            >Average case: <code>O(1 + L)</code>.<br />
+            Worst case: <code>O(2 * M)</code>.
           </span>
-        </div>
-      </td>
-      <td>
-        <div>
-          <span class="t-li4"
-            >Worst case: Constant plus linear in the lesser of the distances
-            between
-            <span class="t-c"
-              ><span class="mw-geshi cpp source-cpp">pos</span></span
-            >
-            and either of the ends of the container.</span
-          >
         </div>
       </td>
     </tr>
@@ -423,31 +410,8 @@ title: insert
       <td>
         <div>
           <span class="t-li4"
-            >Average case: <code>O(N)</code>, where N is the number of elements
-            to insert. <br />Worst case: <code>O(N * size() + N)</code>.</span
-          >
-        </div>
-      </td>
-      <td>
-        <div>
-          <span class="t-li4"
-            >Worset case: Linear in
-            <span class="t-c"
-              ><span class="mw-geshi cpp source-cpp"
-                ><a href="http://en.cppreference.com/w/cpp/iterator/distance"
-                  ><span class="kw678"
-                    >std::<span class="me2">distance</span></span
-                  ></a
-                ><span class="br0">(</span>first, last<span class="br0"
-                  >)</span
-                ></span
-              ></span
-            >
-            plus linear in the lesser of the distances between
-            <span class="t-c"
-              ><span class="mw-geshi cpp source-cpp">pos</span></span
-            >
-            and either of the ends of the container.</span
+            >Average case: <code>O(N * L)</code>. <br />Worst case:
+            <code>O(N * (L + M))</code>.</span
           >
         </div>
       </td>
@@ -457,32 +421,13 @@ title: insert
       <td>
         <div>
           <span class="t-li4"
-            >Average case: <code>O(N)</code>, where N is the number of elements
-            to insert. <br />Worst case: <code>O(N * size() + N)</code>.</span
-          >
-        </div>
-      </td>
-      <td>
-        <div>
-          <span class="t-li4"
-            >Worst case: Linear in
-            <span class="t-c"
-              ><span class="mw-geshi cpp source-cpp"
-                >ilist.<span class="me1">size</span><span class="br0">(</span
-                ><span class="br0">)</span></span
-              ></span
-            >
-            plus linear in the lesser of the distances between
-            <span class="t-c"
-              ><span class="mw-geshi cpp source-cpp">pos</span></span
-            >
-            and either of the ends of the container.</span
+            >Average case: <code>O(N + N * L)</code>. <br />Worst case:
+            <code>O(2 * N * M)</code>.</span
           >
         </div>
       </td>
     </tr>
     <tr class="t-dcl-sep">
-      <td></td>
       <td></td>
       <td></td>
     </tr>
@@ -503,7 +448,7 @@ title: insert
           a single element at either end, this function has no effect (strong
           exception guarantee). Otherwise, if an exception is thrown by the move
           constructor of a non-<a
-            href="/w/cpp/named_req/CopyInsertable"
+            href="https://en.cppreference.com/w/cpp/named_req/CopyInsertable"
             title="cpp/named req/CopyInsertable"
             ><span
               style="
@@ -516,7 +461,7 @@ title: insert
           <code>T</code>, the effects are unspecified.
         </p>
       </td>
-      <td><span class="t-mark-rev t-since-cxx11">(since C++11)</span></td>
+      <td></td>
     </tr>
   </tbody>
 </table>
