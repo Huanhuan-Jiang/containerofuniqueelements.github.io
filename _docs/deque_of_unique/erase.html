@@ -1,5 +1,5 @@
 ---
-last_modified_at: "2025-01-02 15:36:57 +0800"
+last_modified_at: "2024-12-24 15:46:59 +0800"
 layout: deque_of_unique_method
 title: erase
 ---
@@ -217,18 +217,38 @@ title: erase
 </div>
 <h3>Complexity</h3>
 <p>
-  M is the size of the deque_of_unique. K is the number of elements in the range
-  [first, last).
+  Given an instance
+  <span class="t-c"><span class="mw-geshi cpp source-cpp">c</span></span> of
+  <code>deque_of_unique</code>:
 </p>
-
 <table class="t-dsc-begin">
   <tbody>
+    <tr class="t-dsc-hitem">
+      <th></th>
+      <th>Erase elements in unordered_set</th>
+      <th>Erse elements in deque</th>
+    </tr>
     <tr class="t-dsc">
       <td style="text-align: right">1)</td>
       <td>
         <div>
-          &nbsp;&nbsp;Average case: <code>O(M)</code>. <br />
-          &nbsp;&nbsp;Worst case: <code>O(2 * M)</code>.
+          &nbsp;&nbsp;Average case: constant. <br />
+          &nbsp;&nbsp;Worst case:
+          <span class="t-c"
+            ><span class="mw-geshi cpp source-cpp"
+              >c.<span class="me1">size</span><span class="br0">(</span
+              ><span class="br0">)</span></span
+            ></span
+          >.
+        </div>
+      </td>
+      <td rowspan="2">
+        <div>
+          Linear: the number of calls to the destructor of <code>T</code> is the
+          same as the number of elements erased, the number of calls to the
+          assignment operator of <code>T</code> is no more than the lesser of
+          the number of elements before the erased elements and the number of
+          elements after the erased elements.
         </div>
       </td>
     </tr>
@@ -236,8 +256,25 @@ title: erase
       <td style="text-align: right">2)</td>
       <td>
         <div>
-          Average case: <code>O(K)</code>. <br />
-          Worst case: <code>O(K * M + K)</code>.
+          Average case:
+          <span class="t-c"
+            ><span class="mw-geshi cpp source-cpp"
+              ><a href="http://en.cppreference.com/w/cpp/iterator/distance"
+                ><span class="kw678"
+                  >std::<span class="me2">distance</span></span
+                ></a
+              ><span class="br0">(</span>first, last<span class="br0"
+                >)</span
+              ></span
+            ></span
+          >. <br />
+          Worst case:
+          <span class="t-c"
+            ><span class="mw-geshi cpp source-cpp"
+              >c.<span class="me1">size</span><span class="br0">(</span
+              ><span class="br0">)</span></span
+            ></span
+          >.
         </div>
       </td>
     </tr>
