@@ -62,8 +62,13 @@ title: emplace
 <h3>
   <span class="mw-headline" id="Complexity">Complexity</span>
 </h3>
-<p>Average case: <code>O(M)</code>, worst case: <code>O(2 * M)</code>
-, where M is the size of the deque_of_unique.</p>
+<p>Average case: Amortized linear in the lesser of the distances between
+  <span class="t-c"
+    ><span class="mw-geshi cpp source-cpp"
+      >pos
+        </span
+    ></span
+  > and either of the ends of the container. <br> Worst case: linear in the size of the container.</p>
 
 <h3>Exceptions</h3>
 <p>

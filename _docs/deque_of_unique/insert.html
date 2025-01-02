@@ -399,8 +399,12 @@ title: insert
       <td>
         <div>
           <span class="t-li4"
-            >Average case: <code>O(1 + L)</code>.<br />
-            Worst case: <code>O(2 * M)</code>.
+            >Average case: linear in the lesser of the distances between
+            <span class="t-c"
+              ><span class="mw-geshi cpp source-cpp">pos </span></span
+            >
+            and either of the ends of the container. <br />
+            Worst case: linear in the size of the container.
           </span>
         </div>
       </td>
@@ -410,8 +414,12 @@ title: insert
       <td>
         <div>
           <span class="t-li4"
-            >Average case: <code>O(N * L)</code>. <br />Worst case:
-            <code>O(N * (L + M))</code>.</span
+            >Average case:
+            <span class="texhtml" style="white-space: nowrap">O(N * L)</span>.
+            <br />Worst case:
+            <span class="texhtml" style="white-space: nowrap"
+              >O(N * (L + M))</span
+            >.</span
           >
         </div>
       </td>
@@ -421,8 +429,11 @@ title: insert
       <td>
         <div>
           <span class="t-li4"
-            >Average case: <code>O(N + N * L)</code>. <br />Worst case:
-            <code>O(2 * N * M)</code>.</span
+            >Average case:
+            <span class="texhtml" style="white-space: nowrap">O(N + N * L)</span
+            >. <br />Worst case:
+            <span class="texhtml" style="white-space: nowrap">O(2 * N * M)</span
+            >.</span
           >
         </div>
       </td>
