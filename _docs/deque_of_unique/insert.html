@@ -388,10 +388,6 @@ title: insert
   >.
 </div>
 <h3>Complexity</h3>
-<p>
-  N is the number of elements to insert. L is the average distance for insertion
-  into the deque. M is the size of the unordered_set.
-</p>
 <table class="t-dsc-begin">
   <tbody>
     <tr class="t-dsc">
@@ -399,8 +395,15 @@ title: insert
       <td>
         <div>
           <span class="t-li4"
-            >Average case: <code>O(1 + L)</code>.<br />
-            Worst case: <code>O(2 * M)</code>.
+            >Average case: linear in the lesser of the distances between
+            <span class="t-c"
+              ><span class="mw-geshi cpp source-cpp">pos </span></span
+            >
+            and either of the ends of the container assuming no duplicates. If
+            the elements is a duplicate, the complexity is
+            <span class="texhtml" style="white-space: nowrap">O(1)</span>.
+            <br />
+            Worst case: linear in the size of the container.
           </span>
         </div>
       </td>
@@ -410,8 +413,25 @@ title: insert
       <td>
         <div>
           <span class="t-li4"
-            >Average case: <code>O(N * L)</code>. <br />Worst case:
-            <code>O(N * (L + M))</code>.</span
+            >Average case:
+            <span class="texhtml" style="white-space: nowrap">O(N * L)</span>
+            assuming no duplicates, , where N is
+            <span class="mw-geshi cpp source-cpp"
+              ><a href="http://en.cppreference.com/w/cpp/iterator/distance"
+                ><span class="kw678"
+                  >std::<span class="me2">distance</span></span
+                ></a
+              ><span class="br0">(</span>first, last<span class="br0"
+                >)</span
+              ></span
+            >
+            and L is the average distance for insertion into the deque. If the
+            elements are all duplicates, the complexity is
+            <span class="texhtml" style="white-space: nowrap">O(N)</span>.
+            <br />Worst case:
+            <span class="texhtml" style="white-space: nowrap"
+              >O(N * (L + M))</span
+            >, where M is the size of original deque_of_unique.</span
           >
         </div>
       </td>
@@ -421,8 +441,17 @@ title: insert
       <td>
         <div>
           <span class="t-li4"
-            >Average case: <code>O(N + N * L)</code>. <br />Worst case:
-            <code>O(2 * N * M)</code>.</span
+            >Average case:
+            <span class="texhtml" style="white-space: nowrap">O(N * L)</span>
+            assuming no duplicates, where N is the size of
+            <span class="mw-geshi cpp source-cpp">ilist</span>
+            and L is the average distance for insertion into the deque. If the
+            elements are all duplicates, the complexity is
+            <span class="texhtml" style="white-space: nowrap">O(N)</span>.
+            <br />Worst case:
+            <span class="texhtml" style="white-space: nowrap"
+              >O(N * (L + M))</span
+            >.</span
           >
         </div>
       </td>

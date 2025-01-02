@@ -217,37 +217,9 @@ title: erase
 </div>
 <h3>Complexity</h3>
 <p>
-  M is the size of the deque_of_unique. K is the number of elements in the range
-  [first, last).
+  <span class="texhtml" style="white-space: nowrap">O(N)</span> due to the need
+  to shift elements in the deque. N is the size of deque_of_unique.
 </p>
-
-<table class="t-dsc-begin">
-  <tbody>
-    <tr class="t-dsc">
-      <td style="text-align: right">1)</td>
-      <td>
-        <div>
-          &nbsp;&nbsp;Average case: <code>O(M)</code>. <br />
-          &nbsp;&nbsp;Worst case: <code>O(2 * M)</code>.
-        </div>
-      </td>
-    </tr>
-    <tr class="t-dsc">
-      <td style="text-align: right">2)</td>
-      <td>
-        <div>
-          Average case: <code>O(K)</code>. <br />
-          Worst case: <code>O(K * M + K)</code>.
-        </div>
-      </td>
-    </tr>
-    <tr class="t-dcl-sep">
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
 <h3>Exceptions</h3>
 <p>
   Does not throw unless an exception is thrown by the assignment operator of T.
