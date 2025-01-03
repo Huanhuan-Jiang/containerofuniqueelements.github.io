@@ -2,7 +2,7 @@
 
 # Get all the pages that need to update their last_modified_at field
 # Adjust the file types based on your project (e.g., .md for Markdown or .html for HTML files)
-pages=$(git ls-files "*.html" | grep -Ev '(^_includes/|^_plugins/|^_layouts/)')
+pages=$(git ls-files "*.html" | grep -Ev '(^_includes/|^_plugins/|^_layouts/|^_docs/deque_of_unique/|^\.\/)')
 
 # Loop through each file to update its last_modified_at field
 for file in $pages; do
