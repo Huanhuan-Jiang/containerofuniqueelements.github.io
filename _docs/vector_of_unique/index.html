@@ -87,7 +87,243 @@ title: vector_of_unique
   can be accessed or modified from both ends. This makes it perfect for
   applications where maintaining order and preventing duplicates is essential.
 </p>
-<p><br /></p>
+<h3>
+  <span class="mw-headline" id="Template_parameters">Template parameters</span>
+</h3>
+<table class="t-par-begin">
+  <tbody>
+    <tr class="t-par">
+      <td>T</td>
+      <td>-</td>
+      <td>
+        The type of the elements.
+        <table class="t-rev-begin">
+          <tbody>
+            <tr class="t-rev t-until-cxx11"></tr>
+            <tr class="t-rev t-since-cxx11 t-until-cxx17">
+              <td>
+                The requirements that are imposed on the elements depend on the
+                actual operations performed on the container. Generally, it is
+                required that element type is a complete type and meets the
+                requirements of
+                <a
+                  href="https://en.cppreference.com/w/cpp/named_req/Erasable"
+                  title="cpp/named req/Erasable"
+                  ><span
+                    style="
+                      font-family: Georgia, 'DejaVu Serif', serif;
+                      font-style: italic;
+                    "
+                    >Erasable</span
+                  ></a
+                >, but many member functions impose stricter requirements.
+              </td>
+              <td>
+                <span class="t-mark-rev t-until-cxx17">(until C++17)</span>
+              </td>
+            </tr>
+            <tr class="t-rev t-since-cxx17">
+              <td>
+                <p>
+                  The requirements that are imposed on the elements depend on
+                  the actual operations performed on the container. Generally,
+                  it is required that element type meets the requirements of
+                  <a
+                    href="https://en.cppreference.com/w/cpp/named_req/Erasable"
+                    title="cpp/named req/Erasable"
+                    ><span
+                      style="
+                        font-family: Georgia, 'DejaVu Serif', serif;
+                        font-style: italic;
+                      "
+                      >Erasable</span
+                    ></a
+                  >, but many member functions impose stricter requirements.
+                </p>
+              </td>
+              <td>
+                <span class="t-mark-rev t-since-cxx17">(since C++17)</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p></p>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<h3>
+  <span class="mw-headline" id="Iterator_invalidation"
+    >Iterator invalidation</span
+  >
+</h3>
+<table class="dsctable" style="font-size: 0.9em">
+  <tbody>
+    <tr>
+      <th>Operations</th>
+      <th>Invalidated</th>
+    </tr>
+    <tr>
+      <td>All read only operations</td>
+      <td>Never.</td>
+    </tr>
+    <tr>
+      <td>
+        <span class="t-lc"
+          ><a
+            href="/w/cpp/container/vector/swap"
+            title="cpp/container/vector/swap"
+            >swap</a
+          ></span
+        >,
+        <span class="t-lc"
+          ><a href="/w/cpp/algorithm/swap" title="cpp/algorithm/swap"
+            >std::swap</a
+          ></span
+        >
+      </td>
+      <td>
+        <span class="t-lc"
+          ><a
+            href="{{ '/_docs/vector_of_unique/cend.html' | relative_url }}"
+            title="containerofunique/vector_of_unique/cend"
+            >cend()</a
+          ></span
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="t-lc"
+          ><a
+            href="/w/cpp/container/vector/clear"
+            title="cpp/container/vector/clear"
+            >clear</a
+          ></span
+        >,
+        <span class="t-lc"
+          ><a
+            href="/w/cpp/container/vector/operator%3D"
+            title="cpp/container/vector/operator="
+            >operator=</a
+          ></span
+        >,
+        <span class="t-lc"
+          ><a
+            href="/w/cpp/container/vector/assign"
+            title="cpp/container/vector/assign"
+            >assign</a
+          ></span
+        >
+      </td>
+      <td>Always.</td>
+    </tr>
+    <tr>
+      <td>
+        <span class="t-lc"
+          ><a
+            href="/w/cpp/container/vector/erase"
+            title="cpp/container/vector/erase"
+            >erase</a
+          ></span
+        >
+      </td>
+      <td>
+        Erased elements and all elements after them (including
+        <span class="t-lc"
+          ><a
+            href="{{ '/_docs/vector_of_unique/cend.html' | relative_url }}"
+            title="containerofunique/vector_of_unique/cend"
+            >cend()</a
+          ></span
+        >).
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="t-lc"
+          ><a
+            href="/w/cpp/container/vector/push_back"
+            title="cpp/container/vector/push back"
+            >push_back</a
+          ></span
+        >,
+        <span class="t-lc"
+          ><a
+            href="/w/cpp/container/vector/emplace_back"
+            title="cpp/container/vector/emplace back"
+            >emplace_back</a
+          ></span
+        >
+      </td>
+      <td>
+        If the deque_of_unique changed capacity, all of them. If not, only
+        <span class="t-lc"
+          ><a
+            href="{{ '/_docs/vector_of_unique/cend.html' | relative_url }}"
+            title="containerofunique/vector_of_unique/cend"
+            >cend()</a
+          ></span
+        >.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="t-lc"
+          ><a
+            href="/w/cpp/container/vector/insert"
+            title="cpp/container/vector/insert"
+            >insert</a
+          ></span
+        >,
+        <span class="t-lc"
+          ><a
+            href="/w/cpp/container/vector/emplace"
+            title="cpp/container/vector/emplace"
+            >emplace</a
+          ></span
+        >
+      </td>
+      <td>
+        If the vector_of_unique changed capacity, all of them.<br />If not, only
+        those at or after the insertion point (including
+        <span class="t-lc"
+          ><a
+            href="{{ '/_docs/vector_of_unique/cend.html' | relative_url }}"
+            title="containerofunique/vector_of_unique/cend"
+            >cend()</a
+          ></span
+        >).
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="t-lc"
+          ><a
+            href="/w/cpp/container/vector/pop_back"
+            title="cpp/container/vector/pop back"
+            >pop_back</a
+          ></span
+        >
+      </td>
+      <td>
+        The element erased and
+        <span class="t-lc"
+          ><a
+            href="{{ '/_docs/vector_of_unique/cend.html' | relative_url }}"
+            title="containerofunique/vector_of_unique/cend"
+            >cend()</a
+          ></span
+        >.
+      </td>
+    </tr>
+  </tbody>
+</table>
 <h3>
   <span class="mw-headline" id="Member types"> Member types</span>
 </h3>
@@ -153,7 +389,7 @@ title: vector_of_unique
     </tr>
     <tr class="t-dsc">
       <td>
-        <code>vectorType</code>
+        <code>vector_type</code>
       </td>
       <td>
         <code
@@ -169,7 +405,7 @@ title: vector_of_unique
     </tr>
     <tr class="t-dsc">
       <td>
-        <code>UnorderedSetType</code>
+        <code>unordered_set_type</code>
       </td>
       <td>
         <code
@@ -188,7 +424,7 @@ title: vector_of_unique
         <code>size_type</code>
       </td>
       <td>
-        <code>vectorType::size_type</code>
+        <code>vector_type::size_type</code>
       </td>
     </tr>
     <tr class="t-dsc">
@@ -196,7 +432,7 @@ title: vector_of_unique
         <code>iterator</code>
       </td>
       <td>
-        <code>vectorType::iterator</code>
+        <code>vector_type::iterator</code>
       </td>
     </tr>
     <tr class="t-dsc">
@@ -204,7 +440,7 @@ title: vector_of_unique
         <code>const_iterator</code>
       </td>
       <td>
-        <code>vectorType::const_iterator</code>
+        <code>vector_type::const_iterator</code>
       </td>
     </tr>
     <tr class="t-dsc">
@@ -212,7 +448,7 @@ title: vector_of_unique
         <code>reverse_iterator</code>
       </td>
       <td>
-        <code>vectorType::reverse_iterator</code>
+        <code>vector_type::reverse_iterator</code>
       </td>
     </tr>
     <tr class="t-dsc">
@@ -220,12 +456,11 @@ title: vector_of_unique
         <code>const_reverse_iterator</code>
       </td>
       <td>
-        <code>vectorType::const_reverse_iterator</code>
+        <code>vector_type::const_reverse_iterator</code>
       </td>
     </tr>
   </tbody>
 </table>
-<p><br /></p>
 <h3>
   <span class="mw-headline" id="Member functions"> Member functions </span>
 </h3>
