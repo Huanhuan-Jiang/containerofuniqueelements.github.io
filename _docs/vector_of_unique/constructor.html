@@ -6,19 +6,62 @@ title: constructor
 
 <table class="t-dcl-begin">
   <tbody>
-    <tr class="t-dcl">
+    <tr class="t-dcl-rev-aux">
+      <td></td>
+      <td rowspan="142">(1)</td>
+      <td></td>
+    </tr>
+    <tr class="t-dcl t-since-cxx11 t-until-cxx17">
       <td>
         <div>
-          <span class="mw-geshi cpp source-cpp">
-            vector_of_unique<span class="br0">(</span><span class="br0">)</span>
-            <span class="sy4">:</span>
-            vector_of_unique<span class="br0">(</span
-            ><span class="br0">)</span> <span class="br0">{</span
-            ><span class="br0">}</span>
-          </span>
+          <span class="mw-geshi cpp source-cpp"
+            >vector_of_unique<span class="br0">(</span
+            ><span class="br0">)</span>
+            <span class="sy4">:</span> vector_of_unique<span class="br0">(</span
+            ><span class="br0">)</span><span class="br0">)</span>
+            <span class="br0">{</span><span class="br0">}</span></span
+          >
         </div>
       </td>
-      <td>(1)</td>
+      <td>
+        <span class="t-mark-rev t-until-cxx17">(until C++17)</span>
+      </td>
+    </tr>
+    <tr class="t-dcl t-since-cxx17">
+      <td>
+        <div>
+          <span class="mw-geshi cpp source-cpp"
+            >vector_of_unique<span class="br0">(</span
+            ><span class="br0">)</span> <span class="kw1">noexcept</span
+            ><span class="br0">(</span><span class="br0">)</span>
+            <span class="sy4">:</span> vector_of_unique<span class="br0">(</span
+            ><span class="br0">(</span><span class="br0">)</span
+            ><span class="br0">)</span> <span class="br0">{</span
+            ><span class="br0">}</span></span
+          >
+        </div>
+      </td>
+      <td>
+        <span class="t-mark-rev t-since-cxx17">(since C++17)</span>
+      </td>
+    </tr>
+  </tbody>
+  <tbody class="t-dcl-rev t-dcl-rev-num">
+    <tr class="t-dcl t-since-cxx11">
+      <td>
+        <div>
+          <span class="mw-geshi cpp source-cpp"
+            ><span class="kw1">explicit</span> vector_of_unique<span class="br0"
+              >(</span
+            >
+            <span class="br0">)</span><span class="sy4">;</span></span
+          >
+        </div>
+      </td>
+      <td rowspan="142">(2)</td>
+      <td>
+        <span class="t-mark-rev t-since-cxx17">(noexcept since C++17)</span>
+      </td>
     </tr>
   </tbody>
   <tbody>
@@ -36,7 +79,8 @@ title: constructor
           </span>
         </div>
       </td>
-      <td>(2)</td>
+      <td>(3)</td>
+      <td></td>
     </tr>
     <tr class="t-dcl t-since-cxx11">
       <td>
@@ -53,7 +97,7 @@ title: constructor
           >
         </div>
       </td>
-      <td>(3)</td>
+      <td>(4)</td>
       <td></td>
     </tr>
     <tr class="t-dcl">
@@ -68,7 +112,8 @@ title: constructor
           >
         </div>
       </td>
-      <td>(4)</td>
+      <td>(5)</td>
+      <td></td>
     </tr>
     <tr class="t-dcl">
       <td>
@@ -83,7 +128,10 @@ title: constructor
           >
         </div>
       </td>
-      <td>(5)</td>
+      <td>(6)</td>
+      <td>
+        <span class="t-mark-rev t-since-cxx17">(noexcept since C++17)</span>
+      </td>
     </tr>
     <tr class="t-dcl-sep">
       <td></td>
@@ -101,7 +149,18 @@ title: constructor
 </div>
 
 <div class="t-li1">
-  <span class="t-li">2)</span> Constructs a vector_of_unique with the contents
+  <span class="t-li">2)</span> The default constructor with the
+  <span class="t-c"
+    ><span class="mw-geshi cpp source-cpp"
+      ><span class="kw1">explicit</span></span
+    ></span
+  >
+  keyword, preventing implicit conversions or copy-initialization from other
+  types.
+</div>
+
+<div class="t-li1">
+  <span class="t-li">3)</span> Constructs a vector_of_unique with the contents
   of the range
   <span style="display: inline-block"
     ><code>[</code
@@ -113,7 +172,7 @@ title: constructor
 </div>
 
 <div class="t-li1">
-  <span class="t-li">3)</span> Equivalent to
+  <span class="t-li">4)</span> Equivalent to
   <span class="t-c"
     ><span class="mw-geshi cpp source-cpp"
       >vector_of_unique<span class="br0">(</span>il.<span class="me1"
@@ -128,12 +187,12 @@ title: constructor
 </div>
 
 <div class="t-li1">
-  <span class="t-li">4)</span> The copy constructor. Constructs a
+  <span class="t-li">5)</span> The copy constructor. Constructs a
   <code>vector_of_unique</code> with the contents of <code>other</code>.
 </div>
 
 <div class="t-li1">
-  <span class="t-li">5)</span> The move constructor. Constructs a
+  <span class="t-li">6)</span> The move constructor. Constructs a
   <code>vector_of_unique</code> with the contents of <code>other</code>.
 </div>
 
@@ -153,22 +212,14 @@ title: constructor
 </h3>
 <table class="t-dsc-begin">
   <tbody>
-    <tr class="t-dsc-hitem">
-      <th></th>
-      <th>Constructs unordered_set</th>
-      <th>Constructs vector</th>
-    </tr>
     <tr class="t-dsc">
-      <td>1)</td>
-      <td>
-        <div><span class="t-li4">Constant.</span></div>
-      </td>
+      <td style="text-align: right">1,2)</td>
       <td>
         <div><span class="t-li4">Constant.</span></div>
       </td>
     </tr>
     <tr class="t-dsc">
-      <td>2)</td>
+      <td style="text-align: right">3)</td>
       <td>
         <div>
           <span class="t-li4"
@@ -185,35 +236,20 @@ title: constructor
                   >)</span
                 ></span
               ></span
-            >. <br />Worst case: quadratic, i.e.
+            >
+            assuming no duplicates. If the element is a duplicate, the
+            complexity is
+            <span class="texhtml" style="white-space: nowrap">O(1)</span> since
+            no insertion occurs.. <br />Worst case: quadratic, i.e.
             <span class="texhtml" style="white-space: nowrap"
               >O(N<sup>2</sup>).</span
             ></span
           >
         </div>
       </td>
-
-      <td>
-        <div>
-          <span class="t-li4">
-            Linear in
-            <span class="t-c"
-              ><span class="mw-geshi cpp source-cpp"
-                ><a href="http://en.cppreference.com/w/cpp/iterator/distance"
-                  ><span class="kw678"
-                    >std::<span class="me2">distance</span></span
-                  ></a
-                ><span class="br0">(</span>first, last<span class="br0"
-                  >)</span
-                ></span
-              ></span
-            >.</span
-          >
-        </div>
-      </td>
     </tr>
     <tr class="t-dsc">
-      <td>3)</td>
+      <td style="text-align: right">4)</td>
       <td>
         <div>
           <span class="t-li4">
@@ -240,6 +276,9 @@ title: constructor
           </span>
         </div>
       </td>
+    </tr>
+    <tr class="t-dsc">
+      <td style="text-align: right">5)</td>
       <td>
         <div>
           <span class="t-li4">
@@ -255,41 +294,7 @@ title: constructor
       </td>
     </tr>
     <tr class="t-dsc">
-      <td>4)</td>
-      <td>
-        <div>
-          <span class="t-li4">
-            Linear in
-            <span class="t-c"
-              ><span class="mw-geshi cpp source-cpp"
-                >other.<span class="me1">size</span><span class="br0">(</span
-                ><span class="br0">)</span></span
-              ></span
-            >.</span
-          >
-        </div>
-      </td>
-      <td>
-        <div>
-          <span class="t-li4">
-            Linear in
-            <span class="t-c"
-              ><span class="mw-geshi cpp source-cpp"
-                >other.<span class="me1">size</span><span class="br0">(</span
-                ><span class="br0">)</span></span
-              ></span
-            >.</span
-          >
-        </div>
-      </td>
-    </tr>
-    <tr class="t-dsc">
-      <td>5)</td>
-      <td>
-        <div>
-          <span class="t-li4">Constant.</span>
-        </div>
-      </td>
+      <td style="text-align: right">6)</td>
       <td>
         <div>
           <span class="t-li4">Constant.</span>
