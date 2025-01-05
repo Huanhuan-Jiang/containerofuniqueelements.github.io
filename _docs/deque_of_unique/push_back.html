@@ -47,14 +47,23 @@ title: push_back
 </p>
 <div class="t-li1">
   <span class="t-li">1)</span> The new element is initialized as a copy of
-  <code>value</code>.
+  <span class="t-c mw-geshi cpp source-cpp">value</span>.
 </div>
 <div class="t-li1">
-  <span class="t-li">2)</span> <code>value</code> is moved into the new element.
+  <span class="t-li">2)</span>
+  <span class="t-c mw-geshi cpp source-cpp">value</span> is moved into the new
+  element.
 </div>
 <p>
-  All iterators (including the <code>end()</code> iterator) are invalidated. No
-  references are invalidated.
+  All iterators (including the
+  <span class="t-c mw-geshi cpp source-cpp"
+    ><a
+      href="{{ '/_docs/deque_of_unique/cend' | relative_url }}"
+      title="containerofunique/deque_of_unique/crend"
+      >cend()</a
+    ></span
+  >
+  iterator) are invalidated. No references are invalidated.
 </p>
 <p></p>
 <h3>
