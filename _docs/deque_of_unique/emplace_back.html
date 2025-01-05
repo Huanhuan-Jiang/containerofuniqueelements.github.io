@@ -14,6 +14,27 @@ title: emplace_back
             ><span class="kw1">template</span><span class="sy1">&lt;</span>
             <span class="kw1">class</span>... <span class="me1">Args</span>
             <span class="sy1">&gt;</span><br />
+            <span class="kw4">void</span> emplace_back<span class="br0">(</span>
+            Args<span class="sy3">&amp;&amp;</span>...
+            <span class="me1">args</span> <span class="br0">)</span
+            ><span class="sy4">;</span></span
+          >
+        </div>
+      </td>
+      <td>(1)</td>
+      <td>
+        <span class="t-mark-rev t-since-cxx11 t-until-cxx17"
+          >(until C++17)</span
+        >
+      </td>
+    </tr>
+    <tr class="t-dcl">
+      <td>
+        <div>
+          <span class="mw-geshi cpp source-cpp"
+            ><span class="kw1">template</span><span class="sy1">&lt;</span>
+            <span class="kw1">class</span>... <span class="me1">Args</span>
+            <span class="sy1">&gt;</span><br />
             <span class="t-lc">std::optional</span><span class="sy1">&lt;</span
             ><span class="t-lc"
               >std::reference_wrapper<span class="sy1">&lt;</span>T</span
@@ -27,8 +48,8 @@ title: emplace_back
           >
         </div>
       </td>
-      <td class="t-dcl-nopad"></td>
-      <td></td>
+      <td>(2)</td>
+      <td><span class="t-mark-rev t-since-cxx17">(since C++17)</span></td>
     </tr>
   </tbody>
   <tbody>
@@ -105,10 +126,13 @@ title: emplace_back
   </tbody>
 </table>
 <h3><span class="mw-headline" id="Return_value">Return value</span></h3>
-<p>
-  An optional reference wrapper to the inserted element if the insertion is
-  successful; otherwise, std::nullopt if the element already exists in the set.
-</p>
+<div class="t-li1"><span class="t-li">1)</span>None.</div>
+<div class="t-li1">
+  <span class="t-li">2)</span> An optional reference wrapper to the inserted
+  element if the insertion is successful; otherwise,
+  <span class="t-c mw-geshi cpp source-cpp">std::nullopt</span> if the element
+  already exists in the set.
+</div>
 <h3>
   <span class="mw-headline" id="Complexity">Complexity</span>
 </h3>
