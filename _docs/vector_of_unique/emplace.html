@@ -14,6 +14,25 @@ title: emplace
             <span class="kw1">class</span>... <span class="me1">Args</span>
             <span class="sy1">&gt;</span><br />
             <span class="mw-geshi cpp source-cpp"
+              ><span class="kw4">void</span> emplace<span class="br0">(</span>
+              const_iterator pos, Args<span class="sy3">&amp;&amp;</span>...
+              <span class="me1">args</span> <span class="br0">)</span
+              ><span class="sy4">;</span></span
+            ></span
+          >
+        </div>
+      </td>
+      <td>(1)</td>
+      <td class="t-mark-rev t-since-cxx11-untill-cxx17">(Untill C++17)</td>
+    </tr>
+    <tr class="t-dcl t-since-cxx11">
+      <td>
+        <div>
+          <span class="mw-geshi cpp source-cpp"
+            ><span class="kw1">template</span><span class="sy1">&lt;</span>
+            <span class="kw1">class</span>... <span class="me1">Args</span>
+            <span class="sy1">&gt;</span><br />
+            <span class="mw-geshi cpp source-cpp"
               ><span class="t-lc">std::pair</span
               ><span class="sy1">&lt;</span>const_iterator, bool<span
                 class="sy1"
@@ -28,7 +47,8 @@ title: emplace
           >
         </div>
       </td>
-      <td class="t-dcl-nopad"></td>
+      <td>(2)</td>
+      <td class="t-mark-rev t-since-cxx17">(Since C++17)</td>
     </tr>
     <tr class="t-dcl-sep">
       <td></td>
@@ -153,11 +173,13 @@ title: emplace
   </tbody>
 </table>
 <h3><span class="mw-headline" id="Return_value">Return value</span></h3>
-<p>
+<div class="t-li1"><span class="t-li">1)</span>None.</div>
+<div class="t-li1">
+  <span class="t-li">2)</span>
   The function returns a
-  <span class="mw-geshi cpp source-cpp"
-    ><span class="t-lc">std::pair</span
-    ><span class="sy1">&lt;</span>const_iterator, bool<span class="sy1"
+  <span class="t-c mw-geshi cpp source-cpp">
+    <span class="kw1125">std::<span class="me2">pair</span></span
+    ><span class="sy1">(</span>const_iterator, bool<span class="sy1"
       >&gt;</span
     ></span
   >:
@@ -179,40 +201,19 @@ title: emplace
     ></span
   >
   if the element already exists in the set.
-</p>
+</div>
 <h3>
   <span class="mw-headline" id="Complexity">Complexity</span>
 </h3>
-<table class="t-dsc-begin" style="width: 40em">
-  <tbody>
-    <tr class="t-dsc-hitem">
-      <th></th>
-      <th>Emplace element in unordered_set</th>
-      <th>Emplace element in vector</th>
-    </tr>
-
-    <tr class="t-dsc">
-      <td></td>
-      <td>
-        <div>
-          Amortized constant on average, worst case linear in the size of the
-          container.
-        </div>
-      </td>
-      <td>
-        <div>
-          Linear in the lesser of the distances between <code>pos</code> and
-          either of the ends of the container.
-        </div>
-      </td>
-    </tr>
-    <tr class="t-dcl-sep">
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+<p>
+  Average case: Amortized linear in the lesser of the distances between
+  <span class="t-c"><span class="mw-geshi cpp source-cpp">pos </span></span> and
+  either of the ends of the container assuming no duplicates. If the element is
+  a duplicate, the complexity is
+  <span class="texhtml" style="white-space: nowrap">O(1)</span> since no
+  insertion occurs.<br />
+  Worst case: linear in the size of the container.
+</p>
 <h3>Exceptions</h3>
 <p>
   If an exception is thrown for any reason, this function has no effect (<a
