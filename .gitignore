@@ -4,3 +4,4 @@ _site
 404.html
 output
 .git/
+.DS_Store
